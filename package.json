@@ -19,6 +19,7 @@
     "export": "next export",
     "start": "next start",
     "serve": "cd out && serve -p 8080",
+    "fast": "npm run build && npm run export && npm run publish",
     "publish": "git checkout -- out/CNAME && git checkout -- out/.nojekyll && git add out && git commit -m \"chore: regen site\" && git subtree push --prefix out origin master"
   },
   "devDependencies": {
