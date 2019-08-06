@@ -18,7 +18,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "serve": "cd out && serve -p 8080"
+    "serve": "cd out && serve -p 8080",
+    "publish": "git checkout -- out/CNAME && git checkout -- out/.nojekyll && git add out && git commit -m \"chore: regen site\" && git subtree push --prefix out origin master"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "6.9.0",
