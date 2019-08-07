@@ -56587,7 +56587,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/styles */ "./node_modules/@material-ui/styles/esm/index.js");
 /* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/index.js");
 /* harmony import */ var _src_theme__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../src/theme */ "./src/theme.tsx");
-/* harmony import */ var _src_TopBar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../src/TopBar */ "./src/TopBar.tsx");
+/* harmony import */ var _src_Header__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../src/Header */ "./src/Header.tsx");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_16__);
@@ -56609,7 +56609,7 @@ var _jsxFileName = "C:\\Users\\sagel\\OneDrive\\Documents\\Next-Portfolio-Stef\\
 
 
 
-var topBarState = {
+var HeaderState = {
   initial: {
     homeButtonVisible: undefined,
     galleryButtonVisible: undefined
@@ -56643,7 +56643,7 @@ function (_App) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(MyApp)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {
-      topBarButtons: topBarState.initial
+      HeaderButtons: HeaderState.initial
     });
 
     return _this;
@@ -56654,20 +56654,20 @@ function (_App) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log("app mounted"); // Set state of the TopBar component
+      console.log("app mounted"); // Set state of the Header component
 
       next_router__WEBPACK_IMPORTED_MODULE_16___default.a.pathname == "/" ? this.setState({
-        topBarButtons: topBarState.home
+        HeaderButtons: HeaderState.home
       }) : this.setState({
-        topBarButtons: topBarState.notHome
-      }); // Change the state of the TopBar depending on URL
+        HeaderButtons: HeaderState.notHome
+      }); // Change the state of the Header depending on URL
 
       next_router__WEBPACK_IMPORTED_MODULE_16___default.a.events.on('routeChangeStart', function (url) {
         console.log("Loading: ".concat(url));
         url == "/" ? _this2.setState({
-          topBarButtons: topBarState.home
+          HeaderButtons: HeaderState.home
         }) : _this2.setState({
-          topBarButtons: topBarState.notHome
+          HeaderButtons: HeaderState.notHome
         });
       }); // Remove the server-side injected CSS.
 
@@ -56685,7 +56685,7 @@ function (_App) {
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
       var _ref = this.state,
-          topBarButtons = _ref.topBarButtons;
+          HeaderButtons = _ref.HeaderButtons;
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_15__["Container"], {
         __source: {
           fileName: _jsxFileName,
@@ -56724,7 +56724,7 @@ function (_App) {
           lineNumber: 54
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_src_TopBar__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, topBarButtons, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_src_Header__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, HeaderButtons, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55
@@ -56747,23 +56747,23 @@ function (_App) {
 
 /***/ }),
 
-/***/ "./src/TopBar.tsx":
+/***/ "./src/Header.tsx":
 /*!************************!*\
-  !*** ./src/TopBar.tsx ***!
+  !*** ./src/Header.tsx ***!
   \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TopBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-var _jsxFileName = "C:\\Users\\sagel\\OneDrive\\Documents\\Next-Portfolio-Stef\\nextjs-with-typescript\\src\\TopBar.tsx";
+var _jsxFileName = "C:\\Users\\sagel\\OneDrive\\Documents\\Next-Portfolio-Stef\\nextjs-with-typescript\\src\\Header.tsx";
 
 
 
@@ -56788,7 +56788,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["ma
     }
   });
 });
-function TopBar(props) {
+function Header(props) {
   var classes = useStyles(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Toolbar"], {
     className: classes.toolbar,
