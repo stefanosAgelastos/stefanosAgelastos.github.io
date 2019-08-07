@@ -12,20 +12,20 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: 1,
         },
         homeButton: {
-            visibility: (props: TopBarProps) => props.homeButtonVisible ? 'visible' : 'hidden'
+            visibility: (props: HeaderProps) => props.homeButtonVisible ? 'visible' : 'hidden'
         },
         galleryButton: {
-            visibility: (props: TopBarProps) => props.galleryButtonVisible ? 'visible' : 'hidden'
+            visibility: (props: HeaderProps) => props.galleryButtonVisible ? 'visible' : 'hidden'
         }
     }),
 );
 
-type TopBarProps = {
+type HeaderProps = {
     homeButtonVisible: boolean | undefined,
     galleryButtonVisible: boolean | undefined
 }
 
-export default function TopBar(props: TopBarProps) {
+export default function Header(props: HeaderProps) {
     const classes = useStyles(props);
     return (
         <Toolbar className={classes.toolbar}>
