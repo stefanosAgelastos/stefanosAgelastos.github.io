@@ -24,12 +24,10 @@ class MyApp extends App<IProps, IState> {
   state: IState = { HeaderButtons: HeaderState.initial };
 
   componentDidMount() {
-    console.log("app mounted");
     // Set state of the Header component
     Router.pathname == "/" ? this.setState({ HeaderButtons: HeaderState.home }) : this.setState({ HeaderButtons: HeaderState.notHome });
     // Change the state of the Header depending on URL
     Router.events.on('routeChangeStart', url => {
-      console.log(`Loading: ${url}`)
       url == "/" ? this.setState({ HeaderButtons: HeaderState.home }) : this.setState({ HeaderButtons: HeaderState.notHome });
     });
     // Remove the server-side injected CSS.
@@ -40,7 +38,6 @@ class MyApp extends App<IProps, IState> {
   }
 
   render() {
-    console.log("app render");
     const { Component, pageProps } = this.props;
     const { HeaderButtons } = this.state as IState;
     return (

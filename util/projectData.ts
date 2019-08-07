@@ -36,8 +36,6 @@ export const dataArray: Project[] = [{
  * Throws an error if not found.
  */
 export function findData(slug: string) {
-    console.log("looking for: ", slug);
-
     const selected = dataArray.find(data => data.slug === slug)
 
     if (!selected) {

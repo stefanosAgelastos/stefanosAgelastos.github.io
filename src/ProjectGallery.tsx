@@ -22,7 +22,6 @@ export default function ProjectGallery() {
     <React.Fragment>
       <div className={classes.tiles}>
         {projects.map(project => {
-          console.log(project.slug);
           return (
               <ProjectGalleryTile tile={project} key={project.slug} />
           );

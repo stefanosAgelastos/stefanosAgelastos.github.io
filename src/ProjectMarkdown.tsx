@@ -37,6 +37,5 @@ type Props = {
 };
 
 export default function ProjectMarkdown(props: Props) {
-  console.log(props.projectMD);
   return (<Markdown options={options}>{props.projectMD}</Markdown>);
 }
