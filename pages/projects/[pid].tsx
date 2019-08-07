@@ -1,12 +1,19 @@
 import React from 'react';
+import { NextPage } from 'next';
 import ProjectMarkdown from '../../src/ProjectMarkdown';
-import post1 from '../../src/blog-post.1.md';
+import { Project } from '../../interfaces';
+import { findData } from '../../util/projectData';
 
-const Post = () => {
-/*   const router = useRouter();
-  const { pid } = router.query; */
 
-  return <ProjectMarkdown projectMD={post1 as string}  />;
-};
+type Props = {
+  item: Project
+}
 
-export default Post;
+const ProjectPage: NextPage<Props> = ({ item }) => (<ProjectMarkdown projectMD={item.contentMarkdown} />)
+
+ProjectPage.getInitialProps = async  ({ query }) => {
+  const item: Project = findData(query.pid as string);
+  return { item }
+}
+
+export default ProjectPage;

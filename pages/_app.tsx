@@ -9,28 +9,28 @@ import { Container } from '@material-ui/core';
 import Router from 'next/router';
 
 const HeaderState = {
-    initial: { homeButtonVisible: undefined, galleryButtonVisible: undefined },
-    home: { homeButtonVisible: false, galleryButtonVisible: true },
-    notHome: { homeButtonVisible: true, galleryButtonVisible: false }
+  initial: { homeButtonVisible: undefined, galleryButtonVisible: undefined },
+  home: { homeButtonVisible: false, galleryButtonVisible: true },
+  notHome: { homeButtonVisible: true, galleryButtonVisible: false }
 }
 interface IState {
-  HeaderButtons: {homeButtonVisible: boolean | undefined, galleryButtonVisible: boolean | undefined}
+  HeaderButtons: { homeButtonVisible: boolean | undefined, galleryButtonVisible: boolean | undefined }
 }
 
-interface IProps {}
+interface IProps { }
 
 class MyApp extends App<IProps, IState> {
 
-  state : IState = {HeaderButtons :HeaderState.initial};
+  state: IState = { HeaderButtons: HeaderState.initial };
 
   componentDidMount() {
     console.log("app mounted");
     // Set state of the Header component
-    Router.pathname=="/"? this.setState({HeaderButtons: HeaderState.home}) : this.setState({HeaderButtons: HeaderState.notHome});
+    Router.pathname == "/" ? this.setState({ HeaderButtons: HeaderState.home }) : this.setState({ HeaderButtons: HeaderState.notHome });
     // Change the state of the Header depending on URL
     Router.events.on('routeChangeStart', url => {
       console.log(`Loading: ${url}`)
-      url=="/"? this.setState({HeaderButtons: HeaderState.home}) : this.setState({HeaderButtons: HeaderState.notHome});
+      url == "/" ? this.setState({ HeaderButtons: HeaderState.home }) : this.setState({ HeaderButtons: HeaderState.notHome });
     });
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -38,11 +38,11 @@ class MyApp extends App<IProps, IState> {
       jssStyles.parentNode!.removeChild(jssStyles);
     }
   }
-    
+
   render() {
     console.log("app render");
     const { Component, pageProps } = this.props;
-    const {HeaderButtons} = this.state as IState;
+    const { HeaderButtons } = this.state as IState;
     return (
       <Container>
         <Head>

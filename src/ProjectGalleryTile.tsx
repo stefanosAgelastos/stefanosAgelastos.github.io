@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import ProjectGalleryTypography from './ProjectGalleryTypography';
+import { Project } from '../interfaces'
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -75,12 +76,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }));
 
 type Props = {
-    tile: {
-        title: string,
-        width: string | number | undefined,
-        url: string,
-    },
-    slug: string
+    tile: Project
 };
 
 /* const linkElement = (slug: string) => {
@@ -97,7 +93,7 @@ export default function ProjectGalleryTile(props: Props) {
     const { tile } = props;
     return (
         <React.Fragment>
-            <Link href="/projects/[pid]" as={`/projects/${props.slug}`} passHref>
+            <Link href="/projects/[pid]" as={`/projects/${tile.slug}`} passHref>
                 <ButtonBase
                     className={classes.tileWrapper}
                     style={{
@@ -107,7 +103,7 @@ export default function ProjectGalleryTile(props: Props) {
                     <div
                         className={classes.tileSrc}
                         style={{
-                            backgroundImage: `url(${tile.url})`,
+                            backgroundImage: `url(${tile.imageUrl})`,
                         }}
                     />
                     <div className={classes.tileBackdrop} />
