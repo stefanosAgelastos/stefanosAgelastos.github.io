@@ -11051,7 +11051,7 @@ module.exports = "## Sample blog post\r\n\r\n#### April 1, 2020 by [Olivier](/)\
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects%2F%5Bpid%5D&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cprojects%5C%5Bpid%5D.tsx ***!
   \******************************************************************************************************************************************************************************************************************/
@@ -11074,5 +11074,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[pid].js.map
