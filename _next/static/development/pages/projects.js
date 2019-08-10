@@ -22556,7 +22556,7 @@ function ProjectGalleryTypography(props) {
 /*!*****************************!*\
   !*** ./util/projectData.ts ***!
   \*****************************/
-/*! exports provided: dataArray, findData, getREADMEfromMyGithub */
+/*! exports provided: dataArray, findData, getREADMEfromMyGithub, getProjectImageUrl */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22564,6 +22564,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataArray", function() { return dataArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findData", function() { return findData; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getREADMEfromMyGithub", function() { return getREADMEfromMyGithub; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProjectImageUrl", function() { return getProjectImageUrl; });
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
@@ -22607,16 +22608,6 @@ function findData(slug) {
 function getREADMEfromMyGithub(_x) {
   return _getREADMEfromMyGithub.apply(this, arguments);
 }
-/** Calls a mock API which returns the above array to simulate "get all". */
-
-/* export function findAll() {
-    // Throw an error, just for example.
-    if (!Array.isArray(dataArray)) {
-        throw new Error('Cannot find projects')
-    }
-
-    return dataArray
-} */
 
 function _getREADMEfromMyGithub() {
   _getREADMEfromMyGithub = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
@@ -22656,6 +22647,29 @@ function _getREADMEfromMyGithub() {
   return _getREADMEfromMyGithub.apply(this, arguments);
 }
 
+function getProjectImageUrl(slug) {
+  var selected = dataArray.find(function (data) {
+    return data.slug === slug;
+  });
+
+  if (!selected) {
+    /* if for some reason not found return random image url */
+    return "https://source.unsplash.com/user/erondu";
+  }
+
+  return selected.imageUrl;
+}
+/** Calls a mock API which returns the above array to simulate "get all". */
+
+/* export function findAll() {
+    // Throw an error, just for example.
+    if (!Array.isArray(dataArray)) {
+        throw new Error('Cannot find projects')
+    }
+
+    return dataArray
+} */
+
 /***/ }),
 
 /***/ "./util/projects.json":
@@ -22665,11 +22679,11 @@ function _getREADMEfromMyGithub() {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js homepage\",\"slug\":\"next.js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"Static homepage with P5.js\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"Final project, AR app\",\"slug\":\"mern-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1531161339673-a943dd10e29f?auto=format&fit=crop&w=400&q=80\",\"title\":\"Chat webapp with Node.js\",\"slug\":\"chat-webapp-node.js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring API\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js homepage\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"Static homepage with P5.js\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"Final project, AR app\",\"slug\":\"mern-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1531161339673-a943dd10e29f?auto=format&fit=crop&w=400&q=80\",\"title\":\"Chat webapp with Node.js\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring API\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cprojects.tsx ***!
   \******************************************************************************************************************************************************************************************/
@@ -22692,5 +22706,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
