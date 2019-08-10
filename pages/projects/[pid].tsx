@@ -9,7 +9,7 @@ type Props = {
   item: Project
 }
 
-const ProjectPage: NextPage<Props> = ({ item }) => (<ProjectMarkdown projectMD={item.contentMarkdown} />)
+const ProjectPage: NextPage<Props> = ({ item }) => (<ProjectMarkdown projectMD={item.markdownUrl} />)
 
 ProjectPage.getInitialProps = async  ({ query }) => {
   const item: Project = findData(query.pid as string);
