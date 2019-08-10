@@ -38,6 +38,15 @@ export async function getREADMEfromMyGithub(slug: string): Promise<string> {
         }
     });
 }
+
+export function getProjectImageUrl(slug: string): string {
+    const selected = dataArray.find(data => data.slug === slug)
+    if (!selected) {
+        /* if for some reason not found return random image url */
+        return "https://source.unsplash.com/user/erondu";
+    }
+    return selected.imageUrl;
+}
 /** Calls a mock API which returns the above array to simulate "get all". */
 /* export function findAll() {
     // Throw an error, just for example.
