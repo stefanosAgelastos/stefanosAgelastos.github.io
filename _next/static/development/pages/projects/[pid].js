@@ -1,16 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\projects\\[pid].js"],{
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "./node_modules/core-js/library/fn/array/is-array.js");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/assign.js ***!
@@ -5125,19 +5114,6 @@ var e=function(e){return parseFloat(e)};/* harmony default export */ __webpack_e
 
 /***/ }),
 
-/***/ "./node_modules/core-js/library/fn/array/is-array.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/array/is-array.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.array.is-array */ "./node_modules/core-js/library/modules/es6.array.is-array.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Array.isArray;
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/library/fn/object/assign.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/library/fn/object/assign.js ***!
@@ -5683,22 +5659,6 @@ var ArrayProto = Array.prototype;
 
 module.exports = function (it) {
   return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/_is-array.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_is-array.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.2.2 IsArray(argument)
-var cof = __webpack_require__(/*! ./_cof */ "./node_modules/core-js/library/modules/_cof.js");
-module.exports = Array.isArray || function isArray(arg) {
-  return cof(arg) == 'Array';
 };
 
 
@@ -6767,21 +6727,6 @@ module.exports = __webpack_require__(/*! ./_core */ "./node_modules/core-js/libr
     || it['@@iterator']
     || Iterators[classof(it)];
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/modules/es6.array.is-array.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/es6.array.is-array.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
-var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
-
-$export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ "./node_modules/core-js/library/modules/_is-array.js") });
 
 
 /***/ }),
@@ -8205,6 +8150,18 @@ __webpack_require__.r(__webpack_exports__);
 function isObject(val) {
   return val != null && typeof val === 'object' && Array.isArray(val) === false;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/isomorphic-unfetch/browser.js":
+/*!****************************************************!*\
+  !*** ./node_modules/isomorphic-unfetch/browser.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = window.fetch || (window.fetch = __webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.mjs").default || __webpack_require__(/*! unfetch */ "./node_modules/unfetch/dist/unfetch.mjs"));
 
 
 /***/ }),
@@ -12984,6 +12941,21 @@ function warning(condition, message) {
 
 /***/ }),
 
+/***/ "./node_modules/unfetch/dist/unfetch.mjs":
+/*!***********************************************!*\
+  !*** ./node_modules/unfetch/dist/unfetch.mjs ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function(e,n){return n=n||{},new Promise(function(t,r){var s=new XMLHttpRequest,o=[],u=[],i={},a=function(){return{ok:2==(s.status/100|0),statusText:s.statusText,status:s.status,url:s.responseURL,text:function(){return Promise.resolve(s.responseText)},json:function(){return Promise.resolve(JSON.parse(s.responseText))},blob:function(){return Promise.resolve(new Blob([s.response]))},clone:a,headers:{keys:function(){return o},entries:function(){return u},get:function(e){return i[e.toLowerCase()]},has:function(e){return e.toLowerCase()in i}}}};for(var l in s.open(n.method||"get",e,!0),s.onload=function(){s.getAllResponseHeaders().replace(/^(.*?):[^\S\n]*([\s\S]*?)$/gm,function(e,n,t){o.push(n=n.toLowerCase()),u.push([n,t]),i[n]=i[n]?i[n]+","+t:t}),t(a())},s.onerror=r,s.withCredentials="include"==n.credentials,n.headers)s.setRequestHeader(l,n.headers[l]);s.send(n.body||null)})});
+//# sourceMappingURL=unfetch.mjs.map
+
+
+/***/ }),
+
 /***/ "./node_modules/unquote/index.js":
 /*!***************************************!*\
   !*** ./node_modules/unquote/index.js ***!
@@ -13106,13 +13078,12 @@ var _jsxFileName = "C:\\Users\\sagel\\OneDrive\\Documents\\Next-Portfolio-Stef\\
 
 
 
-var ProjectPage = function ProjectPage(_ref) {
-  var item = _ref.item;
+var ProjectPage = function ProjectPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_src_ProjectMarkdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    projectMD: item.markdownUrl,
+    projectMD: props.markdown,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   });
@@ -13121,21 +13092,25 @@ var ProjectPage = function ProjectPage(_ref) {
 ProjectPage.getInitialProps =
 /*#__PURE__*/
 function () {
-  var _ref3 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
-  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref2) {
-    var query, item;
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
+    var query, markdown;
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            query = _ref2.query;
-            item = Object(_util_projectData__WEBPACK_IMPORTED_MODULE_4__["findData"])(query.pid);
-            return _context.abrupt("return", {
-              item: item
-            });
+            query = _ref.query;
+            _context.next = 3;
+            return Object(_util_projectData__WEBPACK_IMPORTED_MODULE_4__["getREADMEfromMyGithub"])(query.pid);
 
           case 3:
+            markdown = _context.sent;
+            return _context.abrupt("return", {
+              markdown: markdown
+            });
+
+          case 5:
           case "end":
             return _context.stop();
         }
@@ -13144,7 +13119,7 @@ function () {
   }));
 
   return function (_x) {
-    return _ref3.apply(this, arguments);
+    return _ref2.apply(this, arguments);
   };
 }();
 
@@ -13300,23 +13275,31 @@ function ProjectMarkdown(props) {
 /*!*****************************!*\
   !*** ./util/projectData.ts ***!
   \*****************************/
-/*! exports provided: dataArray, findData, findAll */
+/*! exports provided: dataArray, findData, getREADMEfromMyGithub */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dataArray", function() { return dataArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findData", function() { return findData; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "findAll", function() { return findAll; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _projects_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects.json */ "./util/projects.json");
-var _projects_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./projects.json */ "./util/projects.json", 1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getREADMEfromMyGithub", function() { return getREADMEfromMyGithub; });
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/promise */ "./node_modules/@babel/runtime-corejs2/core-js/promise.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _projects_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./projects.json */ "./util/projects.json");
+var _projects_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./projects.json */ "./util/projects.json", 1);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 /** Static project data. */
 
-var dataArray = _projects_json__WEBPACK_IMPORTED_MODULE_1__;
+var dataArray = _projects_json__WEBPACK_IMPORTED_MODULE_3__;
 /**
  * Calls a mock API which finds a project by SLUG from the list above.
  *
@@ -13334,15 +13317,62 @@ function findData(slug) {
 
   return selected;
 }
+/* 
+    This method accepts a slug that corresponds to one of the projects in ./projects.json
+    Then it uses the markdownUrlPath of the entry which should be like "/name-of-repo/name-of-branch"
+    and then it returns a promise with the raw README from my github account.
+*/
+
+function getREADMEfromMyGithub(_x) {
+  return _getREADMEfromMyGithub.apply(this, arguments);
+}
 /** Calls a mock API which returns the above array to simulate "get all". */
 
-function findAll() {
-  // Throw an error, just for example.
-  if (!_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(dataArray)) {
-    throw new Error('Cannot find projects');
-  }
+/* export function findAll() {
+    // Throw an error, just for example.
+    if (!Array.isArray(dataArray)) {
+        throw new Error('Cannot find projects')
+    }
 
-  return dataArray;
+    return dataArray
+} */
+
+function _getREADMEfromMyGithub() {
+  _getREADMEfromMyGithub = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  /*#__PURE__*/
+  _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(slug) {
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            return _context.abrupt("return", new _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_1___default.a(function (resolve, reject) {
+              var selected = dataArray.find(function (data) {
+                return data.slug === slug;
+              });
+
+              if (!selected) {
+                reject(new Error("No project matches the slug"));
+              } else {
+                fetch("https://raw.githubusercontent.com/stefanosAgelastos".concat(selected.markdownUrlPath, "/README.md"), {
+                  headers: {
+                    'Accept': 'text/plain; charset=utf-8'
+                  }
+                }).then(function (value) {
+                  return value.text();
+                }).then(function (value) {
+                  return resolve(value);
+                });
+              }
+            }));
+
+          case 1:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _getREADMEfromMyGithub.apply(this, arguments);
 }
 
 /***/ }),
@@ -13351,10 +13381,10 @@ function findAll() {
 /*!****************************!*\
   !*** ./util/projects.json ***!
   \****************************/
-/*! exports provided: 0, 1, 2, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400&q=80\",\"title\":\"Chat: Node.js, Socket.io, jQuery and many other amazing techonologies\",\"slug\":\"Node-Chat\",\"markdownUrl\":\"https://raw.githubusercontent.com/stefanosAgelastos/stefanosAgelastos.github.io/local-development/README.md\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Massage\",\"slug\":\"Massage\",\"markdownUrl\":\"https://raw.githubusercontent.com/stefanosAgelastos/stefanosAgelastos.github.io/local-development/README.md\",\"width\":\"20%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400&q=80\",\"title\":\"Hiking\",\"slug\":\"Hiking\",\"markdownUrl\":\"https://raw.githubusercontent.com/stefanosAgelastos/stefanosAgelastos.github.io/local-development/README.md\",\"width\":\"40%\"}]");
+module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js homepage\",\"slug\":\"next.js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"Static homepage with P5.js\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"Final project, AR app\",\"slug\":\"mern-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1531161339673-a943dd10e29f?auto=format&fit=crop&w=400&q=80\",\"title\":\"Chat webapp with Node.js\",\"slug\":\"chat-webapp-node.js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring API\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 
