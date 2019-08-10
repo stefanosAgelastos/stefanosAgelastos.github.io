@@ -13484,6 +13484,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["ma
   return Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__["createStyles"])({
     title: (_title = {
       backgroundSize: 'cover',
+      textShadow: "-1px -1px 0 #808080, 1px -1px 0 #808080, -1px 1px 0 #808080, 1px 1px 0 #808080",
       padding: theme.spacing(3)
     }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(_title, theme.breakpoints.up('md'), {
       padding: theme.spacing(6),
@@ -13524,7 +13525,7 @@ function ProjectMarkdown(props) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 57
+              lineNumber: 58
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -13534,7 +13535,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 63
             },
             __self: this
           })));
@@ -13548,7 +13549,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 68
+              lineNumber: 69
             },
             __self: this
           }));
@@ -13562,7 +13563,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 69
+              lineNumber: 70
             },
             __self: this
           }));
@@ -13577,7 +13578,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 70
+              lineNumber: 71
             },
             __self: this
           }));
@@ -13590,7 +13591,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 71
+              lineNumber: 72
             },
             __self: this
           }));
@@ -13621,7 +13622,7 @@ function ProjectMarkdown(props) {
             className: classes.listItem,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 90
+              lineNumber: 91
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -13629,7 +13630,7 @@ function ProjectMarkdown(props) {
           }, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 91
+              lineNumber: 92
             },
             __self: this
           })));
@@ -13641,14 +13642,14 @@ function ProjectMarkdown(props) {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(markdown_to_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
     options: options,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 104
     },
     __self: this
   }, projectMD));
@@ -13787,7 +13788,7 @@ module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects%2F%5Bpid%5D&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cprojects%5C%5Bpid%5D.tsx ***!
   \******************************************************************************************************************************************************************************************************************/
@@ -13810,5 +13811,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[pid].js.map

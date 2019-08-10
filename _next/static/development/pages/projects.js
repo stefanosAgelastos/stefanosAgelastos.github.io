@@ -22683,7 +22683,7 @@ module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cprojects.tsx ***!
   \******************************************************************************************************************************************************************************************/
@@ -22706,5 +22706,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
