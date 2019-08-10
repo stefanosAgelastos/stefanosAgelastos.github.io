@@ -3,37 +3,37 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import { capitalize } from '@material-ui/core/utils';
 import MuiTypography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme: Theme) => 
-createStyles({
-  markedH2: {
-    height: 4,
-    width: 73,
-    display: 'block',
-    margin: `${theme.spacing(1)}px auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  markedH3: {
-    height: 4,
-    width: 55,
-    display: 'block',
-    margin: `${theme.spacing(1)}px auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  markedH4: {
-    height: 4,
-    width: 55,
-    display: 'block',
-    margin: `${theme.spacing(1)}px auto 0`,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  markedH6: {
-    height: 2,
-    width: 28,
-    display: 'block',
-    marginTop: theme.spacing(0.5),
-    background: 'currentColor',
-  },
-}));
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    markedH2: {
+      height: 4,
+      width: 73,
+      display: 'block',
+      margin: `${theme.spacing(1)}px auto 0`,
+      backgroundColor: theme.palette.secondary.main,
+    },
+    markedH3: {
+      height: 4,
+      width: 55,
+      display: 'block',
+      margin: `${theme.spacing(1)}px auto 0`,
+      backgroundColor: theme.palette.secondary.main,
+    },
+    markedH4: {
+      height: 4,
+      width: 55,
+      display: 'block',
+      margin: `${theme.spacing(1)}px auto 0`,
+      backgroundColor: theme.palette.secondary.main,
+    },
+    markedH6: {
+      height: 2,
+      width: 28,
+      display: 'block',
+      marginTop: theme.spacing(0.5),
+      background: 'currentColor',
+    },
+  }));
 
 const variantMapping = {
   h1: 'h1',
@@ -48,18 +48,15 @@ const variantMapping = {
 type Props = {
   component?: React.ElementType<React.HTMLAttributes<HTMLElement>>,
   marked?: false | 'center' | 'left',
-  variant: 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h6',
+  variant: 'h2' | 'h3' | 'h4' | 'h6',
   color?: "inherit" | "initial" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error" | undefined,
   align?: "left" | "right" | "inherit" | "center" | "justify" | undefined,
   className?: string,
   children: React.ReactNode;
 };
 
-export default function ProjectGalleryTypography(props: Props) {
-  const classes: {[index:string]: string} = useStyles();
+export default function GalleryTypography(props: Props) {
+  const classes: { [index: string]: string } = useStyles();
   const { children, marked = false, variant, ...other } = props;
 
   return (

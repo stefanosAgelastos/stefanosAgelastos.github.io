@@ -7,15 +7,28 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         toolbar: {
             borderBottom: `1px solid ${theme.palette.divider}`,
+            [theme.breakpoints.down('sm')]: {
+                width: '100% !important',
+                height: 150,
+            },
         },
         toolbarTitle: {
             flex: 1,
+            [theme.breakpoints.down('sm')]: {
+                display: "block !important"
+            }
         },
         homeButton: {
-            visibility: (props: HeaderProps) => props.homeButtonVisible ? 'visible' : 'hidden'
+            visibility: (props: HeaderProps) => props.homeButtonVisible ? 'visible' : 'hidden',
+            [theme.breakpoints.down('sm')]: {
+                display: "block !important"
+            }
         },
         galleryButton: {
-            visibility: (props: HeaderProps) => props.galleryButtonVisible ? 'visible' : 'hidden'
+            visibility: (props: HeaderProps) => props.galleryButtonVisible ? 'visible' : 'hidden',
+            [theme.breakpoints.down('sm')]: {
+                display: "block !important"
+            }
         }
     }),
 );

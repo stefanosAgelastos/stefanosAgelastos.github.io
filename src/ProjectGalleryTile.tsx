@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import ProjectGalleryTypography from './ProjectGalleryTypography';
+import GalleryTypography from './MyGalleryTypography';
 import { Project } from '../interfaces'
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             height: '40vh',
             [theme.breakpoints.down('sm')]: {
                 width: '100% !important',
-                height: 100,
+                height: 150,
             },
             '&:hover': {
                 zIndex: 1,
@@ -108,7 +108,7 @@ export default function ProjectGalleryTile(props: Props) {
                     />
                     <div className={classes.tileBackdrop} />
                     <div className={classes.tileButton}>
-                        <ProjectGalleryTypography
+                        <GalleryTypography
                             component="h3"
                             variant="h6"
                             color="inherit"
@@ -116,7 +116,7 @@ export default function ProjectGalleryTile(props: Props) {
                         >
                             {tile.title}
                             <div className={classes.tileMarked} />
-                        </ProjectGalleryTypography>
+                        </GalleryTypography>
                     </div>
                 </ButtonBase>
             </Link>
