@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
-import Header from '../src/Header';
+import Header from '../src/MyNavBar';
 import { Container } from '@material-ui/core';
 import Router from 'next/router';
 

@@ -49,7 +49,7 @@ export default function Header(props: HeaderProps) {
     </IconButton> */}
             <Link href="/projects" passHref>
                 <Button variant="outlined" size="small" className={classes.galleryButton}>
-                    Browse Projects  </Button>
+                    Browse my Projects  </Button>
             </Link>
         </Toolbar>
     );
