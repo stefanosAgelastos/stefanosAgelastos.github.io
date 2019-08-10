@@ -47165,7 +47165,7 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!*******************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cindex.tsx ***!
   \*******************************************************************************************************************************************************************************/
@@ -47188,5 +47188,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
