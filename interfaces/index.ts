@@ -8,7 +8,7 @@ export type Project = {
     imageUrl: string
     title: string,
     slug: string,
-    markdownUrl: string,
+    markdownUrlPath: string,
     width: string | number | undefined
 }
   

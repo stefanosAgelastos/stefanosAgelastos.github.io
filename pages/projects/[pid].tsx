@@ -1,19 +1,19 @@
 import React from 'react';
 import { NextPage } from 'next';
 import ProjectMarkdown from '../../src/ProjectMarkdown';
-import { Project } from '../../interfaces';
-import { findData } from '../../util/projectData';
-
+import { getREADMEfromMyGithub } from '../../util/projectData';
 
 type Props = {
-  item: Project
+  markdown: string
 }
 
-const ProjectPage: NextPage<Props> = ({ item }) => (<ProjectMarkdown projectMD={item.markdownUrl} />)
+const ProjectPage: NextPage<Props> = (props) => {
+  return (<ProjectMarkdown projectMD={props.markdown} />)
+}
 
-ProjectPage.getInitialProps = async  ({ query }) => {
-  const item: Project = findData(query.pid as string);
-  return { item }
+ProjectPage.getInitialProps = async ({ query }) => {
+  const markdown = await getREADMEfromMyGithub(query.pid as string);
+  return {markdown};
 }
 
 export default ProjectPage;
