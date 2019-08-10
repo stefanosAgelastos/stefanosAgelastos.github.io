@@ -2,7 +2,7 @@
     {
         "imageUrl": "https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80",
         "title": "Next.js homepage",
-        "slug": "next.js-homepage",
+        "slug": "next-js-homepage",
         "markdownUrlPath": "/stefanosAgelastos.github.io/local-development",
         "width": "60%"
     },
@@ -23,7 +23,7 @@
     {
         "imageUrl": "https://images.unsplash.com/photo-1531161339673-a943dd10e29f?auto=format&fit=crop&w=400&q=80",
         "title": "Chat webapp with Node.js",
-        "slug": "chat-webapp-node.js",
+        "slug": "chat-webapp-node-js",
         "markdownUrlPath": "/chatNodejs/master",
         "width": "30%"
     },
