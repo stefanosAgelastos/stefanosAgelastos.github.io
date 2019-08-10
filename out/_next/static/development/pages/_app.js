@@ -56654,8 +56654,7 @@ function (_App) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log("app mounted"); // Set state of the Header component
-
+      // Set state of the Header component
       next_router__WEBPACK_IMPORTED_MODULE_16___default.a.pathname == "/" ? this.setState({
         HeaderButtons: HeaderState.home
       }) : this.setState({
@@ -56663,7 +56662,6 @@ function (_App) {
       }); // Change the state of the Header depending on URL
 
       next_router__WEBPACK_IMPORTED_MODULE_16___default.a.events.on('routeChangeStart', function (url) {
-        console.log("Loading: ".concat(url));
         url == "/" ? _this2.setState({
           HeaderButtons: HeaderState.home
         }) : _this2.setState({
@@ -56680,7 +56678,6 @@ function (_App) {
   }, {
     key: "render",
     value: function render() {
-      console.log("app render");
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
@@ -56689,51 +56686,51 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_15__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 46
         },
         __self: this
       }, "Stefanos Agelastos")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_styles__WEBPACK_IMPORTED_MODULE_11__["ThemeProvider"], {
         theme: _src_theme__WEBPACK_IMPORTED_MODULE_13__["default"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 50
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_15__["Container"], {
         maxWidth: "xl",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_src_Header__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, HeaderButtons, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 52
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 53
         },
         __self: this
       })))));
