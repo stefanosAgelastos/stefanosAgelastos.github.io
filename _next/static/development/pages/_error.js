@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\_error.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_error.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
 /*!*******************************************************************!*\
@@ -3302,20 +3302,17 @@ var head_manager_context_1 = __webpack_require__(/*! ./head-manager-context */ "
 var amp_1 = __webpack_require__(/*! ./amp */ "./node_modules/next-server/dist/lib/amp.js");
 
 function defaultHead() {
-  var className = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'next-head';
-  var inAmpMode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var inAmpMode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   var head = [react_1["default"].createElement("meta", {
     key: "charSet",
-    charSet: "utf-8",
-    className: className
+    charSet: "utf-8"
   })];
 
   if (!inAmpMode) {
     head.push(react_1["default"].createElement("meta", {
       key: "viewport",
       name: "viewport",
-      content: "width=device-width,minimum-scale=1,initial-scale=1",
-      className: className
+      content: "width=device-width,minimum-scale=1,initial-scale=1"
     }));
   }
 
@@ -3403,17 +3400,10 @@ function reduceComponents(headElements, props) {
   return headElements.reduce(function (list, headElement) {
     var headElementChildren = react_1["default"].Children.toArray(headElement.props.children);
     return list.concat(headElementChildren);
-  }, []).reduce(onlyReactElement, []).reverse().concat(defaultHead('', props.inAmpMode)).filter(unique()).reverse().map(function (c, i) {
-    var className = (c.props && c.props.className ? c.props.className + ' ' : '') + 'next-head';
-
-    if (c.type === 'title' && !c.props.className) {
-      className = undefined;
-    }
-
+  }, []).reduce(onlyReactElement, []).reverse().concat(defaultHead(props.inAmpMode)).filter(unique()).reverse().map(function (c, i) {
     var key = c.key || i;
     return react_1["default"].cloneElement(c, {
-      key: key,
-      className: className
+      key: key
     });
   });
 }
@@ -3714,23 +3704,23 @@ var styles = {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react/index.js");
 
 /***/ }),
 
-/***/ "dll-reference dll_7aff549c98b978433226":
+/***/ "dll-reference dll_01f9a3fa864a7b7414d8":
 /*!*******************************************!*\
-  !*** external "dll_7aff549c98b978433226" ***!
+  !*** external "dll_01f9a3fa864a7b7414d8" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7aff549c98b978433226;
+module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
