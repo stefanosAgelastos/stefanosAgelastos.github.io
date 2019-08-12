@@ -48,7 +48,7 @@ const variantMapping = {
 type Props = {
   component?: React.ElementType<React.HTMLAttributes<HTMLElement>>,
     marked?: false | 'center' | 'left',
-    variant: 'h2' | 'h3' | 'h4' | 'h6' | "body2",
+    variant: 'h2' | 'h3' | 'h1' | 'h4' | 'h6' | "subtitle1",
     color?: "inherit" | "initial" | "primary" | "secondary" | "textPrimary" | "textSecondary" | "error" | undefined,
     align?: "left" | "right" | "inherit" | "center" | "justify" | undefined,
     className?: string,

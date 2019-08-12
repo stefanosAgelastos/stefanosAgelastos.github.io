@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: "40vh",
       [theme.breakpoints.down("sm")]: {
         width: "100% !important",
-        height: 200
+        height: 400
       },
       "&:hover": {
         zIndex: 1
@@ -57,24 +57,26 @@ const useStyles = makeStyles((theme: Theme) =>
       bottom: 0,
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
+      alignItems: "flex-start",
       justifyContent: "center",
-      color: theme.palette.common.white
+      padding: theme.spacing(2),
+      color: theme.palette.primary.contrastText
     },
     tileTitle: {
       position: "relative",
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`
     },
     tileSubtitle: {
-      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`
+      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
+      width: "85%"
     },
     tileMarked: {
       height: 3,
-      width: 18,
+      width: "65%",
       background: theme.palette.common.white,
       position: "absolute",
       bottom: -2,
-      left: "calc(50% - 9px)",
+      left: "10",
       transition: theme.transitions.create("opacity")
     }
   })
@@ -115,8 +117,9 @@ export default function ProjectGalleryTile(props: Props) {
           <div className={classes.tileButton}>
             <GalleryTypography
               component="h3"
-              variant="h6"
+              variant="h2"
               color="inherit"
+              align={"left"}
               className={classes.tileTitle}
             >
               {tile.title}
@@ -124,7 +127,7 @@ export default function ProjectGalleryTile(props: Props) {
             </GalleryTypography>
             <GalleryTypography
               component="p"
-              variant="body2"
+              variant="subtitle1"
               className={classes.tileSubtitle}
               color="inherit"
             >

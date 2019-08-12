@@ -1,7 +1,7 @@
 [
     {
         "imageUrl": "https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80",
-        "title": "Next.js & markdown",
+        "title": "Next.js & Markdown",
         "subtitle": "Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..",
         "slug": "next-js-homepage",
         "markdownUrlPath": "/stefanosAgelastos.github.io/local-development",
@@ -17,7 +17,7 @@
     },
     {
         "imageUrl": "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80",
-        "title": "AR prototype system",
+        "title": "AR Prototype System",
         "subtitle": "An AR prototype app, for a Copenhagen bsns. A cool project that my team and I enjoyed to develop!",
         "slug": "ar-admin-page",
         "markdownUrlPath": "/gps-tourist-app/master",
@@ -25,7 +25,7 @@
     },
     {
         "imageUrl": "https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=400&q=80",
-        "title": "Socket.io, Node.js, JWT auth",
+        "title": "Sockets, Node & JWT",
         "subtitle": "Although not a SoMe revolution, this custom webapp chat still makes me proud :D",
         "slug": "chat-webapp-node-js",
         "markdownUrlPath": "/chatNodejs/master",
@@ -33,7 +33,7 @@
     },
     {
         "imageUrl": "https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80",
-        "title": "Angular 5 client app",
+        "title": "Angular 5 Client App",
         "subtitle": "This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.",
         "slug": "angular-crud",
         "markdownUrlPath": "/cvEditorFront/master",

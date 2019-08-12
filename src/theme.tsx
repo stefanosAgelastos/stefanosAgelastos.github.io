@@ -17,6 +17,9 @@ const theme = createMuiTheme({
       default: '#fff',
     },
   },
+  typography: {
+    fontFamily: "Raleway"
+  },
   props: {
     MuiTypography: {
       variantMapping: {
