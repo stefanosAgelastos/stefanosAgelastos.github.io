@@ -24,7 +24,7 @@
         "width": "70%"
     },
     {
-        "imageUrl": "https://images.unsplash.com/photo-1531161339673-a943dd10e29f?auto=format&fit=crop&w=400&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=400&q=80",
         "title": "Socket.io, Node.js, JWT auth",
         "subtitle": "Although not a SoMe revolution, this custom webapp chat still makes me proud :D",
         "slug": "chat-webapp-node-js",

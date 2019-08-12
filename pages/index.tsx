@@ -37,17 +37,20 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const featuredPosts = [
   {
-    title: "My developer blog",
-    date: "Nov 12",
+    title: "Personal stuff",
+    image:
+      "https://images.unsplash.com/photo-1536009282123-37ba63756c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
     description:
-      "In my projects you can see the results of my work with different technologies. I enjoy writing about it on my blog",
-    link: "dev.to/stefanosAgelastos"
+      "Get to know what I like to remember, and maybe give me some likes!",
+    linkText: "My insta",
+    link: "https://www.instagram.com/volatilemercury/"
   },
   {
     title: "Professional info",
-    date: "Nov 11",
+    image: "https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
     description: "Currently I am searching for an inspiring job opportunity.",
-    link: "linkedin.com/stefanosAgelastos"
+    linkText: "My LinkedIn",
+    link: "https://www.linkedin.com/in/stefanosagelastos/"
   }
 ];
 
@@ -55,12 +58,12 @@ const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <MyPaper backgroundimageurl={"https://source.unsplash.com/user/erondu"}>
+      <MyPaper backgroundimageurl={"https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"}>
         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
           Hey! I am Stefanos and this is my developer portfolio.
         </Typography>
         <Typography variant="h5" color="inherit" paragraph>
-          Here you can learn more about me
+          Have a look at my projects
         </Typography>
         <Link href="/projects" passHref>
           <Button
@@ -68,35 +71,34 @@ const IndexPage: NextPage = () => {
             size="small"
             className={classes.galleryButton}
           >
-            Browse my Projects{" "}
+            Project Gallery{" "}
           </Button>
         </Link>
       </MyPaper>
       <Grid container spacing={4}>
         {featuredPosts.map(post => (
           <Grid item key={post.title} xs={12} md={6}>
-            <CardActionArea component="a" href="#">
+            <CardActionArea component="a" href={post.link}>
               <Card className={classes.card}>
                 <div className={classes.cardDetails}>
                   <CardContent>
                     <Typography component="h2" variant="h5">
                       {post.title}
                     </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                      {post.date}
-                    </Typography>
+                    {/*                     <Typography variant="subtitle1" color="textSecondary">
+                    </Typography> */}
                     <Typography variant="subtitle1" paragraph>
                       {post.description}
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
-                      {post.link}
+                      {post.linkText}
                     </Typography>
                   </CardContent>
                 </div>
                 <Hidden xsDown>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image={post.image}
                     title="Image title"
                   />
                 </Hidden>
