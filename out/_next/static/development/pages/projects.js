@@ -22403,7 +22403,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       height: "40vh"
     }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, theme.breakpoints.down("sm"), {
       width: "100% !important",
-      height: 200
+      height: 400
     }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover", {
       zIndex: 1
     }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover $tileBackdrop", {
@@ -22440,24 +22440,26 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       bottom: 0,
       display: "flex",
       flexDirection: "column",
-      alignItems: "center",
+      alignItems: "flex-start",
       justifyContent: "center",
-      color: theme.palette.common.white
+      padding: theme.spacing(2),
+      color: theme.palette.primary.contrastText
     },
     tileTitle: {
       position: "relative",
       padding: "".concat(theme.spacing(2), "px ").concat(theme.spacing(4), "px 14px")
     },
     tileSubtitle: {
-      padding: "".concat(theme.spacing(2), "px ").concat(theme.spacing(4), "px 14px")
+      padding: "".concat(theme.spacing(2), "px ").concat(theme.spacing(4), "px 14px"),
+      width: "85%"
     },
     tileMarked: {
       height: 3,
-      width: 18,
+      width: "65%",
       background: theme.palette.common.white,
       position: "absolute",
       bottom: -2,
-      left: "calc(50% - 9px)",
+      left: "10",
       transition: theme.transitions.create("opacity")
     }
   });
@@ -22477,7 +22479,7 @@ function ProjectGalleryTile(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -22486,7 +22488,7 @@ function ProjectGalleryTile(props) {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core_ButtonBase__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -22496,7 +22498,7 @@ function ProjectGalleryTile(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 104
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -22506,48 +22508,49 @@ function ProjectGalleryTile(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 110
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: classes.tileBackdrop,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 116
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: classes.tileButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 117
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
     component: "h3",
-    variant: "h6",
+    variant: "h2",
     color: "inherit",
+    align: "left",
     className: classes.tileTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 118
     },
     __self: this
   }, tile.title, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: classes.tileMarked,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 126
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
     component: "p",
-    variant: "body2",
+    variant: "subtitle1",
     className: classes.tileSubtitle,
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 128
     },
     __self: this
   }, tile.subtitle)))));
@@ -22682,7 +22685,7 @@ function getProjectImageUrl(slug) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js & markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"AR prototype system\",\"subtitle\":\"An AR prototype app, for a Copenhagen bsns. A cool project that my team and I enjoyed to develop!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=400&q=80\",\"title\":\"Socket.io, Node.js, JWT auth\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular 5 client app\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js & Markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"AR Prototype System\",\"subtitle\":\"An AR prototype app, for a Copenhagen bsns. A cool project that my team and I enjoyed to develop!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=400&q=80\",\"title\":\"Sockets, Node & JWT\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular 5 Client App\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 

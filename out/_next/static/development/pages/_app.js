@@ -56639,6 +56639,9 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["create
       "default": '#fff'
     }
   },
+  typography: {
+    fontFamily: "Raleway"
+  },
   props: {
     MuiTypography: {
       variantMapping: {
