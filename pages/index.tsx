@@ -1,56 +1,77 @@
-import React from 'react';
-import { NextPage } from 'next'
-import { makeStyles } from '@material-ui/styles';
-import { Theme, createStyles, Grid, Typography, Link, CardActionArea, Card, CardContent, Hidden, CardMedia } from '@material-ui/core';
-import MyPaper from '../src/MyPaper';
+import React from "react";
+import { NextPage } from "next";
+import Link from "next/link";
+import { makeStyles } from "@material-ui/styles";
+import {
+  Theme,
+  createStyles,
+  Grid,
+  Typography,
+  CardActionArea,
+  Button,
+  Card,
+  CardContent,
+  Hidden,
+  CardMedia
+} from "@material-ui/core";
+import MyPaper from "../src/MyPaper";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     mainGrid: {
-      marginTop: theme.spacing(3),
+      marginTop: theme.spacing(3)
     },
     card: {
-      display: 'flex',
+      display: "flex"
     },
     cardDetails: {
-      flex: 1,
+      flex: 1
     },
     cardMedia: {
-      width: 160,
+      width: 160
+    },
+    galleryButton: {
+      color: theme.palette.primary.contrastText
     }
   })
 );
 
 const featuredPosts = [
   {
-    title: 'Featured post',
-    date: 'Nov 12',
+    title: "My developer blog",
+    date: "Nov 12",
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      "In my projects you can see the results of my work with different technologies. I enjoy writing about it on my blog",
+    link: "dev.to/stefanosAgelastos"
   },
   {
-    title: 'Post title',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  },
+    title: "Professional info",
+    date: "Nov 11",
+    description: "Currently I am searching for an inspiring job opportunity.",
+    link: "linkedin.com/stefanosAgelastos"
+  }
 ];
 
 const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      < MyPaper backgroundimageurl={"https://source.unsplash.com/user/erondu"} >
+      <MyPaper backgroundimageurl={"https://source.unsplash.com/user/erondu"}>
         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-          Title of a longer featured blog post
-      </Typography>
+          Hey! I am Stefanos and this is my developer portfolio.
+        </Typography>
         <Typography variant="h5" color="inherit" paragraph>
-          Multiple lines of text that form the lede, informing new readers quickly and
-          efficiently about what&apos;s most interesting in this post&apos;s contents.
-      </Typography>
-        <Link variant="subtitle1" href="#">
-          Continue reading…
-      </Link>
-      </MyPaper >
+          Here you can learn more about me
+        </Typography>
+        <Link href="/projects" passHref>
+          <Button
+            variant="outlined"
+            size="small"
+            className={classes.galleryButton}
+          >
+            Browse my Projects{" "}
+          </Button>
+        </Link>
+      </MyPaper>
       <Grid container spacing={4}>
         {featuredPosts.map(post => (
           <Grid item key={post.title} xs={12} md={6}>
@@ -68,7 +89,7 @@ const IndexPage: NextPage = () => {
                       {post.description}
                     </Typography>
                     <Typography variant="subtitle1" color="primary">
-                      Continue reading...
+                      {post.link}
                     </Typography>
                   </CardContent>
                 </div>
@@ -85,7 +106,7 @@ const IndexPage: NextPage = () => {
         ))}
       </Grid>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
