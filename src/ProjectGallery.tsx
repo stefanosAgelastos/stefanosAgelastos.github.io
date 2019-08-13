@@ -7,7 +7,7 @@ import ProjectGalleryTile from './ProjectGalleryTile';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     tiles: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(4),
       display: 'flex',
       flexWrap: 'wrap',
     }

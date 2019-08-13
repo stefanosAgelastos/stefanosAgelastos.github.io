@@ -9,7 +9,7 @@ createStyles({
         position: 'relative',
         backgroundColor: theme.palette.grey[800],
         color: theme.palette.common.white,
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
         backgroundImage: (props: MyPaperProps) => `url(${props.backgroundimageurl})`,
         backgroundSize: 'cover',

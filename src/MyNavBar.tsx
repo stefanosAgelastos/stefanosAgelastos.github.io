@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       borderBottom: `1px solid ${theme.palette.divider}`,
       [theme.breakpoints.down("sm")]: {
+        marginTop: theme.spacing(4),
         flexDirection: "column"
       }
     },

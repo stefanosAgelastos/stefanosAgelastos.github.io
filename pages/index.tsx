@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(3)
     },
     titleText: {
-      textShadow: '#000000 -1px 4px 10px'
+      textShadow: "#000000 -1px 4px 10px"
     },
     card: {
       display: "flex"
@@ -47,14 +47,14 @@ const featuredPosts = [
     title: "Personal life",
     image:
       "https://images.unsplash.com/photo-1536009282123-37ba63756c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
-    description:
-      "Get to know what I like to remember, and maybe give me some likes!",
+    description: "Get to know what I like to post about.",
     linkText: "My Instagram",
     link: "https://www.instagram.com/volatilemercury/"
   },
   {
     title: "Professional info",
-    image: "https://images.unsplash.com/photo-1527259216948-b0c66d6fc31f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+    image:
+      "https://images.unsplash.com/photo-1527259216948-b0c66d6fc31f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
     description: "Currently I am searching for an inspiring job opportunity.",
     linkText: "My LinkedIn",
     link: "https://www.linkedin.com/in/stefanosagelastos/"
@@ -65,11 +65,26 @@ const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <MyPaper backgroundimageurl={"https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"}>
-        <Typography className={classes.titleText} component="h1" variant="h3" color="inherit" gutterBottom>
+      <MyPaper
+        backgroundimageurl={
+          "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
+        }
+      >
+        <Typography
+          className={classes.titleText}
+          component="h1"
+          variant="h3"
+          color="inherit"
+          gutterBottom
+        >
           Hey! I&apos;m Stefanos and this is my developer portfolio.
         </Typography>
-        <Typography className={classes.titleText} variant="h5" color="inherit" paragraph>
+        <Typography
+          className={classes.titleText}
+          variant="h5"
+          color="inherit"
+          paragraph
+        >
           Have a look at my projects
         </Typography>
         <Link href="/projects" passHref>
