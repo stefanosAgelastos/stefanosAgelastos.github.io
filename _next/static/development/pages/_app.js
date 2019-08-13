@@ -56554,13 +56554,17 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       display: "flex",
       borderBottom: "1px solid ".concat(theme.palette.divider)
     }, theme.breakpoints.down("sm"), {
-      marginTop: theme.spacing(4),
       flexDirection: "column"
     }),
+    spacer: {
+      flex: 1,
+      visibility: "hidden"
+    },
     toolbarTitle: {
       flex: 1
     },
     homeButton: {
+      flex: 1,
       visibility: function visibility(props) {
         return props.homeButtonVisible ? "visible" : "hidden";
       }
@@ -56573,10 +56577,18 @@ function Header(props) {
     className: classes.toolbar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 38
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    href: "#",
+    className: classes.spacer,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "spacer"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
     component: "h2",
     variant: "h5",
     color: "inherit",
@@ -56585,14 +56597,14 @@ function Header(props) {
     className: classes.toolbarTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 40
     },
     __self: this
   }, "STEFWORKS"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
@@ -56600,7 +56612,7 @@ function Header(props) {
     className: classes.homeButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 54
     },
     __self: this
   }, "Back to home")));
