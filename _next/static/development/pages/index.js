@@ -55611,7 +55611,7 @@ function Mypaper(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!*******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Findex.tsx ***!
   \*******************************************************************************************************************************************************/
@@ -55634,5 +55634,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
