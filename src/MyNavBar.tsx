@@ -9,14 +9,18 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       borderBottom: `1px solid ${theme.palette.divider}`,
       [theme.breakpoints.down("sm")]: {
-        marginTop: theme.spacing(4),
         flexDirection: "column"
       }
+    },
+    spacer: {
+      flex: 1,
+      visibility: "hidden"
     },
     toolbarTitle: {
       flex: 1
     },
     homeButton: {
+      flex: 1,
       visibility: (props: HeaderProps) =>
         props.homeButtonVisible ? "visible" : "hidden"
     }
@@ -32,6 +36,7 @@ export default function Header(props: HeaderProps) {
   const classes = useStyles(props);
   return (
     <Toolbar className={classes.toolbar}>
+      <Button href="#" className={classes.spacer}>{"spacer"}</Button>
       <Typography
         component="h2"
         variant="h5"
