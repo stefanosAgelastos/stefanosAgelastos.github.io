@@ -22329,7 +22329,7 @@ var _jsxFileName = "/Users/stefanos/Desktop/code/stefanosAgelastos.github.io/src
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
   return Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["createStyles"])({
     tiles: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(4),
       display: 'flex',
       flexWrap: 'wrap'
     }
