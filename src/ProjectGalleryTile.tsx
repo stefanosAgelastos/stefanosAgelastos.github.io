@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
     tileWrapper: {
       position: "relative",
       display: "block",
-      padding: 0,
+      padding: theme.spacing(0),
       borderRadius: 0,
       height: "40vh",
       [theme.breakpoints.down("sm")]: {
@@ -60,14 +60,23 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: "flex-start",
       justifyContent: "center",
       padding: theme.spacing(2),
+      [theme.breakpoints.down("md")]: {
+        padding: theme.spacing(1)
+      },
       color: theme.palette.primary.contrastText
     },
     tileTitle: {
       position: "relative",
-      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`
+      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
+      [theme.breakpoints.down("md")]: {
+        padding: theme.spacing(1)
+      },
     },
     tileSubtitle: {
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
+      [theme.breakpoints.down("md")]: {
+        padding: theme.spacing(1)
+      },
       width: "85%"
     },
     tileMarked: {
