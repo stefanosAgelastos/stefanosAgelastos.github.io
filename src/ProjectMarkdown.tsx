@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     root: {
       marginTop: theme.spacing(8),
-
     },
     image: {
       width: "45%",

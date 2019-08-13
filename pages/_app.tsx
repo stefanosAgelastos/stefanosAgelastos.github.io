@@ -41,19 +41,18 @@ class MyApp extends App<IProps, IState> {
     const { Component, pageProps } = this.props;
     const { HeaderButtons } = this.state as IState;
     return (
-      <Container>
+      <React.Fragment>
         <Head>
           <title>Stefanos Agelastos</title>
         </Head>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <ThemeProvider theme={theme}>
           <CssBaseline />
           <Container maxWidth="xl">
             <Header {...HeaderButtons} />
             <Component {...pageProps} />
           </Container>
         </ThemeProvider>
-      </Container>
+      </React.Fragment>
     );
   }
 }

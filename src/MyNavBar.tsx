@@ -13,8 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     toolbarTitle: {
-      marginLeft: "auto",
-      marginRight: "auto",
       flex: 1
     },
     homeButton: {
