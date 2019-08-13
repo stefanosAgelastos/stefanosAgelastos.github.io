@@ -55330,6 +55330,9 @@ var useStyles = Object(_material_ui_styles__WEBPACK_IMPORTED_MODULE_2__["makeSty
     mainGrid: {
       marginTop: theme.spacing(3)
     },
+    titleText: {
+      textShadow: '#000000 -1px 4px 10px'
+    },
     card: {
       display: "flex"
     },
@@ -55343,7 +55346,8 @@ var useStyles = Object(_material_ui_styles__WEBPACK_IMPORTED_MODULE_2__["makeSty
       width: 160
     },
     galleryButton: {
-      color: theme.palette.primary.contrastText
+      color: theme.palette.primary.contrastText,
+      boxShadow: theme.shadows[3]
     }
   });
 });
@@ -55366,33 +55370,35 @@ var IndexPage = function IndexPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_MyPaper__WEBPACK_IMPORTED_MODULE_4__["default"], {
     backgroundimageurl: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+    className: classes.titleText,
     component: "h1",
     variant: "h3",
     color: "inherit",
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: this
   }, "Hey! I'm Stefanos and this is my developer portfolio."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
+    className: classes.titleText,
     variant: "h5",
     color: "inherit",
     paragraph: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 72
     },
     __self: this
   }, "Have a look at my projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -55400,16 +55406,16 @@ var IndexPage = function IndexPage() {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     variant: "outlined",
-    size: "small",
+    size: "medium",
     className: classes.galleryButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: this
   }, "Project Gallery", " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
@@ -55418,7 +55424,7 @@ var IndexPage = function IndexPage() {
     spacing: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 85
     },
     __self: this
   }, featuredPosts.map(function (post) {
@@ -55429,7 +55435,7 @@ var IndexPage = function IndexPage() {
       md: 6,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 87
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardActionArea"], {
@@ -55437,27 +55443,27 @@ var IndexPage = function IndexPage() {
       href: post.link,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 88
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Card"], {
       className: classes.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 89
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.cardDetails,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86
+        lineNumber: 90
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardContent"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 91
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55465,7 +55471,7 @@ var IndexPage = function IndexPage() {
       variant: "h5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 92
       },
       __self: this
     }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55473,7 +55479,7 @@ var IndexPage = function IndexPage() {
       paragraph: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 97
       },
       __self: this
     }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55481,14 +55487,14 @@ var IndexPage = function IndexPage() {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 100
       },
       __self: this
     }, post.linkText))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Hidden"], {
       xsDown: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 105
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardMedia"], {
@@ -55497,7 +55503,7 @@ var IndexPage = function IndexPage() {
       title: "Image title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 106
       },
       __self: this
     })))));
