@@ -55331,7 +55331,7 @@ var useStyles = Object(_material_ui_styles__WEBPACK_IMPORTED_MODULE_2__["makeSty
       marginTop: theme.spacing(3)
     },
     titleText: {
-      textShadow: '#000000 -1px 4px 10px'
+      textShadow: "#000000 -1px 4px 10px"
     },
     card: {
       display: "flex"
@@ -55354,7 +55354,7 @@ var useStyles = Object(_material_ui_styles__WEBPACK_IMPORTED_MODULE_2__["makeSty
 var featuredPosts = [{
   title: "Personal life",
   image: "https://images.unsplash.com/photo-1536009282123-37ba63756c6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80",
-  description: "Get to know what I like to remember, and maybe give me some likes!",
+  description: "Get to know what I like to post about.",
   linkText: "My Instagram",
   link: "https://www.instagram.com/volatilemercury/"
 }, {
@@ -55388,7 +55388,7 @@ var IndexPage = function IndexPage() {
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     },
     __self: this
   }, "Hey! I'm Stefanos and this is my developer portfolio."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55398,7 +55398,7 @@ var IndexPage = function IndexPage() {
     paragraph: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 82
     },
     __self: this
   }, "Have a look at my projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -55406,7 +55406,7 @@ var IndexPage = function IndexPage() {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -55415,7 +55415,7 @@ var IndexPage = function IndexPage() {
     className: classes.galleryButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 91
     },
     __self: this
   }, "Project Gallery", " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Grid"], {
@@ -55424,7 +55424,7 @@ var IndexPage = function IndexPage() {
     spacing: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 100
     },
     __self: this
   }, featuredPosts.map(function (post) {
@@ -55435,7 +55435,7 @@ var IndexPage = function IndexPage() {
       md: 6,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 102
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardActionArea"], {
@@ -55443,27 +55443,27 @@ var IndexPage = function IndexPage() {
       href: post.link,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 103
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Card"], {
       className: classes.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 104
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.cardDetails,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 105
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardContent"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 106
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55471,7 +55471,7 @@ var IndexPage = function IndexPage() {
       variant: "h5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 107
       },
       __self: this
     }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55479,7 +55479,7 @@ var IndexPage = function IndexPage() {
       paragraph: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 112
       },
       __self: this
     }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Typography"], {
@@ -55487,14 +55487,14 @@ var IndexPage = function IndexPage() {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 115
       },
       __self: this
     }, post.linkText))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["Hidden"], {
       xsDown: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 120
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_3__["CardMedia"], {
@@ -55503,7 +55503,7 @@ var IndexPage = function IndexPage() {
       title: "Image title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 121
       },
       __self: this
     })))));
@@ -55540,7 +55540,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       position: 'relative',
       backgroundColor: theme.palette.grey[800],
       color: theme.palette.common.white,
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(4),
       marginBottom: theme.spacing(4),
       backgroundImage: function backgroundImage(props) {
         return "url(".concat(props.backgroundimageurl, ")");
