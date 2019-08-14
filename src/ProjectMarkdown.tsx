@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(1),
       display: "inline"
     },
-    code: {
+/*     code: {
       backgroundColor: 'rgba(0,0,0,.1)',
       padding: theme.spacing(1),
-    }
+    } */
   }));
 
 
@@ -49,7 +49,7 @@ export default function ProjectMarkdown(props: Props) {
       h4: { component: props => <Typography gutterBottom variant="caption" paragraph {...props} /> },
       p: { component: props => <Typography paragraph {...props} /> },
       a: { component: Link },
-      code: { component: MyPaper, props: { elevation: 0, className: classes.code } },
+      /* code: { component: MyPaper, props: { elevation: 0, className: classes.code } }, */
       img: { component: CardMedia, props: { className: classes.image, component: 'img' } },
       li: { component: ({ ...props }) => { return (<li className={classes.listItem}> <Typography component="span" {...props} /> </li>) }},
     },

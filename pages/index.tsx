@@ -2,6 +2,7 @@ import React from "react";
 import { NextPage } from "next";
 import Link from "next/link";
 import { makeStyles } from "@material-ui/styles";
+import TouchAppIcon from "@material-ui/icons/TouchApp"
 import {
   Theme,
   createStyles,
@@ -93,7 +94,8 @@ const IndexPage: NextPage = () => {
             size="medium"
             className={classes.galleryButton}
           >
-            Project Gallery{" "}
+            Project Gallery
+            <TouchAppIcon />
           </Button>
         </Link>
       </MyPaper>
