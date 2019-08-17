@@ -2,11 +2,13 @@ import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Link from "next/link";
 import { Typography, Toolbar, Button } from "@material-ui/core";
+import IconTabs from './MyIconTabs';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     toolbar: {
       display: "flex",
+      flexDirection: "column",
       borderBottom: `1px solid ${theme.palette.divider}`,
       [theme.breakpoints.down("sm")]: {
         flexDirection: "column"
@@ -55,6 +57,7 @@ export default function Header(props: HeaderProps) {
           Back to home
         </Button>
       </Link>
+      <IconTabs/>
     </Toolbar>
   );
 }

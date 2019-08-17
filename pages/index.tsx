@@ -15,7 +15,8 @@ import {
   Hidden,
   CardMedia
 } from "@material-ui/core";
-import MyPaper from "../src/MyPaper";
+import MyPaper from "../src/MyHeroPaper";
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     mainGrid: {

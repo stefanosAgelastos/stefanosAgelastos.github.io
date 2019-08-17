@@ -4,7 +4,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import CardMedia from '@material-ui/core/CardMedia';
-import MyPaper from './MyPaper';
+import MyPaper from './MyHeroPaper';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -54,8 +54,6 @@ export default function ProjectMarkdown(props: Props) {
       li: { component: ({ ...props }) => { return (<li className={classes.listItem}> <Typography component="span" {...props} /> </li>) }},
     },
   };
-
-
 
   return (
     <div className={classes.root}>
