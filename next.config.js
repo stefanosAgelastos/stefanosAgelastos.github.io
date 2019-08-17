@@ -38,7 +38,8 @@ module.exports = {
         // combine the map of project pages with the home
         return Object.assign({}, pages, {
             '/': { page: '/' },
-            '/projects': { page: '/projects' }
+            '/projects': { page: '/projects' },
+            '/test': { page: '/test' },
         })
     }
 };
