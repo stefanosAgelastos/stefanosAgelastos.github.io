@@ -55421,7 +55421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_TouchApp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/TouchApp */ "./node_modules/@material-ui/icons/TouchApp.js");
 /* harmony import */ var _material_ui_icons_TouchApp__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_TouchApp__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _src_MyPaper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/MyPaper */ "./src/MyPaper.tsx");
+/* harmony import */ var _src_MyHeroPaper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../src/MyHeroPaper */ "./src/MyHeroPaper.tsx");
 var _jsxFileName = "/Users/stefanos/Desktop/code/stefanosAgelastos.github.io/pages/index.tsx";
 
 
@@ -55474,14 +55474,14 @@ var IndexPage = function IndexPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_MyPaper__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_MyHeroPaper__WEBPACK_IMPORTED_MODULE_5__["default"], {
     backgroundimageurl: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -55492,7 +55492,7 @@ var IndexPage = function IndexPage() {
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, "Hey! I'm Stefanos and this is my developer portfolio."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -55502,7 +55502,7 @@ var IndexPage = function IndexPage() {
     paragraph: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, "Have a look at my projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -55510,7 +55510,7 @@ var IndexPage = function IndexPage() {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 92
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
@@ -55519,13 +55519,13 @@ var IndexPage = function IndexPage() {
     className: classes.galleryButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: this
   }, "Project Gallery", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_TouchApp__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 99
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -55534,7 +55534,7 @@ var IndexPage = function IndexPage() {
     spacing: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, featuredPosts.map(function (post) {
@@ -55545,7 +55545,7 @@ var IndexPage = function IndexPage() {
       md: 6,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 105
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CardActionArea"], {
@@ -55553,27 +55553,27 @@ var IndexPage = function IndexPage() {
       href: post.link,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 106
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Card"], {
       className: classes.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 107
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.cardDetails,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 108
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CardContent"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 109
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -55581,7 +55581,7 @@ var IndexPage = function IndexPage() {
       variant: "h5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 110
       },
       __self: this
     }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -55589,7 +55589,7 @@ var IndexPage = function IndexPage() {
       paragraph: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 115
       },
       __self: this
     }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -55597,14 +55597,14 @@ var IndexPage = function IndexPage() {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 118
       },
       __self: this
     }, post.linkText))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Hidden"], {
       xsDown: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 123
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CardMedia"], {
@@ -55613,7 +55613,7 @@ var IndexPage = function IndexPage() {
       title: "Image title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 124
       },
       __self: this
     })))));
@@ -55624,10 +55624,10 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ "./src/MyPaper.tsx":
-/*!*************************!*\
-  !*** ./src/MyPaper.tsx ***!
-  \*************************/
+/***/ "./src/MyHeroPaper.tsx":
+/*!*****************************!*\
+  !*** ./src/MyHeroPaper.tsx ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -55640,7 +55640,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 
-var _jsxFileName = "/Users/stefanos/Desktop/code/stefanosAgelastos.github.io/src/MyPaper.tsx";
+var _jsxFileName = "/Users/stefanos/Desktop/code/stefanosAgelastos.github.io/src/MyHeroPaper.tsx";
 
 
 
@@ -55727,7 +55727,7 @@ function Mypaper(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*******************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Findex.tsx ***!
   \*******************************************************************************************************************************************************/
@@ -55750,5 +55750,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
