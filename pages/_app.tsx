@@ -4,10 +4,10 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
-import Header from "../src/MyNavBar";
 import { Container } from "@material-ui/core";
 import Router from "next/router";
 import StickyFooter from "../src/MyStickyFooter";
+import ElevateAppBar from "../src/MyElevatedAppBar";
 
 const HeaderState = {
   initial: { homeButtonVisible: undefined, galleryButtonVisible: undefined },
@@ -46,7 +46,7 @@ class MyApp extends App<IProps, IState> {
 
   render() {
     const { Component, pageProps } = this.props;
-    const { HeaderButtons } = this.state as IState;
+    /* const { HeaderButtons } = this.state as IState; */
     return (
       <React.Fragment>
         <Head>
@@ -56,7 +56,7 @@ class MyApp extends App<IProps, IState> {
           <CssBaseline />
           <StickyFooter>
             <Container maxWidth="xl">
-              <Header {...HeaderButtons} />
+              <ElevateAppBar />
               <Component {...pageProps} />
             </Container>
           </StickyFooter>

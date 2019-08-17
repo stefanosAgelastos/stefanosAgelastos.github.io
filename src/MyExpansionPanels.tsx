@@ -33,6 +33,7 @@ export default function ControlledExpansionPanels() {
 
   return (
     <div className={classes.root}>
+      
       <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
@@ -49,6 +50,8 @@ export default function ControlledExpansionPanels() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+
+
       <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
