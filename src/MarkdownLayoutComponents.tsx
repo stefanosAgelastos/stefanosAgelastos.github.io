@@ -1,5 +1,6 @@
 import React from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import CardMedia from "@material-ui/core/CardMedia";
 import {
   Chip,
   makeStyles,
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
     },
     chip: {
       margin: theme.spacing(1)
@@ -34,7 +35,27 @@ const useStyles = makeStyles((theme: Theme) =>
     secondaryHeading: {
       fontSize: theme.typography.pxToRem(15),
       color: theme.palette.text.secondary
+    },
+    images: {
+      marginTop: theme.spacing(2)
     }
+  })
+);
+
+/* Separate styles for the HeaderTitle component,
+*  because styling rules require the props
+*/
+const useTitleStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    titlePaper: {
+      padding: theme.spacing(2),
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+      backgroundImage: (props: MyHeaderTitleProps) => `url(${props.backgroundimageurl})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+    },
   })
 );
 
@@ -44,16 +65,22 @@ export const MainGrid: React.FunctionComponent<{}> = ({ children }) => {
       {children}
     </Grid>
   );
-}
+};
 
-export const HeaderTitle: React.FunctionComponent<{}> = ({ children }) => {
-  const classes = useStyles();
+export type MyHeaderTitleProps = {
+  backgroundimageurl: string;
+};
+
+export const HeaderTitle: React.FunctionComponent<{} & MyHeaderTitleProps> = ({ children, ...props }) => {
+  const classes = useTitleStyles(props);
   return (
     <Grid item xs={12}>
-      <Paper className={classes.paper}>{children}</Paper>
+      <Paper className={classes.titlePaper} >
+        <Typography>{ children }</Typography>
+      </Paper>
     </Grid>
   );
-}
+};
 
 export const InfoGrid: React.FunctionComponent<{}> = ({ children }) => {
   return (
@@ -61,7 +88,7 @@ export const InfoGrid: React.FunctionComponent<{}> = ({ children }) => {
       {children}
     </Grid>
   );
-}
+};
 
 export const InfoPaper: React.FunctionComponent<{}> = ({ children }) => {
   const classes = useStyles();
@@ -70,22 +97,22 @@ export const InfoPaper: React.FunctionComponent<{}> = ({ children }) => {
       <Paper className={classes.paper}>{children}</Paper>
     </Grid>
   );
-}
+};
 
 export type MyChipProps = {
   label: string;
 };
 
-export const MyChip: React.FunctionComponent<{}> = ({ children, ...props }) => {
+export const MyChip: React.FunctionComponent<{} & MyChipProps> = ({ children, ...props }) => {
   const classes = useStyles();
-  const {label} = props as MyChipProps;
+  const { label } = props;
   return (
     <Chip className={classes.chip} label={label}>
       {" "}
       {children}{" "}
     </Chip>
   );
-}
+};
 
 export const PanelGrid: React.FunctionComponent<{}> = ({ children }) => {
   const classes = useStyles();
@@ -94,36 +121,45 @@ export const PanelGrid: React.FunctionComponent<{}> = ({ children }) => {
       <div className={classes.panelRoot}>{children}</div>
     </Grid>
   );
-}
-export const Panel: React.FunctionComponent<{}> = ({ children }) => {
-  return <ExpansionPanel>{children}</ExpansionPanel>;
-}
-
-export type MyPanelSummaryProps = {
-  id: string;
-  label: string;
 };
 
-export const PanelSummary: React.FunctionComponent<{}> = ({ children, ...props}) => {
+export type MyPanelProps = {
+  id: string;
+  heading: string;
+  secondaryHeading: string;
+};
+
+export const Panel: React.FunctionComponent<{}> = ({ children, ...props }) => {
   const classes = useStyles();
-  const {id, label} = props as MyPanelSummaryProps;
+  const { id, heading, secondaryHeading } = props as MyPanelProps;
   return (
+    <ExpansionPanel>
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls={`${id}bh-content`}
         id={id}
       >
-        <Typography className={classes.heading}>{label}</Typography>
+        <Typography className={classes.heading}>{heading}</Typography>
         <Typography className={classes.secondaryHeading}>
-          {children}
+          {secondaryHeading}
         </Typography>
       </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <Typography>{children}</Typography>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
   );
-}
-export const PanelContent: React.FunctionComponent<{}> = ({ children }) => {
+};
+
+export const ImageCard: React.FunctionComponent<{}> = ({ ...props }) => {
+  const classes = useStyles();
   return (
-    <ExpansionPanelDetails>
-      <Typography>{children}</Typography>
-    </ExpansionPanelDetails>
+    <CardMedia
+      component="img"
+      classes={{
+        root: classes.images
+      }}
+      {...props}
+    />
   );
-}
+};

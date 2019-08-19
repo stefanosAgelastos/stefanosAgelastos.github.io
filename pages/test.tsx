@@ -8,8 +8,7 @@ import {
   PanelGrid,
   MainGrid,
   Panel,
-  PanelSummary,
-  PanelContent
+  ImageCard,
 } from "../src/MarkdownLayoutComponents";
 import test from "../static/test.md";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
@@ -31,20 +30,27 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function CenteredGrid() {
+type Props = {
+  projectMD: string,
+  titleBackroundImage: string
+};
+
+export default function CenteredGrid(props: Props) {
   const classes = useStyles();
+  const { /* projectMD, titleBackroundImage */ } = props;
 
   const options: MarkdownOptions = {
     overrides: {
-      /* img: { component: CardMedia, props: { component: "img" } }, */
+      img: ImageCard,
       MainGrid: MainGrid,
-      HeaderTitle: HeaderTitle,
+      HeaderTitle: {
+        component: HeaderTitle,
+        props: { backgroundimageurl: "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80"}
+      },
       InfoGrid: InfoGrid ,
       InfoPaper: InfoPaper ,
       PanelGrid: PanelGrid,
       Panel:  Panel,
-      PanelSummary: PanelSummary,
-      PanelContent: PanelContent,
       MyChip: MyChip,
     }
   };
