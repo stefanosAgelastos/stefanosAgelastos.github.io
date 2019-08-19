@@ -46321,16 +46321,6 @@ var _jsxFileName = "C:\\Users\\sagel\\OneDrive\\Documents\\Next-Portfolio-Stef\\
 
 var useStyles = Object(_material_ui_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
   return Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["createStyles"])({
-    "@global": {
-      body: {
-        backgroundImage: "url('https://images.unsplash.com/photo-1479920252409-6e3d8e8d4866?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80')",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        height: "100%"
-      }
-    },
     mainGrid: {
       marginTop: theme.spacing(4)
     },
@@ -46391,7 +46381,7 @@ var ContactPage = function ContactPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Grid"], {
@@ -46400,7 +46390,7 @@ var ContactPage = function ContactPage() {
     spacing: 4,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 89
     },
     __self: this
   }, featuredPosts.map(function (post) {
@@ -46411,7 +46401,7 @@ var ContactPage = function ContactPage() {
       md: 6,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 91
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["CardActionArea"], {
@@ -46419,27 +46409,27 @@ var ContactPage = function ContactPage() {
       href: post.link,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 92
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Card"], {
       className: classes.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 93
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: classes.cardDetails,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 94
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["CardContent"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 95
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -46447,7 +46437,7 @@ var ContactPage = function ContactPage() {
       variant: "h5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 96
       },
       __self: this
     }, post.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -46455,7 +46445,7 @@ var ContactPage = function ContactPage() {
       paragraph: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 100
       },
       __self: this
     }, post.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -46463,7 +46453,7 @@ var ContactPage = function ContactPage() {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 103
       },
       __self: this
     }, post.linkText))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["CardMedia"], {
@@ -46472,7 +46462,7 @@ var ContactPage = function ContactPage() {
       title: "Image title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 109
       },
       __self: this
     }))));
