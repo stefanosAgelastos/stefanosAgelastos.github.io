@@ -16,13 +16,9 @@ function Copyright() {
       <Link color="inherit" href="https://material-ui.com/">
       {'Material-UI'}
       </Link>
-      {', '}
+      {' & '}
       <Link color="inherit" href="https://nextjs.org/">
       {'Next.js'}
-      </Link>
-      {' and '}
-      <Link color="inherit" href="https://www.typescriptlang.org/">
-      {'Typescript'}
       </Link>
       {'. Images from '}
       <Link color="inherit" href="https://unsplash.com">
@@ -40,9 +36,9 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
   },
   footer: {
+    marginTop: "auto",
     padding: theme.spacing(2),
-    marginTop: 'auto',
-    backgroundColor: 'white',
+    backgroundColor: theme.palette.background.default,
   },
 }));
 

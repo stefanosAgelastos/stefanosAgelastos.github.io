@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import {
   MyChip,
@@ -14,6 +14,14 @@ import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    "@global": {
+      body: (props: Props) => ({
+        backgroundImage: `url(${props.backroundImage as string})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      } as CSSProperties),
+    },
     root: {
       flexGrow: 1,
       marginTop: theme.spacing(4)
@@ -31,12 +39,12 @@ const useStyles = makeStyles((theme: Theme) =>
 
 type Props = {
   projectMD: string,
-  titleBackroundImage: string
+  backroundImage: string
 };
 
 export default function MarkdownLayout(props: Props) {
-  const classes = useStyles();
-  const { projectMD, titleBackroundImage } = props;
+  const classes = useStyles(props);
+  const { projectMD, backroundImage } = props;
 
   const options: MarkdownOptions = {
     overrides: {
@@ -44,12 +52,12 @@ export default function MarkdownLayout(props: Props) {
       MainGrid: MainGrid,
       HeaderTitle: {
         component: HeaderTitle,
-        props: { backgroundimageurl: titleBackroundImage}
+        props: { backgroundimageurl: backroundImage }
       },
-      InfoGrid: InfoGrid ,
-      InfoPaper: InfoPaper ,
+      InfoGrid: InfoGrid,
+      InfoPaper: InfoPaper,
       PanelGrid: PanelGrid,
-      Panel:  Panel,
+      Panel: Panel,
       MyChip: MyChip,
     }
   };

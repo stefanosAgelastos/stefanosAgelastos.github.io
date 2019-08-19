@@ -16,18 +16,18 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function ProjectGallery() {
   const classes = useStyles();
 
-  const projects : Project[] = dataArray;
+  const projects: Project[] = dataArray;
 
   return (
     <React.Fragment>
-      <div className={classes.tiles}>
-        {projects.map(project => {
-          return (
+        <div className={classes.tiles}>
+          {projects.map(project => {
+            return (
               <ProjectGalleryTile tile={project} key={project.slug} />
-          );
-        }
-        )}
-      </div>
+            );
+          }
+          )}
+        </div>
     </React.Fragment>
   );
 }

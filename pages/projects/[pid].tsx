@@ -43,7 +43,7 @@ class ProjectPage extends React.Component<Props, IState> {
       <Collapse in={this.state.zoom} timeout={500}>
         <MarkdownLayout
           projectMD={this.props.markdown}
-          titleBackroundImage={this.props.imageUrl}
+          backroundImage={this.props.imageUrl}
         /> 
       </Collapse>
     );

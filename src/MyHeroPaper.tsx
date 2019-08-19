@@ -7,14 +7,11 @@ const useStyles = makeStyles((theme: Theme) =>
 createStyles({
     root: {
         position: 'relative',
-        backgroundColor: theme.palette.grey[800],
+        backgroundColor: theme.palette.primary.light,
+        opacity: 0.95,
         color: theme.palette.common.white,
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
-        backgroundImage: (props: MyPaperProps) => `url(${props.backgroundimageurl})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
     },
     overlay: {
         position: 'absolute',
@@ -22,8 +19,8 @@ createStyles({
         bottom: 0,
         right: 0,
         left: 0,
-        backgroundColor: 'rgba(0,0,0,.3)',
-    },
+/*         backgroundColor: 'rgba(0,0,0,.3)',
+ */    },
     childrenWrapper: {
         position: 'relative',
         padding: theme.spacing(3),
