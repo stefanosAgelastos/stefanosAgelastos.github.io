@@ -3,11 +3,11 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import {
   MyChip,
   InfoPaper,
-  HeaderTitle,
   InfoGrid,
   PanelGrid,
   MainGrid,
   Panel,
+  HeaderTitle,
   ImageCard,
 } from "./MarkdownLayoutComponents";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
+        backgroundAttachment: "fixed",
+        height: "100%"
       } as CSSProperties),
     },
     root: {
@@ -44,16 +46,13 @@ type Props = {
 
 export default function MarkdownLayout(props: Props) {
   const classes = useStyles(props);
-  const { projectMD, backroundImage } = props;
+  const { projectMD } = props;
 
   const options: MarkdownOptions = {
     overrides: {
       img: ImageCard,
       MainGrid: MainGrid,
-      HeaderTitle: {
-        component: HeaderTitle,
-        props: { backgroundimageurl: backroundImage }
-      },
+      HeaderTitle: HeaderTitle,
       InfoGrid: InfoGrid,
       InfoPaper: InfoPaper,
       PanelGrid: PanelGrid,

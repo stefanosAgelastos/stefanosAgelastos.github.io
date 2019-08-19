@@ -6,7 +6,7 @@ import {
   createStyles,
   Typography,
 } from "@material-ui/core";
-import MyPaper from "../src/MyHeroPaper";
+import { MyPaper } from "../src/MyHeroPaper";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -37,11 +37,7 @@ const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-        <MyPaper
-          backgroundimageurl={
-            "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80"
-          }
-        >
+        <MyPaper>
           <Typography
             className={classes.titleText}
             component="h1"

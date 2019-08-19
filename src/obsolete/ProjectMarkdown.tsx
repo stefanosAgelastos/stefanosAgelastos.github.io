@@ -4,7 +4,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import CardMedia from '@material-ui/core/CardMedia';
-import MyPaper from '../MyHeroPaper';
+import {MyPaper} from '../MyHeroPaper';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,16 +31,15 @@ const useStyles = makeStyles((theme: Theme) =>
 
 type Props = {
   projectMD: string,
-  titleBackroundImage: string
 };
 
 export default function ProjectMarkdown(props: Props) {
 
-  const { projectMD, titleBackroundImage } = props;
+  const { projectMD } = props;
   const classes = useStyles();
   const options: MarkdownOptions = {
     overrides: {
-      h1: { component: props => (<MyPaper backgroundimageurl={titleBackroundImage}>
+      h1: { component: props => (<MyPaper>
                                   <Typography color="inherit" gutterBottom variant="h3" {...props} />
         </MyPaper>)
       },

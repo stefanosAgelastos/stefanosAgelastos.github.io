@@ -16,6 +16,12 @@ import {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    titlePaper: {
+      padding: theme.spacing(2),
+      textAlign: "center",
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.primary.main,
+    },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
@@ -42,23 +48,6 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-/* Separate styles for the HeaderTitle component,
-*  because styling rules require the props
-*/
-const useTitleStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    titlePaper: {
-      padding: theme.spacing(2),
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-      backgroundImage: (props: MyHeaderTitleProps) => `url(${props.backgroundimageurl})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    },
-  })
-);
-
 export const MainGrid: React.FunctionComponent<{}> = ({ children }) => {
   return (
     <Grid container spacing={3}>
@@ -67,18 +56,16 @@ export const MainGrid: React.FunctionComponent<{}> = ({ children }) => {
   );
 };
 
-export type MyHeaderTitleProps = {
-  backgroundimageurl: string;
-};
-
-export const HeaderTitle: React.FunctionComponent<{}> = ({ children, ...props }) => {
-  const classes = useTitleStyles(props as MyHeaderTitleProps);
+export const HeaderTitle: React.FunctionComponent<{}> = ({ children }) => {
+  const classes = useStyles();
   return (
-    <Grid item xs={12}>
+    <React.Fragment>
+    <Grid item xs={12} >
       <Paper className={classes.titlePaper} >
-        <Typography>{ children }</Typography>
+        <Typography>{children}</Typography>
       </Paper>
     </Grid>
+    </React.Fragment>
   );
 };
 
