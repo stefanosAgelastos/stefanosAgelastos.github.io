@@ -55272,57 +55272,57 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       }, "Stefanos Agelastos")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_styles__WEBPACK_IMPORTED_MODULE_9__["ThemeProvider"], {
         theme: _src_theme__WEBPACK_IMPORTED_MODULE_11__["default"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Container"], {
         maxWidth: "xl",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_src_MyStickyFooter__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_src_MyElevatedAppBar__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         },
         __self: this
       }))))));
