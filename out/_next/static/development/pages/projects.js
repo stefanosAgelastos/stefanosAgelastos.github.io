@@ -1272,7 +1272,7 @@ var styles = {
     backgroundColor: 'transparent',
     // Reset default value
     // We disable the focus ring for mouse, touch and keyboard users.
-    outline: 'none',
+    outline: 0,
     border: 0,
     margin: 0,
     // Remove the margin in Safari
@@ -14763,40 +14763,6 @@ exports["default"] = mitt;
 
 /***/ }),
 
-/***/ "./node_modules/next-server/dist/lib/request-context.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/next-server/dist/lib/request-context.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _defineProperty = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js"));
-
-var __importStar = void 0 && (void 0).__importStar || function (mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) {
-    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  }
-  result["default"] = mod;
-  return result;
-};
-
-(0, _defineProperty["default"])(exports, "__esModule", {
-  value: true
-});
-
-var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-exports.RequestContext = React.createContext(null);
-
-/***/ }),
-
 /***/ "./node_modules/next-server/dist/lib/router-context.js":
 /*!*************************************************************!*\
   !*** ./node_modules/next-server/dist/lib/router-context.js ***!
@@ -14940,6 +14906,7 @@ function () {
     var initialProps = _ref.initialProps,
         pageLoader = _ref.pageLoader,
         App = _ref.App,
+        wrapApp = _ref.wrapApp,
         Component = _ref.Component,
         err = _ref.err,
         subscription = _ref.subscription;
@@ -15021,6 +14988,7 @@ function () {
     this.asPath = as;
     this.sub = subscription;
     this.clc = null;
+    this._wrapApp = wrapApp;
 
     if (true) {
       // in order for `e.state` to work on the `onpopstate` event
@@ -15528,6 +15496,7 @@ function () {
                 App = this.components['/_app'].Component;
                 _context2.next = 6;
                 return utils_1.loadGetInitialProps(App, {
+                  AppTree: this._wrapApp(App),
                   Component: Component,
                   router: this,
                   ctx: ctx
@@ -16083,8 +16052,6 @@ function (_react$Component) {
           window.scrollTo(0, 0);
           document.body.focus();
         }
-      })["catch"](function (err) {
-        if (_this.props.onError) _this.props.onError(err);
       });
     };
 
@@ -16236,7 +16203,6 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
-exports.useRequest = useRequest;
 exports.makePublicRouterInstance = makePublicRouterInstance;
 exports.createRouter = exports.withRouter = exports["default"] = void 0;
 
@@ -16252,8 +16218,6 @@ exports.Router = _router2["default"];
 exports.NextRouter = _router2.NextRouter;
 
 var _routerContext = __webpack_require__(/*! next-server/dist/lib/router-context */ "./node_modules/next-server/dist/lib/router-context.js");
-
-var _requestContext = __webpack_require__(/*! next-server/dist/lib/request-context */ "./node_modules/next-server/dist/lib/request-context.js");
 
 var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
 
@@ -16340,10 +16304,6 @@ exports["default"] = _default;
 
 function useRouter() {
   return _react["default"].useContext(_routerContext.RouterContext);
-}
-
-function useRequest() {
-  return _react["default"].useContext(_requestContext.RequestContext);
 } // INTERNAL APIS
 // -------------
 // (do not use following exports inside the app)
@@ -16497,12 +16457,12 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -16975,12 +16935,12 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -17615,12 +17575,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -18366,12 +18326,12 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react-dom/index.js":
 /*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react-dom/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react-dom/index.js");
 
 /***/ }),
 
@@ -18733,6 +18693,10 @@ var removeClass = function removeClass(node, classes) {
  * ```
  *
  * `*-active` classes represent which styles you want to animate **to**.
+ *
+ * **Note**: If you're using the
+ * [`appear`](http://reactcommunity.org/react-transition-group/transition#Transition-prop-appear)
+ * prop, make sure to define styles for `.appear-*` classes as well.
  */
 
 
@@ -18898,13 +18862,13 @@ CSSTransition.defaultProps = {
 };
 CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _Transition__WEBPACK_IMPORTED_MODULE_7__["default"].propTypes, {
   /**
-   * The animation classNames applied to the component as it enters, exits or
-   * has finished the transition. A single name can be provided and it will be
-   * suffixed for each stage: e.g.
+   * The animation classNames applied to the component as it appears, enters,
+   * exits or has finished the transition. A single name can be provided and it
+   * will be suffixed for each stage: e.g.
    *
-   * `classNames="fade"` applies `fade-enter`, `fade-enter-active`,
-   * `fade-enter-done`, `fade-exit`, `fade-exit-active`, `fade-exit-done`,
-   * `fade-appear`, `fade-appear-active`, and `fade-appear-done`.
+   * `classNames="fade"` applies `fade-appear`, `fade-appear-active`,
+   * `fade-appear-done`, `fade-enter`, `fade-enter-active`, `fade-enter-done`,
+   * `fade-exit`, `fade-exit-active`, and `fade-exit-done`.
    *
    * **Note**: `fade-appear-done` and `fade-enter-done` will _both_ be applied.
    * This allows you to define different behavior for when appearing is done and
@@ -18963,7 +18927,7 @@ CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEB
    *
    * @type Function(node: HtmlElement, isAppearing: bool)
    */
-  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"],
+  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
 
   /**
    * A `<Transition>` callback fired immediately after the 'enter-active' or
@@ -18971,7 +18935,7 @@ CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEB
    *
    * @type Function(node: HtmlElement, isAppearing: bool)
    */
-  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"],
+  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
 
   /**
    * A `<Transition>` callback fired immediately after the 'enter' or
@@ -18979,7 +18943,7 @@ CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEB
    *
    * @type Function(node: HtmlElement, isAppearing: bool)
    */
-  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"],
+  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
 
   /**
    * A `<Transition>` callback fired immediately after the 'exit' class is
@@ -18987,14 +18951,14 @@ CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEB
    *
    * @type Function(node: HtmlElement)
    */
-  onExit: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"],
+  onExit: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
 
   /**
    * A `<Transition>` callback fired immediately after the 'exit-active' is applied.
    *
    * @type Function(node: HtmlElement)
    */
-  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"],
+  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
 
   /**
    * A `<Transition>` callback fired immediately after the 'exit' classes
@@ -19002,7 +18966,7 @@ CSSTransition.propTypes =  true ? Object(_babel_runtime_helpers_esm_extends__WEB
    *
    * @type Function(node: HtmlElement)
    */
-  onExited: prop_types__WEBPACK_IMPORTED_MODULE_3__["func"]
+  onExited: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
 }) : undefined;
 /* harmony default export */ __webpack_exports__["default"] = (CSSTransition);
 
@@ -19117,7 +19081,7 @@ function (_React$Component) {
     var children = this.props.children;
     var child = react__WEBPACK_IMPORTED_MODULE_3___default.a.Children.toArray(children)[idx];
     if (child.props[handler]) (_child$props = child.props)[handler].apply(_child$props, originalArgs);
-    if (this.props[handler]) this.props[handler](Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["findDOMNode"])(this));
+    if (this.props[handler]) this.props[handler](react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(this));
   };
 
   _proto.render = function render() {
@@ -19861,12 +19825,12 @@ Transition.propTypes =  true ? {
    * </Transition>
    * ```
    */
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2__["oneOfType"]([prop_types__WEBPACK_IMPORTED_MODULE_2__["func"].isRequired, prop_types__WEBPACK_IMPORTED_MODULE_2__["element"].isRequired]).isRequired,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired, prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.element.isRequired]).isRequired,
 
   /**
    * Show the component; triggers the enter or exit states
    */
-  in: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  in: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
    * By default the child component is mounted immediately along with
@@ -19874,32 +19838,37 @@ Transition.propTypes =  true ? {
    * first `in={true}` you can set `mountOnEnter`. After the first enter transition the component will stay
    * mounted, even on "exited", unless you also specify `unmountOnExit`.
    */
-  mountOnEnter: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  mountOnEnter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
    * By default the child component stays mounted after it reaches the `'exited'` state.
    * Set `unmountOnExit` if you'd prefer to unmount the component after it finishes exiting.
    */
-  unmountOnExit: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  unmountOnExit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
-   * Normally a component is not transitioned if it is shown when the `<Transition>` component mounts.
-   * If you want to transition on the first mount set `appear` to `true`, and the
-   * component will transition in as soon as the `<Transition>` mounts.
+   * Normally a component is not transitioned if it is shown when the
+   * `<Transition>` component mounts. If you want to transition on the first
+   * mount set `appear` to `true`, and the component will transition in as soon
+   * as the `<Transition>` mounts.
    *
-   * > Note: there are no specific "appear" states. `appear` only adds an additional `enter` transition.
+   * > **Note**: there are no special appear states like `appearing`/`appeared`, this prop
+   * > only adds an additional enter transition. However, in the
+   * > `<CSSTransition>` component that first enter transition does result in
+   * > additional `.appear-*` classes, that way you can choose to style it
+   * > differently.
    */
-  appear: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  appear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
    * Enable or disable enter transitions.
    */
-  enter: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  enter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
    * Enable or disable exit transitions.
    */
-  exit: prop_types__WEBPACK_IMPORTED_MODULE_2__["bool"],
+  exit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
 
   /**
    * The duration of the transition, in milliseconds.
@@ -19950,7 +19919,7 @@ Transition.propTypes =  true ? {
    * }}
    * ```
    */
-  addEndListener: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  addEndListener: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired before the "entering" status is applied. An extra parameter
@@ -19958,7 +19927,7 @@ Transition.propTypes =  true ? {
    *
    * @type Function(node: HtmlElement, isAppearing: bool) -> void
    */
-  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  onEnter: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired after the "entering" status is applied. An extra parameter
@@ -19966,7 +19935,7 @@ Transition.propTypes =  true ? {
    *
    * @type Function(node: HtmlElement, isAppearing: bool)
    */
-  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  onEntering: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired after the "entered" status is applied. An extra parameter
@@ -19974,28 +19943,28 @@ Transition.propTypes =  true ? {
    *
    * @type Function(node: HtmlElement, isAppearing: bool) -> void
    */
-  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  onEntered: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired before the "exiting" status is applied.
    *
    * @type Function(node: HtmlElement) -> void
    */
-  onExit: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  onExit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired after the "exiting" status is applied.
    *
    * @type Function(node: HtmlElement) -> void
    */
-  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"],
+  onExiting: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
 
   /**
    * Callback fired after the "exited" status is applied.
    *
    * @type Function(node: HtmlElement) -> void
    */
-  onExited: prop_types__WEBPACK_IMPORTED_MODULE_2__["func"] // Name the function so it is clearer in the documentation
+  onExited: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func // Name the function so it is clearer in the documentation
 
 } : undefined;
 
@@ -20498,12 +20467,12 @@ var classNamesShape =  true ? prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_7aff549c98b978433226 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_01f9a3fa864a7b7414d8 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_01f9a3fa864a7b7414d8 */ "dll-reference dll_01f9a3fa864a7b7414d8"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -22139,13 +22108,33 @@ module.exports = warning;
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_7aff549c98b978433226 ***!
-  \******************************************************************************************************/
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_7aff549c98b978433226 */ "dll-reference dll_7aff549c98b978433226"))("./node_modules/webpack/buildin/global.js");
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (true) g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 
@@ -22700,11 +22689,11 @@ function getProjectImageUrl(slug) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=400&q=80\",\"title\":\"Next.js & Markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=400&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80\",\"title\":\"AR Prototype System\",\"subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=400&q=80\",\"title\":\"Sockets, Node & JWT\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=400&q=80\",\"title\":\"Angular 5 Client App\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=400&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=1652&q=80\",\"title\":\"Next.js & Markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=1652&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=1652&q=80\",\"title\":\"AR Prototype System\",\"subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=1652&q=80\",\"title\":\"Sockets, Node & JWT\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=1652&q=80\",\"title\":\"Angular 5 Client App\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=1652&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5Csagel%5COneDrive%5CDocuments%5CNext-Portfolio-Stef%5Cnextjs-with-typescript%5Cpages%5Cprojects.tsx ***!
   \******************************************************************************************************************************************************************************************/
@@ -22716,16 +22705,16 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fprojec
 
 /***/ }),
 
-/***/ "dll-reference dll_7aff549c98b978433226":
+/***/ "dll-reference dll_01f9a3fa864a7b7414d8":
 /*!*******************************************!*\
-  !*** external "dll_7aff549c98b978433226" ***!
+  !*** external "dll_01f9a3fa864a7b7414d8" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_7aff549c98b978433226;
+module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
