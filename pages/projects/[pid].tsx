@@ -5,7 +5,7 @@ import {
 } from "../../util/projectData";
 import { NextPageContext } from "next";
 import { Collapse } from '@material-ui/core';
-import MarkdownLayout from "../test";
+import MarkdownLayout from "../../src/MyMarkdownLayout";
 
 type Props = {
   markdown: string;

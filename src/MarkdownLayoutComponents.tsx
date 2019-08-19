@@ -71,8 +71,8 @@ export type MyHeaderTitleProps = {
   backgroundimageurl: string;
 };
 
-export const HeaderTitle: React.FunctionComponent<{} & MyHeaderTitleProps> = ({ children, ...props }) => {
-  const classes = useTitleStyles(props);
+export const HeaderTitle: React.FunctionComponent<{}> = ({ children, ...props }) => {
+  const classes = useTitleStyles(props as MyHeaderTitleProps);
   return (
     <Grid item xs={12}>
       <Paper className={classes.titlePaper} >
@@ -103,9 +103,9 @@ export type MyChipProps = {
   label: string;
 };
 
-export const MyChip: React.FunctionComponent<{} & MyChipProps> = ({ children, ...props }) => {
+export const MyChip: React.FunctionComponent<{}> = ({ children, ...props }) => {
   const classes = useStyles();
-  const { label } = props;
+  const { label } = props as MyChipProps;
   return (
     <Chip className={classes.chip} label={label}>
       {" "}

@@ -9,7 +9,7 @@ import {
   MainGrid,
   Panel,
   ImageCard,
-} from "../src/MarkdownLayoutComponents";
+} from "./MarkdownLayoutComponents";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme: Theme) =>
