@@ -4,7 +4,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import CardMedia from '@material-ui/core/CardMedia';
-import MyPaper from './MyHeroPaper';
+import MyPaper from '../MyHeroPaper';
 
 
 const useStyles = makeStyles((theme: Theme) =>

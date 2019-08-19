@@ -1,11 +1,11 @@
 import React from "react";
-import ProjectMarkdown from "../../src/ProjectMarkdown";
 import {
   getREADMEfromMyGithub,
   getProjectImageUrl
 } from "../../util/projectData";
 import { NextPageContext } from "next";
 import { Collapse } from '@material-ui/core';
+import MarkdownLayout from "../test";
 
 type Props = {
   markdown: string;
@@ -41,7 +41,7 @@ class ProjectPage extends React.Component<Props, IState> {
   render() {
     return (
       <Collapse in={this.state.zoom} timeout={500}>
-        <ProjectMarkdown
+        <MarkdownLayout
           projectMD={this.props.markdown}
           titleBackroundImage={this.props.imageUrl}
         /> 

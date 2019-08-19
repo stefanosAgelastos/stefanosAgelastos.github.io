@@ -2,7 +2,7 @@ import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Link from "next/link";
 import { Typography, Toolbar, Button } from "@material-ui/core";
-import IconTabs from './MyIconTabs';
+import IconTabs from '../MyIconTabs';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

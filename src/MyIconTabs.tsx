@@ -19,7 +19,7 @@ export default function CenteredTabs() {
   }
 
   return (
-    <Paper className={classes.root} elevation={0}>
+    <Paper className={classes.root}>
       <Tabs
         value={value}
         onChange={handleChange}

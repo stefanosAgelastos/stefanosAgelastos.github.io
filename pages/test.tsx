@@ -10,7 +10,6 @@ import {
   Panel,
   ImageCard,
 } from "../src/MarkdownLayoutComponents";
-import test from "../static/test.md";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -35,9 +34,9 @@ type Props = {
   titleBackroundImage: string
 };
 
-export default function CenteredGrid(props: Props) {
+export default function MarkdownLayout(props: Props) {
   const classes = useStyles();
-  const { /* projectMD, titleBackroundImage */ } = props;
+  const { projectMD, titleBackroundImage } = props;
 
   const options: MarkdownOptions = {
     overrides: {
@@ -45,7 +44,7 @@ export default function CenteredGrid(props: Props) {
       MainGrid: MainGrid,
       HeaderTitle: {
         component: HeaderTitle,
-        props: { backgroundimageurl: "https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=400&q=80"}
+        props: { backgroundimageurl: titleBackroundImage}
       },
       InfoGrid: InfoGrid ,
       InfoPaper: InfoPaper ,
@@ -57,7 +56,7 @@ export default function CenteredGrid(props: Props) {
 
   return (
     <div className={classes.root}>
-      <Markdown options={options} children={test} />
+      <Markdown options={options} children={projectMD} />
     </div>
   );
 }
