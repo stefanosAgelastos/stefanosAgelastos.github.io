@@ -5,26 +5,16 @@ import {
   Theme,
   createStyles,
   Typography,
+  Button,
+  Grid,
 } from "@material-ui/core";
 import { MyPaper } from "../src/MyHeroPaper";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    "@global": {
-      body: {
-        backgroundImage: "url('https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80')",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        height: "100%"
-      },
-    },
-    mainGrid: {
-      marginTop: theme.spacing(3)
-    },
     titleText: {
-/*       textShadow: "#000000 -1px 4px 10px" */
+      /*       textShadow: "#000000 -1px 4px 10px" */
     },
     galleryButton: {
       color: theme.palette.primary.contrastText,
@@ -37,35 +27,43 @@ const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-        <MyPaper>
-          <Typography
-            className={classes.titleText}
-            component="h1"
-            variant="h3"
-            color="inherit"
-            gutterBottom
-          >
-            Hey! I&apos;m Stefanos and this is my developer portfolio.
-        </Typography>
-          <Typography
-            className={classes.titleText}
-            variant="h5"
-            color="inherit"
-            paragraph
-          >
-            Have a look at my projects
-        </Typography>
-{/*           <Link href="/projects" passHref>
-            <Button
-              variant="outlined"
-              size="medium"
-              className={classes.galleryButton}
+      <Grid
+        container
+        direction="row"
+        justify="space-evenly"
+        alignItems="center"
+      >
+        <Grid item >
+          <MyPaper>
+            <Typography
+              className={classes.titleText}
+              component="h1"
+              variant="h3"
+              color="inherit"
+              gutterBottom
             >
-              Project Gallery
-            <TouchAppIcon />
+              Hey! I&apos;m Stefanos and this is my developer portfolio.
+        </Typography>
+            <Typography
+              className={classes.titleText}
+              variant="h5"
+              color="inherit"
+              paragraph
+            >
+              Have a look at my projects
+        </Typography>
+            <Link href="/projects" passHref>
+              <Button
+                variant="outlined"
+                size="medium"
+                className={classes.galleryButton}
+              >
+                Project Gallery
             </Button>
-          </Link> */}
-        </MyPaper>
+            </Link>
+          </MyPaper>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 };

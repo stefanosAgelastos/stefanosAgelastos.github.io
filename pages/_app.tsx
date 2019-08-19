@@ -11,6 +11,7 @@ import { Container } from "@material-ui/core";
 
 class MyApp extends App {
 
+
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");

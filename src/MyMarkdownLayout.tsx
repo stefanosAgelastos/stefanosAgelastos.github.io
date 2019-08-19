@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import {
   MyChip,
@@ -14,16 +14,6 @@ import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    "@global": {
-      body: (props: Props) => ({
-        backgroundImage: `url(${props.backroundImage as string})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundAttachment: "fixed",
-        height: "100%"
-      } as CSSProperties),
-    },
     root: {
       flexGrow: 1,
       marginTop: theme.spacing(4)

@@ -3,7 +3,18 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 import theme from '../src/theme';
 
+/* sets the body's global background */
+const stylesBody = {
+  backgroundImage: "url('https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80')",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center",
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed",
+  height: "100%"
+};
+
 class MyDocument extends Document {
+
   render() {
     return (
       <html lang="en">
@@ -22,7 +33,7 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />.
         </Head>
-        <body>
+        <body style={stylesBody}>
           <Main />
           <NextScript />
         </body>
