@@ -14,12 +14,21 @@ function Copyright() {
       {new Date().getFullYear()}
       {'. Built with '}
       <Link color="inherit" href="https://material-ui.com/">
-        Material-UI.
+      {'Material-UI'}
+      </Link>
+      {', '}
+      <Link color="inherit" href="https://nextjs.org/">
+      {'Next.js'}
+      </Link>
+      {' and '}
+      <Link color="inherit" href="https://www.typescriptlang.org/">
+      {'Typescript'}
       </Link>
       {'. Images from '}
       <Link color="inherit" href="https://unsplash.com">
-        Unsplash.
+      {'Unsplash'}
       </Link>
+      {'.'}
     </Typography>
   );
 }

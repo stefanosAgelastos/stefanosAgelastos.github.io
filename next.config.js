@@ -39,7 +39,6 @@ module.exports = {
         return Object.assign({}, pages, {
             '/': { page: '/' },
             '/projects': { page: '/projects' },
-            '/test': { page: '/test' },
         })
     }
 };
