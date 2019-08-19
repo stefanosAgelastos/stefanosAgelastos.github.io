@@ -10,7 +10,6 @@ const stylesBody = {
   backgroundPosition: "center center",
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
-  height: "100%"
 };
 
 class MyDocument extends Document {
