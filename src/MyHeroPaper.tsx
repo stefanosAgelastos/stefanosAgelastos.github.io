@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             position: 'relative',
-            backgroundColor: theme.palette.background.paper,
+            backgroundColor: theme.palette.background.default,
             opacity: 0.95,
             color: theme.palette.common.white,
             marginTop: theme.spacing(4),
@@ -38,7 +38,7 @@ export const MyPaper: React.FC<{}> = ({ children }) => {
             {/* ? Increase the priority of the hero background image */}
             <div className={classes.overlay} />
             <Grid container>
-                <Grid item md={6}>
+                <Grid item md={4}>
                     <div className={classes.childrenWrapper}>
                         {children}
                     </div>

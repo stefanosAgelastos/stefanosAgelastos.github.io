@@ -20,18 +20,22 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.common.white,
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.dark,
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      color: theme.palette.text.secondary,
+      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.text.primary,
     },
     chip: {
-      margin: theme.spacing(1)
+      margin: theme.spacing(1),
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.text.primary
     },
     panelRoot: {
-      width: "100%"
+      width: "100%",
+      backgroundColor: theme.palette.primary.main
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),

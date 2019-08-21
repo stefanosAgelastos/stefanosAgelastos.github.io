@@ -6,13 +6,12 @@ import Link from '@material-ui/core/Link';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Stefanos Agelastos
-      </Link>{' '}
+    <Typography variant="body2" color="textPrimary" align="center">
+      {'© Stefanos Agelastos '}
       {new Date().getFullYear()}
-      {'. Built with '}
+      {', Copenhagen, DK'}
+      <br></br>
+      {'Built with '}
       <Link color="inherit" href="https://material-ui.com/">
       {'Material-UI'}
       </Link>
@@ -38,7 +37,6 @@ const useStyles = makeStyles(theme => ({
   footer: {
     marginTop: "auto",
     padding: theme.spacing(2),
-    backgroundColor: theme.palette.background.default,
   },
 }));
 
