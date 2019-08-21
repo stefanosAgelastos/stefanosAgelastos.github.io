@@ -50598,8 +50598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _util_projectData__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../util/projectData */ "./util/projectData.ts");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
-/* harmony import */ var _src_MyMarkdownLayout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../src/MyMarkdownLayout */ "./src/MyMarkdownLayout.tsx");
+/* harmony import */ var _src_MyMarkdownLayout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../src/MyMarkdownLayout */ "./src/MyMarkdownLayout.tsx");
 
 
 
@@ -50613,51 +50612,29 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
 
 
 
-
 var ProjectPage =
 /*#__PURE__*/
 function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(ProjectPage, _React$Component);
 
   function ProjectPage(props) {
-    var _this;
-
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, ProjectPage);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(ProjectPage).call(this, props));
-    _this.state = {
-      zoom: false
-    };
-    return _this;
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(ProjectPage).call(this, props));
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(ProjectPage, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.setState({
-        zoom: true
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
-      return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_9__["Collapse"], {
-        "in": this.state.zoom,
-        timeout: 500,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, __jsx(_src_MyMarkdownLayout__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      return __jsx(_src_MyMarkdownLayout__WEBPACK_IMPORTED_MODULE_9__["default"], {
         projectMD: this.props.markdown,
         backroundImage: this.props.imageUrl,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 27
         },
         __self: this
-      }));
+      });
     }
   }], [{
     key: "getInitialProps",
@@ -50709,21 +50686,22 @@ function (_React$Component) {
 /*!******************************************!*\
   !*** ./src/MarkdownLayoutComponents.tsx ***!
   \******************************************/
-/*! exports provided: MainGrid, HeaderTitle, InfoGrid, InfoPaper, MyChip, PanelGrid, Panel, ImageCard */
+/*! exports provided: MainGrid, HeaderTitle, TitleAction, InfoGrid, InfoPaper, MyChip, PanelGrid, Panel, ImageCard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainGrid", function() { return MainGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderTitle", function() { return HeaderTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TitleAction", function() { return TitleAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoGrid", function() { return InfoGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfoPaper", function() { return InfoPaper; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyChip", function() { return MyChip; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PanelGrid", function() { return PanelGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Panel", function() { return Panel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageCard", function() { return ImageCard; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/ExpandMore */ "./node_modules/@material-ui/icons/ExpandMore.js");
@@ -50752,6 +50730,9 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["makeStyle
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.text.primary,
       fontSize: theme.typography.pxToRem(17)
+    },
+    actions: {
+      margin: theme.spacing(1)
     },
     chip: {
       margin: theme.spacing(1),
@@ -50784,7 +50765,7 @@ var MainGrid = function MainGrid(_ref) {
     spacing: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, children);
@@ -50795,7 +50776,7 @@ var HeaderTitle = function HeaderTitle(_ref2) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 72
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -50803,7 +50784,7 @@ var HeaderTitle = function HeaderTitle(_ref2) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Paper"], {
@@ -50811,19 +50792,42 @@ var HeaderTitle = function HeaderTitle(_ref2) {
     className: classes.titlePaper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 74
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: this
   }, children))));
 };
-var InfoGrid = function InfoGrid(_ref3) {
-  var children = _ref3.children;
+var TitleAction = function TitleAction(_ref3) {
+  var children = _ref3.children,
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, ["children"]);
+
+  var classes = useStyles();
+  var _ref4 = props,
+      href = _ref4.href,
+      label = _ref4.label,
+      disabled = _ref4.disabled;
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+    href: href,
+    className: classes.actions,
+    disabled: disabled,
+    size: "large",
+    variant: "outlined",
+    color: "default",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, label);
+};
+var InfoGrid = function InfoGrid(_ref5) {
+  var children = _ref5.children;
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     item: true,
     xs: 12,
@@ -50832,18 +50836,18 @@ var InfoGrid = function InfoGrid(_ref3) {
     direction: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 101
     },
     __self: this
   }, children);
 };
-var InfoPaper = function InfoPaper(_ref4) {
-  var children = _ref4.children;
+var InfoPaper = function InfoPaper(_ref6) {
+  var children = _ref6.children;
   var classes = useStyles();
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 110
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Paper"], {
@@ -50851,68 +50855,68 @@ var InfoPaper = function InfoPaper(_ref4) {
     className: classes.paper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 111
     },
     __self: this
   }, children));
 };
-var MyChip = function MyChip(_ref5) {
-  var props = Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, _ref5);
+var MyChip = function MyChip(_ref7) {
+  var props = Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _ref7);
 
   var classes = useStyles();
-  var _ref6 = props,
-      label = _ref6.label;
+  var _ref8 = props,
+      label = _ref8.label;
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Chip"], {
     className: classes.chip,
     label: label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 124
     },
     __self: this
   });
 };
-var PanelGrid = function PanelGrid(_ref7) {
-  var children = _ref7.children;
+var PanelGrid = function PanelGrid(_ref9) {
+  var children = _ref9.children;
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     item: true,
     xs: 12,
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 130
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 131
     },
     __self: this
   }, children));
 };
-var Panel = function Panel(_ref8) {
-  var children = _ref8.children,
-      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref8, ["children"]);
+var Panel = function Panel(_ref10) {
+  var children = _ref10.children,
+      props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref10, ["children"]);
 
   var classes = useStyles();
-  var _ref9 = props,
-      id = _ref9.id,
-      heading = _ref9.heading,
-      secondaryHeading = _ref9.secondaryHeading;
+  var _ref11 = props,
+      id = _ref11.id,
+      heading = _ref11.heading,
+      secondaryHeading = _ref11.secondaryHeading;
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanel"], {
     square: true,
     className: classes.panelRoot,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 146
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanelSummary"], {
     expandIcon: __jsx(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 148
       },
       __self: this
     }),
@@ -50920,42 +50924,42 @@ var Panel = function Panel(_ref8) {
     id: id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 147
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     className: classes.heading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 152
     },
     __self: this
   }, heading), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     className: classes.secondaryHeading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 153
     },
     __self: this
   }, secondaryHeading)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanelDetails"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 157
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 158
     },
     __self: this
   }, children)));
 };
-var ImageCard = function ImageCard(_ref10) {
-  var props = Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, _ref10);
+var ImageCard = function ImageCard(_ref12) {
+  var props = Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _ref12);
 
   var classes = useStyles();
-  return __jsx(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  return __jsx(_material_ui_core_CardMedia__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     component: "img",
     classes: {
       root: classes.images
@@ -50963,7 +50967,7 @@ var ImageCard = function ImageCard(_ref10) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 167
     },
     __self: this
   }));
@@ -51016,6 +51020,7 @@ function MarkdownLayout(props) {
       img: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["ImageCard"],
       MainGrid: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["MainGrid"],
       HeaderTitle: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["HeaderTitle"],
+      TitleAction: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["TitleAction"],
       InfoGrid: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["InfoGrid"],
       InfoPaper: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["InfoPaper"],
       PanelGrid: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_2__["PanelGrid"],
@@ -51027,7 +51032,7 @@ function MarkdownLayout(props) {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: this
   }, __jsx(markdown_to_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -51035,14 +51040,14 @@ function MarkdownLayout(props) {
     children: projectMD,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }));
 }
 {
   /* <ControlledExpansionPanels />
-  */
+   */
 }
 
 /***/ }),
@@ -51174,7 +51179,7 @@ function getProjectImageUrl(slug) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"title\":\"Next.js & Markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"title\":\"AR Prototype System\",\"subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/gps-tourist-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"title\":\"Sockets, Node & JWT\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"title\":\"Angular 5 Client App\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"title\":\"Next.js & Markdown\",\"subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"title\":\"P5.js, jQuery SPA\",\"subtitle\":\"I coded my previous homepage with P5.js, wanna see it? With vector graphics & custom made navbar\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"title\":\"AR Prototype System\",\"subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/mern-admin-app-for-android-AR-app/master\",\"width\":\"70%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"title\":\"Sockets, Node & JWT\",\"subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"title\":\"Angular 5 Client App\",\"subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"title\":\"Spring Boot Rest\",\"subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 
