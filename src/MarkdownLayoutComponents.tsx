@@ -90,14 +90,11 @@ export type MyChipProps = {
   label: string;
 };
 
-export const MyChip: React.FunctionComponent<{}> = ({ children, ...props }) => {
+export const MyChip: React.FunctionComponent<{}> = ({ ...props }) => {
   const classes = useStyles();
   const { label } = props as MyChipProps;
   return (
-    <Chip className={classes.chip} label={label}>
-      {" "}
-      {children}{" "}
-    </Chip>
+    <Chip className={classes.chip} label={label} />
   );
 };
 

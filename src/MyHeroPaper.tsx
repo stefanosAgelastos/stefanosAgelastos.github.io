@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             position: 'relative',
-            backgroundColor: theme.palette.primary.light,
+            backgroundColor: theme.palette.background.paper,
             opacity: 0.95,
             color: theme.palette.common.white,
             marginTop: theme.spacing(4),

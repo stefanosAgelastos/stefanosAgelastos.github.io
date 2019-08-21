@@ -34,10 +34,6 @@ class ProjectPage extends React.Component<Props, IState> {
     this.setState({ zoom: true });
   }
 
-  componentWillMount() {
-    this.setState({ zoom: false });
-  }
-
   render() {
     return (
       <Collapse in={this.state.zoom} timeout={500}>

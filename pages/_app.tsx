@@ -5,13 +5,10 @@ import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import StickyFooter from "../src/MyStickyFooter";
-import ElevateAppBar from "../src/MyElevatedAppBar";
+import ElevatedAppBar from "../src/MyElevatedAppBar";
 import { Container } from "@material-ui/core";
 
-
 class MyApp extends App {
-
-
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");
@@ -31,10 +28,10 @@ class MyApp extends App {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Container maxWidth="xl">
-          <StickyFooter>
-              <ElevateAppBar />
-              <Component {...pageProps} />
-          </StickyFooter>
+            <StickyFooter>
+              <ElevatedAppBar />
+                <Component {...pageProps} />
+            </StickyFooter>
           </Container>
         </ThemeProvider>
       </React.Fragment>
