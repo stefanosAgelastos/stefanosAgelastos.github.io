@@ -2,6 +2,15 @@
   "name": "personal-homepage-stefworks-next",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "serve": "cd out && serve -p 8080",
+    "fast": "npm run build && npm run export && npm run publish",
+    "publish": "git checkout -- out/CNAME && git checkout -- out/.nojekyll && git add out && git commit -m \"chore: regen site\" && git subtree push --prefix out origin master"
+  },
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.2.1",
@@ -12,23 +21,15 @@
     "next": "^9.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-protected-mailto": "^1.0.3",
+    "react-swipeable-views": "^0.13.3",
     "slugify": "^1.3.4"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start",
-    "serve": "cd out && serve -p 8080",
-    "fast": "npm run build && npm run export && npm run publish",
-    "publish": "git checkout -- out/CNAME && git checkout -- out/.nojekyll && git add out && git commit -m \"chore: regen site\" && git subtree push --prefix out origin master"
   },
   "devDependencies": {
     "@types/markdown-to-jsx": "6.9.0",
     "@types/next": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-swipeable-views": "^0.13.0",
     "raw-loader": "^1.0.0",
     "typescript": "latest"
   }

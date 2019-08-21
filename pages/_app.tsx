@@ -7,6 +7,20 @@ import theme from "../src/theme";
 import StickyFooter from "../src/MyStickyFooter";
 import ElevatedAppBar from "../src/MyElevatedAppBar";
 import { Container } from "@material-ui/core";
+import SwipeableViews from "react-swipeable-views";
+import { virtualize } from "react-swipeable-views-utils";
+/* import { mod } from "react-swipeable-views-core";
+ */import { withRouter } from "next/router";
+/* import IndexPage from ".";
+import ContactPage from "./contact";
+import Projects from "./projects"; */
+
+const VirtualizeSwipeableViews = virtualize(SwipeableViews);
+
+type Parameters = {
+  index: number;
+  key: string;
+};
 
 class MyApp extends App {
   componentDidMount() {
@@ -19,7 +33,22 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    /* const { HeaderButtons } = this.state as IState; */
+
+    const slideRenderer = (params: Parameters) => {
+      const { /* index, */ key } = params;
+/*       switch (mod(index, 3)) {
+        case 0:
+          return <IndexPage key={key} {...pageProps} />;
+        case 1:
+          return <Component key={key} {...pageProps} />;
+        case 2:
+          return <ContactPage key={key} {...pageProps} />;
+        default:
+          return <Projects key={key} {...pageProps} />;
+      } */
+      return <Component key={key} {...pageProps} />;
+
+    };
     return (
       <React.Fragment>
         <Head>
@@ -30,7 +59,11 @@ class MyApp extends App {
           <Container maxWidth="xl">
             <StickyFooter>
               <ElevatedAppBar />
-                <Component {...pageProps} />
+              <VirtualizeSwipeableViews
+                animateHeight
+                enableMouseEvents
+                slideRenderer={slideRenderer}
+              />
             </StickyFooter>
           </Container>
         </ThemeProvider>
@@ -39,4 +72,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withRouter(MyApp);

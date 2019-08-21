@@ -36,7 +36,7 @@ export default function CenteredTabs() {
           ? setValue("/contact")
           : setValue("/projects");
     });
-  }, []); // run an effect and clean it up only once (on mount and unmount)
+  }, []); // run the effect and clean it up only once (on mount and unmount)
 
   return (
     <Paper className={classes.root}>
