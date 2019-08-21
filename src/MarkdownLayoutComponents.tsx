@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.text.primary,
+      fontSize: theme.typography.pxToRem(17)
     },
     chip: {
       margin: theme.spacing(1),
@@ -39,12 +40,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
+      fontWeight: "bold",
       flexBasis: "33.33%",
       flexShrink: 0
     },
     secondaryHeading: {
       fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.secondary
+      color: theme.palette.text.primary,
     },
     images: {
       marginTop: theme.spacing(2)
@@ -65,7 +67,7 @@ export const HeaderTitle: React.FunctionComponent<{}> = ({ children }) => {
   return (
     <React.Fragment>
     <Grid item xs={12} >
-      <Paper className={classes.titlePaper} >
+      <Paper square className={classes.titlePaper} >
         <Typography>{children}</Typography>
       </Paper>
     </Grid>
@@ -85,7 +87,7 @@ export const InfoPaper: React.FunctionComponent<{}> = ({ children }) => {
   const classes = useStyles();
   return (
     <Grid>
-      <Paper className={classes.paper}>{children}</Paper>
+      <Paper square className={classes.paper}>{children}</Paper>
     </Grid>
   );
 };
@@ -103,10 +105,9 @@ export const MyChip: React.FunctionComponent<{}> = ({ ...props }) => {
 };
 
 export const PanelGrid: React.FunctionComponent<{}> = ({ children }) => {
-  const classes = useStyles();
   return (
     <Grid item xs={12} md={6}>
-      <div className={classes.panelRoot}>{children}</div>
+      <div >{children}</div>
     </Grid>
   );
 };
@@ -121,7 +122,7 @@ export const Panel: React.FunctionComponent<{}> = ({ children, ...props }) => {
   const classes = useStyles();
   const { id, heading, secondaryHeading } = props as MyPanelProps;
   return (
-    <ExpansionPanel>
+    <ExpansionPanel square className={classes.panelRoot}>
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls={`${id}bh-content`}
