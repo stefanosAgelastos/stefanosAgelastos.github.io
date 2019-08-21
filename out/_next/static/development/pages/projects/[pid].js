@@ -50750,7 +50750,8 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["makeStyle
       padding: theme.spacing(2),
       textAlign: "center",
       backgroundColor: theme.palette.primary.dark,
-      color: theme.palette.text.primary
+      color: theme.palette.text.primary,
+      fontSize: theme.typography.pxToRem(17)
     },
     chip: {
       margin: theme.spacing(1),
@@ -50763,12 +50764,13 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["makeStyle
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
+      fontWeight: "bold",
       flexBasis: "33.33%",
       flexShrink: 0
     },
     secondaryHeading: {
       fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.secondary
+      color: theme.palette.text.primary
     },
     images: {
       marginTop: theme.spacing(2)
@@ -50782,7 +50784,7 @@ var MainGrid = function MainGrid(_ref) {
     spacing: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, children);
@@ -50793,7 +50795,7 @@ var HeaderTitle = function HeaderTitle(_ref2) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -50801,20 +50803,21 @@ var HeaderTitle = function HeaderTitle(_ref2) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Paper"], {
+    square: true,
     className: classes.titlePaper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }, children))));
@@ -50829,7 +50832,7 @@ var InfoGrid = function InfoGrid(_ref3) {
     direction: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: this
   }, children);
@@ -50840,14 +50843,15 @@ var InfoPaper = function InfoPaper(_ref4) {
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Paper"], {
+    square: true,
     className: classes.paper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 90
     },
     __self: this
   }, children));
@@ -50863,28 +50867,26 @@ var MyChip = function MyChip(_ref5) {
     label: label,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: this
   });
 };
 var PanelGrid = function PanelGrid(_ref7) {
   var children = _ref7.children;
-  var classes = useStyles();
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     item: true,
     xs: 12,
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }, __jsx("div", {
-    className: classes.panelRoot,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
     },
     __self: this
   }, children));
@@ -50899,16 +50901,18 @@ var Panel = function Panel(_ref8) {
       heading = _ref9.heading,
       secondaryHeading = _ref9.secondaryHeading;
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanel"], {
+    square: true,
+    className: classes.panelRoot,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 125
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanelSummary"], {
     expandIcon: __jsx(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 127
       },
       __self: this
     }),
@@ -50916,33 +50920,33 @@ var Panel = function Panel(_ref8) {
     id: id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 126
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     className: classes.heading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, heading), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     className: classes.secondaryHeading,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, secondaryHeading)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["ExpansionPanelDetails"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Typography"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }, children)));
@@ -50959,7 +50963,7 @@ var ImageCard = function ImageCard(_ref10) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 146
     },
     __self: this
   }));
