@@ -11,7 +11,8 @@ import {
   ExpansionPanel,
   ExpansionPanelSummary,
   Typography,
-  ExpansionPanelDetails
+  ExpansionPanelDetails,
+  Button
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.text.primary,
       fontSize: theme.typography.pxToRem(17)
+    },
+    actions: {
+      margin: theme.spacing(1),
     },
     chip: {
       margin: theme.spacing(1),
@@ -72,6 +76,23 @@ export const HeaderTitle: React.FunctionComponent<{}> = ({ children }) => {
       </Paper>
     </Grid>
     </React.Fragment>
+  );
+};
+
+type TitleActionProps = {
+  href: string,
+  label: string,
+  disabled?: boolean
+}
+
+export const TitleAction: React.FunctionComponent<{}> = ({ children, ...props }) => {
+  const classes = useStyles();
+
+  const {href, label, disabled} = props as TitleActionProps;
+  return (
+    <Button href={href} className={classes.actions} disabled={disabled} size="large" variant="outlined" color="default">
+      {label}
+    </Button>
   );
 };
 

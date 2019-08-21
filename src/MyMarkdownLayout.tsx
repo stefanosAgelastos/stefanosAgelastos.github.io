@@ -9,6 +9,7 @@ import {
   Panel,
   HeaderTitle,
   ImageCard,
+  TitleAction,
 } from "./MarkdownLayoutComponents";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
@@ -43,6 +44,7 @@ export default function MarkdownLayout(props: Props) {
       img: ImageCard,
       MainGrid: MainGrid,
       HeaderTitle: HeaderTitle,
+      TitleAction: TitleAction,
       InfoGrid: InfoGrid,
       InfoPaper: InfoPaper,
       PanelGrid: PanelGrid,
@@ -59,4 +61,5 @@ export default function MarkdownLayout(props: Props) {
 }
 
 {/* <ControlledExpansionPanels />
+
  */}

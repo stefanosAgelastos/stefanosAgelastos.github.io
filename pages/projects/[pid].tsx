@@ -4,7 +4,6 @@ import {
   getProjectImageUrl
 } from "../../util/projectData";
 import { NextPageContext } from "next";
-import { Collapse } from '@material-ui/core';
 import MarkdownLayout from "../../src/MyMarkdownLayout";
 
 type Props = {
@@ -12,16 +11,9 @@ type Props = {
   imageUrl: string;
 };
 
-type IState = {
-  zoom: boolean;
-}
-
-class ProjectPage extends React.Component<Props, IState> {
+class ProjectPage extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      zoom: false
-    };
   }
 
   static async getInitialProps({ query }: NextPageContext) {
@@ -30,18 +22,12 @@ class ProjectPage extends React.Component<Props, IState> {
     return { markdown, imageUrl };
   }
 
-  componentDidMount() {
-    this.setState({ zoom: true });
-  }
-
   render() {
     return (
-      <Collapse in={this.state.zoom} timeout={500}>
         <MarkdownLayout
           projectMD={this.props.markdown}
           backroundImage={this.props.imageUrl}
         /> 
-      </Collapse>
     );
   }
 }
