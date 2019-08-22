@@ -55557,7 +55557,7 @@ function (_App) {
         },
         __self: this
       }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__["Container"], {
-        maxWidth: "xl",
+        maxWidth: "md",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30

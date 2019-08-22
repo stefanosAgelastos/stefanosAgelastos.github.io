@@ -46550,7 +46550,6 @@ var ContactPage = function ContactPage() {
     justify: "space-evenly",
     alignItems: "center",
     container: true,
-    spacing: 4,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
@@ -46560,11 +46559,10 @@ var ContactPage = function ContactPage() {
     return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
       item: true,
       key: post.title,
-      xs: 12,
-      md: 4,
+      xs: 8,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 115
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CardActionArea"], {
@@ -46572,7 +46570,7 @@ var ContactPage = function ContactPage() {
       href: post.link,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 116
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Card"], {
@@ -46580,20 +46578,20 @@ var ContactPage = function ContactPage() {
       className: classes.card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118
+        lineNumber: 117
       },
       __self: this
     }, __jsx("div", {
       className: classes.cardDetails,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 118
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CardContent"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 119
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -46601,7 +46599,7 @@ var ContactPage = function ContactPage() {
       variant: "h5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 120
       },
       __self: this
     }, post.title), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -46609,7 +46607,7 @@ var ContactPage = function ContactPage() {
       paragraph: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 124
       },
       __self: this
     }, post.description), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
@@ -46617,7 +46615,7 @@ var ContactPage = function ContactPage() {
       color: "primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128
+        lineNumber: 127
       },
       __self: this
     }, post.linkText))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -46626,7 +46624,7 @@ var ContactPage = function ContactPage() {
       fontSize: "large",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 133
       },
       __self: this
     }))));
