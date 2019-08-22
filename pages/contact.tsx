@@ -39,10 +39,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     card: {
       display: "flex",
-      backgroundColor: theme.palette.background.default
+      backgroundColor: theme.palette.background.default,
     },
     cardDetails: {
-      flex: 1
+      flex: 1,
+      color: theme.palette.secondary.main,
+      textAlign: "right"
     },
     cardGrid: {
       marginTop: theme.spacing(2)
@@ -60,9 +62,6 @@ const featuredPosts = [
     description: "",
     linkText: "",
     link: "https://www.linkedin.com/in/stefanosagelastos/",
-    email: null,
-    tel: null,
-    headers: null
   },
   {
     title: "Personal life",
@@ -70,9 +69,6 @@ const featuredPosts = [
     description: "Get to know what I like to post about.",
     linkText: "",
     link: "https://www.instagram.com/volatilemercury/",
-    email: null,
-    tel: null,
-    headers: null
   },
   {
     title: "LinkedIn",
@@ -80,9 +76,6 @@ const featuredPosts = [
     description: "Currently I am searching for an inspiring job opportunity.",
     linkText: "",
     link: "https://www.linkedin.com/in/stefanosagelastos/",
-    email: null,
-    tel: null,
-    headers: null
   },
   {
     title: "Get in touch",
@@ -90,9 +83,6 @@ const featuredPosts = [
     description: "sagelastos@gmail.com",
     linkText: "",
     link: "mailto:sagelastos@gmail.com",
-    email: null,
-    tel: null,
-    headers: null
   },
   {
     title: "or Just ring",
@@ -100,9 +90,6 @@ const featuredPosts = [
     description: "+45 7158 7288",
     linkText: "",
     link: "tel:71-58-72-88",
-    email: null,
-    tel: null,
-    headers: null
   },
 ];
 
@@ -128,7 +115,7 @@ const ContactPage: NextPage = () => {
           {featuredPosts.map(post => (
             <Grid item key={post.title} xs={12} md={4}>
               <CardActionArea component="a" href={post.link}>
-                <Card className={classes.card}>
+                <Card elevation={0} className={classes.card}>
                   <div className={classes.cardDetails}>
                     <CardContent>
                       <Typography component="h2" variant="h5">
@@ -146,7 +133,7 @@ const ContactPage: NextPage = () => {
 
                   <Icon
                     className={clsx(classes.icon, post.icon)}
-                    color="primary"
+                    color="secondary"
                     fontSize="large"
                   />
                 </Card>

@@ -1,6 +1,7 @@
 import React from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CardMedia from "@material-ui/core/CardMedia";
+import DoneIcon from "@material-ui/icons/Done";
 import {
   Chip,
   makeStyles,
@@ -12,7 +13,7 @@ import {
   ExpansionPanelSummary,
   Typography,
   ExpansionPanelDetails,
-  Button
+  Button,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -20,37 +21,43 @@ const useStyles = makeStyles((theme: Theme) =>
     titlePaper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      color: theme.palette.common.white,
-      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.text.secondary,
+      backgroundColor: "#009499"
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      backgroundColor: theme.palette.primary.dark,
-      color: theme.palette.text.primary,
+      backgroundColor: "#81894E",
+      color: theme.palette.text.secondary,
       fontSize: theme.typography.pxToRem(17)
     },
     actions: {
-      margin: theme.spacing(1),
+      margin: theme.spacing(1)
     },
     chip: {
       margin: theme.spacing(1),
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.text.primary
+      backgroundColor: theme.palette.text.secondary,
+      fontWeight: "bold",
+      color: "#81894E"
     },
     panelRoot: {
       width: "100%",
-      backgroundColor: theme.palette.primary.main
+      backgroundColor: "#81894E"
+    },
+    panelDetails: {
+      backgroundColor: "#009499",
+      color: theme.palette.text.secondary,
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
+      color: theme.palette.text.secondary,
       fontWeight: "bold",
       flexBasis: "33.33%",
       flexShrink: 0
     },
     secondaryHeading: {
       fontSize: theme.typography.pxToRem(15),
-      color: theme.palette.text.primary,
+      color: theme.palette.text.secondary,
     },
     images: {
       marginTop: theme.spacing(2)
@@ -70,27 +77,37 @@ export const HeaderTitle: React.FunctionComponent<{}> = ({ children }) => {
   const classes = useStyles();
   return (
     <React.Fragment>
-    <Grid item xs={12} >
-      <Paper square className={classes.titlePaper} >
-        <Typography>{children}</Typography>
-      </Paper>
-    </Grid>
+      <Grid item xs={12}>
+        <Paper square className={classes.titlePaper}>
+          <Typography>{children}</Typography>
+        </Paper>
+      </Grid>
     </React.Fragment>
   );
 };
 
 type TitleActionProps = {
-  href: string,
-  label: string,
-  disabled?: boolean
-}
+  href: string;
+  label: string;
+  disabled?: boolean;
+};
 
-export const TitleAction: React.FunctionComponent<{}> = ({ children, ...props }) => {
+export const TitleAction: React.FunctionComponent<{}> = ({
+  children,
+  ...props
+}) => {
   const classes = useStyles();
 
-  const {href, label, disabled} = props as TitleActionProps;
+  const { href, label, disabled } = props as TitleActionProps;
   return (
-    <Button href={href} className={classes.actions} disabled={disabled} size="large" variant="outlined" color="default">
+    <Button
+      href={href}
+      className={classes.actions}
+      disabled={disabled}
+      size="large"
+      variant="outlined"
+      color="default"
+    >
       {label}
     </Button>
   );
@@ -108,7 +125,9 @@ export const InfoPaper: React.FunctionComponent<{}> = ({ children }) => {
   const classes = useStyles();
   return (
     <Grid>
-      <Paper square className={classes.paper}>{children}</Paper>
+      <Paper square className={classes.paper}>
+        {children}
+      </Paper>
     </Grid>
   );
 };
@@ -121,14 +140,20 @@ export const MyChip: React.FunctionComponent<{}> = ({ ...props }) => {
   const classes = useStyles();
   const { label } = props as MyChipProps;
   return (
-    <Chip className={classes.chip} label={label} />
+    <Chip
+      className={classes.chip}
+      label={label}
+      icon={
+          <DoneIcon />
+      }
+    />
   );
 };
 
 export const PanelGrid: React.FunctionComponent<{}> = ({ children }) => {
   return (
     <Grid item xs={12} md={6}>
-      <div >{children}</div>
+      <div>{children}</div>
     </Grid>
   );
 };
@@ -154,7 +179,7 @@ export const Panel: React.FunctionComponent<{}> = ({ children, ...props }) => {
           {secondaryHeading}
         </Typography>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
+      <ExpansionPanelDetails className={classes.panelDetails}>
         <Typography>{children}</Typography>
       </ExpansionPanelDetails>
     </ExpansionPanel>

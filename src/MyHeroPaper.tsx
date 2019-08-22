@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
 export const MyPaper: React.FC<{}> = ({ children }) => {
     const classes = useStyles();
     return (
-        <Paper className={classes.root}>
+        <Paper elevation={0} className={classes.root}>
             {/* ? Increase the priority of the hero background image */}
             <div className={classes.overlay} />
             <Grid container>

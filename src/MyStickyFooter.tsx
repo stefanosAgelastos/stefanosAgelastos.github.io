@@ -3,10 +3,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import theme from './theme';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textPrimary" align="center">
+    <Typography variant="body2" color="secondary" align="left">
       {'© Stefanos Agelastos '}
       {new Date().getFullYear()}
       {', Copenhagen, DK'}
@@ -19,16 +20,12 @@ function Copyright() {
       <Link color="inherit" href="https://nextjs.org/">
       {'Next.js'}
       </Link>
-      {'. Images from '}
-      <Link color="inherit" href="https://unsplash.com">
-      {'Unsplash'}
-      </Link>
       {'.'}
     </Typography>
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(_theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -36,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
   footer: {
     marginTop: "auto",
-    padding: theme.spacing(2),
+    padding: theme.spacing(0)
   },
 }));
 
@@ -50,8 +47,8 @@ export default function StickyFooter(props: FooterProps) {
   return (
     <div className={classes.root}>
         {props.children}
-      <footer className={classes.footer}>
-        <Container maxWidth="sm">
+      <footer >
+        <Container className={classes.footer} maxWidth="sm">
           <Typography variant="body1"></Typography>
           <Copyright />
         </Container>

@@ -16,23 +16,26 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("sm")]: {
         scrollSnapAlign: "start",
         width: "100% !important",
-        height: 400
+        height: 400,
+        zIndex: 1,
       },
-      "&:hover": {
-        zIndex: 1
+      [theme.breakpoints.up("sm")]: {
+        "&:hover": {
+          zIndex: 1
+        },
+        "&:hover $tileBackdrop": {
+          opacity: 0.15
+        },
+        "&:hover $tileMarked": {
+          opacity: 0
+        },
+        "&:hover $tileTitle": {
+          border: "4px solid currentColor"
+        },
+        "&:hover $tileSubtitle": {
+          visibility: "visible"
+        }
       },
-      "&:hover $tileBackdrop": {
-        opacity: 0.15
-      },
-      "&:hover $tileMarked": {
-        opacity: 0
-      },
-      "&:hover $tileTitle": {
-        border: "4px solid currentColor"
-      },
-      "&:hover $tileSubtitle": {
-        visibility: "visible"
-      }
     },
     tileSrc: {
       position: "absolute",
@@ -51,7 +54,10 @@ const useStyles = makeStyles((theme: Theme) =>
       bottom: 0,
       background: theme.palette.common.black,
       opacity: 0.5,
-      transition: theme.transitions.create("opacity")
+      transition: theme.transitions.create("opacity"),
+      [theme.breakpoints.down("sm")]: {
+        opacity: 0.15
+      },
     },
     tileButton: {
       position: "absolute",
@@ -73,15 +79,17 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "relative",
       whiteSpace: "pre-wrap", // for displaying \n and tabs in html
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
-      [theme.breakpoints.down("md")]: {
-        padding: theme.spacing(1)
-      }
+      [theme.breakpoints.down("sm")]: {
+        padding: theme.spacing(1),
+        border: "4px solid currentColor"
+      },
     },
     tileSubtitle: {
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
       visibility: "hidden",
       [theme.breakpoints.down("md")]: {
-        padding: theme.spacing(1)
+        padding: theme.spacing(1),
+        visibility: "visible"
       },
       width: "85%"
     },
@@ -92,7 +100,10 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "absolute",
       bottom: -2,
       left: "10",
-      transition: theme.transitions.create("opacity")
+      transition: theme.transitions.create("opacity"),
+      [theme.breakpoints.down("sm")]: {
+        opacity: 0
+      },
     }
   })
 );

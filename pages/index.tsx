@@ -9,7 +9,7 @@ import {
 import { MyPaper } from "../src/MyHeroPaper";
 import Link from "next/link";
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
     titleText: {
       /*       textShadow: "#000000 -1px 4px 10px" */
@@ -21,10 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: "column",
       justifyContent: "center"
     },
-    galleryButton: {
-      color: theme.palette.primary.contrastText,
-      boxShadow: theme.shadows[3]
-    }
   })
 );
 
@@ -37,7 +33,7 @@ const IndexPage: NextPage = () => {
               className={classes.titleText}
               component="h1"
               variant="h3"
-              color="inherit"
+              color="secondary"
               gutterBottom
             >
               Hello. I&apos;m Stefanos and this is my developer portfolio.
@@ -45,17 +41,15 @@ const IndexPage: NextPage = () => {
             <Typography
               className={classes.titleText}
               variant="h5"
-              color="inherit"
+              color="secondary"
               paragraph
             >
               Have a look at my projects
         </Typography>
             <Link href="/projects" passHref>
               <Button
-                variant="outlined"
-                color="primary"
+                variant="contained"
                 size="medium"
-                className={classes.galleryButton}
               >
                 Project Gallery
             </Button>

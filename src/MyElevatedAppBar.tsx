@@ -7,8 +7,8 @@ import IconTabs from "./MyIconTabs";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBar: {
-      backgroundColor: theme.palette.common.white,
-      color: theme.palette.common.black,
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
       paddingTop: theme.spacing(2),
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
