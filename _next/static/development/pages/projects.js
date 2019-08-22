@@ -22494,17 +22494,24 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
     }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, theme.breakpoints.down("sm"), {
       scrollSnapAlign: "start",
       width: "100% !important",
-      height: 400
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover", {
+      height: 400,
       zIndex: 1
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover $tileBackdrop", {
-      opacity: 0.15
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover $tileMarked", {
-      opacity: 0
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover $tileTitle", {
-      border: "4px solid currentColor"
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, "&:hover $tileSubtitle", {
-      visibility: "visible"
+    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileWrapper, theme.breakpoints.up("sm"), {
+      "&:hover": {
+        zIndex: 1
+      },
+      "&:hover $tileBackdrop": {
+        opacity: 0.15
+      },
+      "&:hover $tileMarked": {
+        opacity: 0
+      },
+      "&:hover $tileTitle": {
+        border: "4px solid currentColor"
+      },
+      "&:hover $tileSubtitle": {
+        visibility: "visible"
+      }
     }), _tileWrapper),
     tileSrc: {
       position: "absolute",
@@ -22515,7 +22522,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       backgroundSize: "cover",
       backgroundPosition: "center 40%"
     },
-    tileBackdrop: {
+    tileBackdrop: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
       position: "absolute",
       left: 0,
       right: 0,
@@ -22524,7 +22531,9 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       background: theme.palette.common.black,
       opacity: 0.5,
       transition: theme.transitions.create("opacity")
-    },
+    }, theme.breakpoints.down("sm"), {
+      opacity: 0.15
+    }),
     tileButton: (_tileButton = {
       position: "absolute",
       left: 0,
@@ -22544,16 +22553,18 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       whiteSpace: "pre-wrap",
       // for displaying \n and tabs in html
       padding: "".concat(theme.spacing(2), "px ").concat(theme.spacing(4), "px 14px")
-    }, theme.breakpoints.down("md"), {
-      padding: theme.spacing(1)
+    }, theme.breakpoints.down("sm"), {
+      padding: theme.spacing(1),
+      border: "4px solid currentColor"
     }),
     tileSubtitle: (_tileSubtitle = {
       padding: "".concat(theme.spacing(2), "px ").concat(theme.spacing(4), "px 14px"),
       visibility: "hidden"
     }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileSubtitle, theme.breakpoints.down("md"), {
-      padding: theme.spacing(1)
+      padding: theme.spacing(1),
+      visibility: "visible"
     }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileSubtitle, "width", "85%"), _tileSubtitle),
-    tileMarked: {
+    tileMarked: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
       height: 3,
       width: "65%",
       background: theme.palette.common.white,
@@ -22561,7 +22572,9 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       bottom: -2,
       left: "10",
       transition: theme.transitions.create("opacity")
-    }
+    }, theme.breakpoints.down("sm"), {
+      opacity: 0
+    })
   });
 });
 function ProjectGalleryTile(props) {
@@ -22570,7 +22583,7 @@ function ProjectGalleryTile(props) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 119
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -22579,7 +22592,7 @@ function ProjectGalleryTile(props) {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 120
     },
     __self: this
   }, __jsx(_material_ui_core_ButtonBase__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -22589,7 +22602,7 @@ function ProjectGalleryTile(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 121
     },
     __self: this
   }, __jsx("div", {
@@ -22602,21 +22615,21 @@ function ProjectGalleryTile(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 127
     },
     __self: this
   }), __jsx("div", {
     className: classes.tileBackdrop,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 135
     },
     __self: this
   }), __jsx("div", {
     className: classes.tileButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 136
     },
     __self: this
   }, __jsx(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -22627,14 +22640,14 @@ function ProjectGalleryTile(props) {
     className: classes.tileTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 137
     },
     __self: this
   }, tile.title, __jsx("div", {
     className: classes.tileMarked,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 145
     },
     __self: this
   })), __jsx(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -22644,7 +22657,7 @@ function ProjectGalleryTile(props) {
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 147
     },
     __self: this
   }, tile.subtitle)))));
@@ -22779,11 +22792,11 @@ function getProjectImageUrl(slug) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"_imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(176, 8, 2)\",\"_title\":\"Next.js & Markdown\",\"title\":\"Making a nice homepage\",\"_subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"subtitle\":\"Read about how I made my website, STEFWORKS.ml and the tech\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(24, 2, 166)\",\"_title\":\"P5.js, jQuery SPA\",\"title\":\"Tailoring a \\nnavigation menu\",\"_subtitle\":\"I coded my previous homepage with P5.js, wanna Read about it? With vector graphics & custom made navbar\",\"subtitle\":\"Read about how I coded my previous homepage\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(66, 135, 245)\",\"_title\":\"AR Prototype System\",\"title\":\"Augmenting a sought-after guided tour\",\"_subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"subtitle\":\"Read about my team work as an intern for KøbenhavnerTure\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/mern-admin-app-for-android-AR-app/master\",\"width\":\"70%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(90, 115, 0)\",\"_title\":\"Sockets, Node & JWT\",\"title\":\"Make your own chat room\",\"_subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"subtitle\":\"Read about this personal fullstack project\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(61, 235, 104)\",\"_title\":\"Angular 5 Client App\",\"title\":\"Angular 5 Client App\",\"_subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"subtitle\":\"Read about this personal frontend project\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"rgb(240, 62, 216)\",\"_title\":\"Spring Boot Rest\",\"title\":\"Spring Boot Rest\",\"_subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"subtitle\":\"Read about this personal backend project\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"_imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#98DDDE\",\"_title\":\"Next.js & Markdown\",\"title\":\"Making a nice homepage\",\"_subtitle\":\"Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..\",\"subtitle\":\"Read about how I made my website, STEFWORKS.ml and the tech\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"width\":\"60%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#FFDA29\",\"_title\":\"P5.js, jQuery SPA\",\"title\":\"Tailoring a \\nnavigation menu\",\"_subtitle\":\"I coded my previous homepage with P5.js, wanna Read about it? With vector graphics & custom made navbar\",\"subtitle\":\"Read about how I coded my previous homepage\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"width\":\"40%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#DE98AB\",\"_title\":\"AR Prototype System\",\"title\":\"Augmenting a sought-after guided tour\",\"_subtitle\":\"An AR prototype app, for a Copenhagen business. A cool multidiciplinary team project!\",\"subtitle\":\"Read about my team work as an intern for KøbenhavnerTure\",\"slug\":\"ar-admin-page\",\"markdownUrlPath\":\"/mern-admin-app-for-android-AR-app/master\",\"width\":\"70%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#FF6F61\",\"_title\":\"Sockets, Node & JWT\",\"title\":\"Make your own chat room\",\"_subtitle\":\"Although not a SoMe revolution, this custom webapp chat still makes me proud :D\",\"subtitle\":\"Read about this personal fullstack project\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"width\":\"30%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#98DDDE\",\"_title\":\"Angular 5 Client App\",\"title\":\"Angular 5 Client App\",\"_subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"subtitle\":\"Read about this personal frontend project\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"width\":\"65%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#FFDA29\",\"_title\":\"Spring Boot Rest\",\"title\":\"Spring Boot Rest\",\"_subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"subtitle\":\"Read about this personal backend project\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"width\":\"35%\"}]");
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Fprojects.tsx ***!
   \******************************************************************************************************************************************************************/
@@ -22806,5 +22819,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=projects.js.map
