@@ -10,8 +10,8 @@ function Copyright() {
     <Typography variant="body2" color="secondary" align="left">
       {'© Stefanos Agelastos '}
       {new Date().getFullYear()}
-      {', Copenhagen, DK'}
-      <br></br>
+      {', Copenhagen, DK. '}
+      <br/>
       {'Built with '}
       <Link color="inherit" href="https://material-ui.com/">
       {'Material-UI'}
@@ -33,7 +33,7 @@ const useStyles = makeStyles(_theme => ({
   },
   footer: {
     marginTop: "auto",
-    padding: theme.spacing(0)
+    padding: theme.spacing(2)
   },
 }));
 
@@ -47,8 +47,8 @@ export default function StickyFooter(props: FooterProps) {
   return (
     <div className={classes.root}>
         {props.children}
-      <footer >
-        <Container className={classes.footer} maxWidth="sm">
+      <footer className={classes.footer} >
+        <Container >
           <Typography variant="body1"></Typography>
           <Copyright />
         </Container>

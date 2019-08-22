@@ -7,7 +7,9 @@ import WarningIcon from "@material-ui/icons/Warning";
 const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
     warning: {
-        backgroundColor: "#FFBF00",
+      backgroundColor: "#FFDA29",
+      color: _theme.palette.text.secondary,
+      fontWeight: "bold"
     }
   })
 );
@@ -34,33 +36,40 @@ export default function SimpleSnackbar() {
   return (
     <Snackbar
       anchorOrigin={{
-        vertical: "top",
-        horizontal: "left"
+        vertical: "bottom",
+        horizontal: "center"
       }}
       open={open}
-      autoHideDuration={15000}
+      /*       autoHideDuration={15000} */
       onClose={handleClose}
       ContentProps={{
-        "aria-describedby": "message-id",        
+        "aria-describedby": "message-id",
+        classes: { root: classes.warning }
       }}
-      className={classes.warning}
       message={
-        <span id="message-id">
-          Page under development, I am sorrry for the bad experience. 
-          <br/>
-          <br/>
-           These are the pages with the most interesting content at the moment: 
-          <br/>
-          <a href="/projects/ar-admin-page"> AR project </a>
-          <br/>
-          <a href="/projects/ar-admin-page">Node Chat</a>
-        </span>
+        <React.Fragment>
+          <WarningIcon fontSize={"large"} />
+          <br />
+          <span id="message-id">
+            Page under development, I am sorrry for the bad experience.
+            <br />
+            <br />
+            At the moment, I have only the following projects updated:
+            <br />
+            <a href="/projects/ar-admin-page"> AR Prototype System </a>
+           { "  & " }
+            <a href="/projects/ar-admin-page">Make your own chat room</a>
+            <br />
+            There you can find more content.
+            <br />
+            Have a look!
+          </span>
+        </React.Fragment>
       }
       action={[
         <Button key="undo" color="secondary" size="small" onClick={handleClose}>
           I understand
-        </Button>,
-        <WarningIcon />
+        </Button>
       ]}
     />
   );

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
           zIndex: 1
         },
         "&:hover $tileBackdrop": {
-          opacity: 0.15
+          opacity: 0.05
         },
         "&:hover $tileMarked": {
           opacity: 0
@@ -53,10 +53,10 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 0,
       bottom: 0,
       background: theme.palette.common.black,
-      opacity: 0.5,
+      opacity: 0.2,
       transition: theme.transitions.create("opacity"),
       [theme.breakpoints.down("sm")]: {
-        opacity: 0.15
+        opacity: 0.05
       },
     },
     tileButton: {
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(1)
       },
-      color: theme.palette.primary.contrastText
+      color: theme.palette.text.secondary
     },
     tileTitle: {
       position: "relative",
@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme: Theme) =>
     tileMarked: {
       height: 3,
       width: "65%",
-      background: theme.palette.common.white,
+      background: theme.palette.text.secondary,
       position: "absolute",
       bottom: -2,
       left: "10",
