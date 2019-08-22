@@ -27,7 +27,7 @@ class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Container maxWidth="xl">
+          <Container maxWidth="md">
             <StickyFooter>
               <ElevatedAppBar />
                 <Component {...pageProps} />

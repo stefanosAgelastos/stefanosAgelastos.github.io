@@ -110,10 +110,9 @@ const ContactPage: NextPage = () => {
           justify="space-evenly"
           alignItems="center"
           container
-          spacing={4}
         >
           {featuredPosts.map(post => (
-            <Grid item key={post.title} xs={12} md={4}>
+            <Grid item key={post.title} xs={8}>
               <CardActionArea component="a" href={post.link}>
                 <Card elevation={0} className={classes.card}>
                   <div className={classes.cardDetails}>

@@ -5,7 +5,8 @@ import {
   createStyles,
   Typography,
   Button,
-  } from "@material-ui/core";
+  Grid
+} from "@material-ui/core";
 import { MyPaper } from "../src/MyHeroPaper";
 import Link from "next/link";
 
@@ -20,42 +21,42 @@ const useStyles = makeStyles((_theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       justifyContent: "center"
-    },
+    }
   })
 );
 
 const IndexPage: NextPage = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-          <MyPaper>
-            <Typography
-              className={classes.titleText}
-              component="h1"
-              variant="h3"
-              color="secondary"
-              gutterBottom
-            >
-              Hello. I&apos;m Stefanos and this is my developer portfolio.
+    <Grid 
+    className={classes.root}
+    container
+    >
+      <MyPaper>
+        <Typography
+          className={classes.titleText}
+          component="h1"
+          variant="h3"
+          color="secondary"
+          gutterBottom
+        >
+          Hello. I&apos;m Stefanos and this is my developer portfolio.
         </Typography>
-            <Typography
-              className={classes.titleText}
-              variant="h5"
-              color="secondary"
-              paragraph
-            >
-              Have a look at my projects
+        <Typography
+          className={classes.titleText}
+          variant="h5"
+          color="secondary"
+          paragraph
+        >
+          Have a look at my projects
         </Typography>
-            <Link href="/projects" passHref>
-              <Button
-                variant="contained"
-                size="medium"
-              >
-                Project Gallery
-            </Button>
-            </Link>
-          </MyPaper>
-    </div>
+        <Link href="/projects" passHref>
+          <Button variant="contained" size="medium">
+            Project Gallery
+          </Button>
+        </Link>
+      </MyPaper>
+    </Grid>
   );
 };
 

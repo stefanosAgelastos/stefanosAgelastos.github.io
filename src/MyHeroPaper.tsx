@@ -37,13 +37,11 @@ export const MyPaper: React.FC<{}> = ({ children }) => {
         <Paper elevation={0} className={classes.root}>
             {/* ? Increase the priority of the hero background image */}
             <div className={classes.overlay} />
-            <Grid container>
-                <Grid item md={4}>
+                <Grid item xs={6}>
                     <div className={classes.childrenWrapper}>
                         {children}
                     </div>
                 </Grid>
-            </Grid>
         </Paper>
     );
 }
