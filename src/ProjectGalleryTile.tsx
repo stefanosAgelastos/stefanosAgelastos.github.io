@@ -118,7 +118,7 @@ export default function ProjectGalleryTile(props: Props) {
           <div className={classes.tileButton}>
             <GalleryTypography
               component="h3"
-              variant="h2"
+              variant="h3"
               color="inherit"
               align={"left"}
               className={classes.tileTitle}
