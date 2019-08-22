@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: 0,
       height: "40vh",
       [theme.breakpoints.down("sm")]: {
+        scrollSnapAlign: "start",
         width: "100% !important",
         height: 400
       },

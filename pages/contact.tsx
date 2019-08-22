@@ -55,6 +55,16 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const featuredPosts = [
   {
+    title: "Github",
+    icon: "fab fa-github",
+    description: "",
+    linkText: "",
+    link: "https://www.linkedin.com/in/stefanosagelastos/",
+    email: null,
+    tel: null,
+    headers: null
+  },
+  {
     title: "Personal life",
     icon: "fab fa-instagram",
     description: "Get to know what I like to post about.",
@@ -93,7 +103,7 @@ const featuredPosts = [
     email: null,
     tel: null,
     headers: null
-  }
+  },
 ];
 
 const ContactPage: NextPage = () => {

@@ -5,7 +5,7 @@
         "_title": "Next.js & Markdown",
         "title": "Making a nice homepage",
         "_subtitle": "Get under the hood of my homepage, STEFWORKS. You'll find typescript, material-ui and more..",
-        "subtitle": "Read about my website, STEFWORKS.ml and the technologies I used",
+        "subtitle": "Read about how I made my website, STEFWORKS.ml and the tech",
         "slug": "next-js-homepage",
         "markdownUrlPath": "/stefanosAgelastos.github.io/local-development",
         "width": "60%"
