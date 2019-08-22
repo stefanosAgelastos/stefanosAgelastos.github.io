@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       "&:hover $tileTitle": {
         border: "4px solid currentColor"
+      },
+      "&:hover $tileSubtitle": {
+        visibility: "visible"
       }
     },
     tileSrc: {
@@ -67,13 +70,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     tileTitle: {
       position: "relative",
+      whiteSpace: "pre-wrap",
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(1)
-      },
+      }
     },
     tileSubtitle: {
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
+      visibility: "hidden",
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(1)
       },
@@ -111,8 +116,9 @@ export default function ProjectGalleryTile(props: Props) {
             className={classes.tileSrc}
             style={{
               backgroundColor: tile.imageUrl
-/*               backgroundImage: `url(${tile.imageUrl})`
- */            }}
+              /*               backgroundImage: `url(${tile.imageUrl})`
+               */
+            }}
           />
           <div className={classes.tileBackdrop} />
           <div className={classes.tileButton}>
@@ -132,7 +138,7 @@ export default function ProjectGalleryTile(props: Props) {
               className={classes.tileSubtitle}
               color="inherit"
             >
-{/*               {tile.subtitle} */}
+              {tile.subtitle}
             </GalleryTypography>
           </div>
         </ButtonBase>
