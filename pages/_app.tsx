@@ -7,7 +7,6 @@ import theme from "../src/theme";
 import StickyFooter from "../src/MyStickyFooter";
 import ElevatedAppBar from "../src/MyElevatedAppBar";
 import { Container } from "@material-ui/core";
-import SimpleSnackbar from "../src/MySnack";
 
 class MyApp extends App {
   componentDidMount() {
@@ -32,7 +31,6 @@ class MyApp extends App {
             <StickyFooter>
               <ElevatedAppBar />
                 <Component {...pageProps} />
-                <SimpleSnackbar/>
             </StickyFooter>
           </Container>
         </ThemeProvider>

@@ -5,6 +5,7 @@ import {
 } from "../../util/projectData";
 import { NextPageContext } from "next";
 import MarkdownLayout from "../../src/MyMarkdownLayout";
+import SimpleSnackbar from "../../src/MySnack";
 
 type Props = {
   markdown: string;
@@ -24,10 +25,13 @@ class ProjectPage extends React.Component<Props> {
 
   render() {
     return (
+      <React.Fragment>
+                        <SimpleSnackbar/>
         <MarkdownLayout
           projectMD={this.props.markdown}
           backroundImage={this.props.imageUrl}
-        /> 
+        />
+      </React.Fragment>
     );
   }
 }
