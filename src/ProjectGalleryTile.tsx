@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     tileTitle: {
       position: "relative",
-      whiteSpace: "pre-wrap",
+      whiteSpace: "pre-wrap", // for displaying \n and tabs in html
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(1)
