@@ -95,15 +95,6 @@ type Props = {
   tile: Project;
 };
 
-/* const linkElement = (slug: string) => {
-    const linkprops = {
-        href: "/post/[slug]",
-        as: `/post/${slug}`,
-        passHref: true
-    }
-    return new Link(linkrops);
-} */
-
 export default function ProjectGalleryTile(props: Props) {
   const classes = useStyles();
   const { tile } = props;
@@ -119,8 +110,9 @@ export default function ProjectGalleryTile(props: Props) {
           <div
             className={classes.tileSrc}
             style={{
-              backgroundImage: `url(${tile.imageUrl})`
-            }}
+              backgroundColor: tile.imageUrl
+/*               backgroundImage: `url(${tile.imageUrl})`
+ */            }}
           />
           <div className={classes.tileBackdrop} />
           <div className={classes.tileButton}>
@@ -140,7 +132,7 @@ export default function ProjectGalleryTile(props: Props) {
               className={classes.tileSubtitle}
               color="inherit"
             >
-              {tile.subtitle}
+{/*               {tile.subtitle} */}
             </GalleryTypography>
           </div>
         </ButtonBase>

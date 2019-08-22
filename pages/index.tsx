@@ -40,7 +40,7 @@ const IndexPage: NextPage = () => {
               color="inherit"
               gutterBottom
             >
-              Hey! I&apos;m Stefanos and this is my developer portfolio.
+              Hello. I&apos;m Stefanos and this is my developer portfolio.
         </Typography>
             <Typography
               className={classes.titleText}
@@ -53,6 +53,7 @@ const IndexPage: NextPage = () => {
             <Link href="/projects" passHref>
               <Button
                 variant="outlined"
+                color="primary"
                 size="medium"
                 className={classes.galleryButton}
               >
