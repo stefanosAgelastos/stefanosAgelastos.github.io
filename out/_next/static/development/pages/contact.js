@@ -46637,7 +46637,7 @@ var ContactPage = function ContactPage() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Fcontact.tsx ***!
   \****************************************************************************************************************************************************************/
@@ -46660,5 +46660,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact.js.map

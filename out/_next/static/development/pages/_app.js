@@ -55844,7 +55844,7 @@ function Copyright() {
       lineNumber: 10
     },
     __self: this
-  }, '© Stefanos Agelastos ', new Date().getFullYear(), ', Copenhagen, DK', __jsx("br", {
+  }, '© Stefanos Agelastos ', new Date().getFullYear(), ', Copenhagen, DK. ', __jsx("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -55878,7 +55878,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
     },
     footer: {
       marginTop: "auto",
-      padding: _theme__WEBPACK_IMPORTED_MODULE_5__["default"].spacing(0)
+      padding: _theme__WEBPACK_IMPORTED_MODULE_5__["default"].spacing(2)
     }
   };
 });
@@ -55892,14 +55892,13 @@ function StickyFooter(props) {
     },
     __self: this
   }, props.children, __jsx("footer", {
+    className: classes.footer,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
     },
     __self: this
   }, __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    className: classes.footer,
-    maxWidth: "sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
