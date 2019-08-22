@@ -10,6 +10,7 @@ import SimpleSnackbar from "../../src/MySnack";
 type Props = {
   markdown: string;
   imageUrl: string;
+  snack: boolean;
 };
 
 class ProjectPage extends React.Component<Props> {
@@ -20,13 +21,19 @@ class ProjectPage extends React.Component<Props> {
   static async getInitialProps({ query }: NextPageContext) {
     const markdown = await getREADMEfromMyGithub(query.pid as string);
     const imageUrl = getProjectImageUrl(query.pid as string);
-    return { markdown, imageUrl };
+    var snack = true;
+    if(query.pid == "ar-admin-page" || query.pid == "chat-webapp-node-js"){
+      snack = false;
+    }
+    return { markdown, imageUrl, snack };
   }
 
   render() {
     return (
       <React.Fragment>
-                        <SimpleSnackbar/>
+        { this.props.snack &&
+          <SimpleSnackbar />
+          }
         <MarkdownLayout
           projectMD={this.props.markdown}
           backroundImage={this.props.imageUrl}
