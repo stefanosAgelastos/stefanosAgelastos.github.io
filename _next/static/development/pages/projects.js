@@ -22501,7 +22501,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
         zIndex: 1
       },
       "&:hover $tileBackdrop": {
-        opacity: 0.15
+        opacity: 0.05
       },
       "&:hover $tileMarked": {
         opacity: 0
@@ -22529,10 +22529,10 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       top: 0,
       bottom: 0,
       background: theme.palette.common.black,
-      opacity: 0.5,
+      opacity: 0.2,
       transition: theme.transitions.create("opacity")
     }, theme.breakpoints.down("sm"), {
-      opacity: 0.15
+      opacity: 0.05
     }),
     tileButton: (_tileButton = {
       position: "absolute",
@@ -22547,7 +22547,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       padding: theme.spacing(2)
     }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileButton, theme.breakpoints.down("md"), {
       padding: theme.spacing(1)
-    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileButton, "color", theme.palette.primary.contrastText), _tileButton),
+    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_tileButton, "color", theme.palette.text.secondary), _tileButton),
     tileTitle: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
       position: "relative",
       whiteSpace: "pre-wrap",
@@ -22567,7 +22567,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
     tileMarked: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({
       height: 3,
       width: "65%",
-      background: theme.palette.common.white,
+      background: theme.palette.text.secondary,
       position: "absolute",
       bottom: -2,
       left: "10",
