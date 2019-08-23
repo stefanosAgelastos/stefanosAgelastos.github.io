@@ -52,7 +52,7 @@ export default function CenteredTabs() {
 
   const classes = useStyles();
   return (
-    <Paper className={classes.root}>
+    <Paper elevation={0} className={classes.root}>
       <Tabs
         value={value}
         onChange={handleChange}
