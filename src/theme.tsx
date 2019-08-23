@@ -1,25 +1,42 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
 
+/* 
+PANTONE: UNDER THE SEA
+https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2019-palette-exploration
+*/
+export enum Pantone {
+  LivingCoral = "#FF6F61",
+  BlueDepths = "#263056",
+  /* harmony gallery */
+  TurtleGreen = "#81894E",
+  ViridianGreen = "#009499",
+  TurkishSea = "#195190",
+  /* harmony [pid] */
+  SeaPink = "#DE98AB",
+  LimpetShell = "#98DDDE",
+  VibrantYellow = "#FFDA29",
+}
+
 // Create a theme instance.
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#263056"
+      main: Pantone.BlueDepths
     },
     secondary: {
-      main: "#FF6F61"
+      main: Pantone.LivingCoral
     },
     error: {
       main: red.A400
     },
     background: {
-      default: "#263056", // PANTONE Blue Depths
-      paper: "rgba(255, 255, 255, 0.8)" //almost transparent
+      default: Pantone.BlueDepths,
+      paper: "rgba(255, 255, 255, 0)" // transparent
     },
     text: {
       primary: "rgba(255, 255, 255, 0.87)",
-      secondary: "#195190",
+      secondary: Pantone.TurkishSea,
       disabled: "rgba(0, 0, 0, 0.38)",
       hint: "rgba(0, 0, 0, 0.38)"
     }
@@ -33,12 +50,12 @@ const theme = createMuiTheme({
         fontSize: "1rem"
       },
       contained: {
-        backgroundColor: "#FF6F61",
-        color: "#263056"
+        backgroundColor: Pantone.LivingCoral,
+        color: Pantone.BlueDepths
       },
       outlined: {
-        borderColor: "#195190",
-        color: "#195190"
+        borderColor: Pantone.TurkishSea,
+        color: Pantone.TurkishSea
       }
     }
   },
@@ -61,16 +78,3 @@ const theme = createMuiTheme({
 });
 
 export default theme;
-
-/* 
-PANTONE: UNDER THE SEA
-
-263056 Blue Depths
-195190 Turkish Sea 
-009499 Viridian Green
-81894E Turtle Green
-FF6F61 Living Coral
-DE98AB Sea Pink
-FFDA29 Vibrant Yellow
-98DDDE Limpet Shell
-*/

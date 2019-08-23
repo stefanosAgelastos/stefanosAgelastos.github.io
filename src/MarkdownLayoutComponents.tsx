@@ -2,6 +2,7 @@ import React from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CardMedia from "@material-ui/core/CardMedia";
 import DoneIcon from "@material-ui/icons/Done";
+import { Pantone } from './theme';
 import {
   Chip,
   makeStyles,
@@ -22,12 +23,12 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor: "#009499"
+      backgroundColor: Pantone.VibrantYellow
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      backgroundColor: "#81894E",
+      backgroundColor: Pantone.LimpetShell,
       color: theme.palette.text.secondary,
       fontSize: theme.typography.pxToRem(17)
     },
@@ -38,15 +39,18 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(1),
       backgroundColor: theme.palette.text.secondary,
       fontWeight: "bold",
-      color: "#81894E"
+      color: Pantone.LimpetShell,
+    },
+    chipIcon: {
+      color: Pantone.LimpetShell
     },
     panelRoot: {
       width: "100%",
-      backgroundColor: "#81894E"
+      backgroundColor: Pantone.SeaPink,
     },
     panelDetails: {
-      backgroundColor: "#009499",
-      color: theme.palette.text.secondary,
+      backgroundColor: theme.palette.background.default,
+      color: Pantone.LimpetShell,
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
@@ -144,7 +148,7 @@ export const MyChip: React.FunctionComponent<{}> = ({ ...props }) => {
       className={classes.chip}
       label={label}
       icon={
-          <DoneIcon />
+          <DoneIcon classes={{root:classes.chipIcon}}/>
       }
     />
   );

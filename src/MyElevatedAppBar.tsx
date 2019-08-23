@@ -3,6 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { Typography, makeStyles, Theme, createStyles } from "@material-ui/core";
 import IconTabs from "./MyIconTabs";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme: Theme) =>
       visibility: "hidden"
     },
     toolbarTitle: {
-      flex: 1
+      flex: 1,
+      cursor: "pointer",
     }
   })
 );
@@ -44,6 +46,7 @@ export default function ElevatedAppBar() {
       <div className={classes.spacer}> {"spacer"} </div>
       <ElevationScroll>
         <AppBar className={classes.appBar}>
+        <Link href="/">
           <Typography
             component="h2"
             variant="h5"
@@ -54,6 +57,7 @@ export default function ElevatedAppBar() {
           >
             STEFWORKS
           </Typography>
+            </Link>
           <IconTabs />
         </AppBar>
       </ElevationScroll>

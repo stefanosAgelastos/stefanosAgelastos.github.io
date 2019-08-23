@@ -2,12 +2,13 @@ import React, { useEffect } from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Snackbar from "@material-ui/core/Snackbar";
-import WarningIcon from "@material-ui/icons/Warning";
+import InfoIcon from "@material-ui/icons/Info";
+import { Pantone } from './theme';
 
 const useStyles = makeStyles((_theme: Theme) =>
   createStyles({
     warning: {
-      backgroundColor: "#FFDA29",
+      backgroundColor: Pantone.VibrantYellow,
       color: _theme.palette.text.secondary,
       fontWeight: "bold"
     }
@@ -36,7 +37,7 @@ export default function SimpleSnackbar() {
   return (
     <Snackbar
       anchorOrigin={{
-        vertical: "bottom",
+        vertical: "top",
         horizontal: "center"
       }}
       open={open}
@@ -48,7 +49,7 @@ export default function SimpleSnackbar() {
       }}
       message={
         <React.Fragment>
-          <WarningIcon fontSize={"large"} />
+          <InfoIcon fontSize={"large"} />
           <br />
           <span id="message-id">
             Page under development, I am sorrry for the bad experience.

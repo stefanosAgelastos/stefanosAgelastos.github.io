@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 0,
       bottom: 0,
       background: theme.palette.common.black,
-      opacity: 0.2,
+      opacity: 0.5,
       transition: theme.transitions.create("opacity"),
       [theme.breakpoints.down("sm")]: {
         opacity: 0.05
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(1)
       },
-      color: theme.palette.text.secondary
+      color: theme.palette.common.white
     },
     tileTitle: {
       position: "relative",
@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme: Theme) =>
     tileMarked: {
       height: 3,
       width: "65%",
-      background: theme.palette.text.secondary,
+      background: theme.palette.common.white,
       position: "absolute",
       bottom: -2,
       left: "10",

@@ -5,7 +5,7 @@ import Tab from "@material-ui/core/Tab";
 import Router from "next/router";
 import { Theme, createStyles, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles((theme: Theme) => 
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     tabRoot: {
       color: theme.palette.primary.main,
+      "&:hover": {
+        color: theme.palette.primary.light,
+        opacity: 1
+      }
     },
     tabIndicator: {
       backgroundColor: theme.palette.primary.main
@@ -53,15 +57,31 @@ export default function CenteredTabs() {
         value={value}
         onChange={handleChange}
         classes={{
-          root: classes.tabRoot,
-          indicator: classes.tabIndicator,
-          centered: classes.tabRoot
+          indicator: classes.tabIndicator
         }}
         centered
       >
-        <Tab label="Home" value="/" />
-        <Tab label="My projects" value="/projects" />
-        <Tab label="Contact" value="/contact" />
+        <Tab
+          classes={{
+            root: classes.tabRoot,
+          }}
+          label="Home"
+          value="/"
+        />
+        <Tab
+          classes={{
+            root: classes.tabRoot,
+          }}
+          label="My projects"
+          value="/projects"
+        />
+        <Tab
+          classes={{
+            root: classes.tabRoot,
+          }}
+          label="Contact"
+          value="/contact"
+        />
       </Tabs>
     </Paper>
   );
