@@ -112,7 +112,7 @@ const ContactPage: NextPage = () => {
           container
         >
           {featuredPosts.map(post => (
-            <Grid item key={post.title} xs={8}>
+            <Grid item key={post.title} xs={10}>
               <CardActionArea component="a" href={post.link}>
                 <Card elevation={0} className={classes.card}>
                   <div className={classes.cardDetails}>
