@@ -61,7 +61,7 @@ const featuredPosts = [
     icon: "fab fa-github",
     description: "",
     linkText: "",
-    link: "https://www.linkedin.com/in/stefanosagelastos/",
+    link: "https://github.com/stefanosAgelastos",
   },
   {
     title: "Personal life",

@@ -59,7 +59,7 @@ export default function SimpleSnackbar() {
             <br />
             <a href="/projects/ar-admin-page"> AR Prototype System </a>
            { "  & " }
-            <a href="/projects/ar-admin-page">Make your own chat room</a>
+            <a href="/projects/chat-webapp-node-js">Make your own chat room</a>
             <br />
             There you can find more content.
             <br />
