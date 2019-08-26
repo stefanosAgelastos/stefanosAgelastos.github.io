@@ -46500,7 +46500,7 @@ var featuredPosts = [{
   icon: "fab fa-github",
   description: "",
   linkText: "",
-  link: "https://www.linkedin.com/in/stefanosagelastos/"
+  link: "https://github.com/stefanosAgelastos"
 }, {
   title: "Personal life",
   icon: "fab fa-instagram",
@@ -46635,7 +46635,7 @@ var ContactPage = function ContactPage() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontact&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Fcontact.tsx ***!
   \****************************************************************************************************************************************************************/
@@ -46658,5 +46658,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=contact.js.map
