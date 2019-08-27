@@ -166,13 +166,21 @@ export type MyPanelProps = {
   id: string;
   heading: string;
   secondaryHeading: string;
+  expanded: string | boolean;
+  onChange: (panelId: string, isExpanded: boolean) => void;
 };
 
 export const Panel: React.FunctionComponent<{}> = ({ children, ...props }) => {
   const classes = useStyles();
-  const { id, heading, secondaryHeading } = props as MyPanelProps;
+  const { id, heading, secondaryHeading, expanded, onChange } = props as MyPanelProps;
+  
   return (
-    <ExpansionPanel square className={classes.panelRoot}>
+    <ExpansionPanel 
+    expanded={expanded === id } 
+    square 
+    onChange={(_e, isExpanded) => {
+      onChange(id, isExpanded)}}
+    className={classes.panelRoot} >
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls={`${id}bh-content`}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import {
   MyChip,
@@ -9,7 +9,7 @@ import {
   Panel,
   HeaderTitle,
   ImageCard,
-  TitleAction,
+  TitleAction
 } from "./MarkdownLayoutComponents";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
@@ -31,13 +31,18 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 type Props = {
-  projectMD: string,
-  backroundImage: string
+  projectMD: string;
+  backroundImage: string;
 };
 
 export default function MarkdownLayout(props: Props) {
   const classes = useStyles(props);
+  const [expanded, setExpanded] = React.useState<string | false>(false);
   const { projectMD } = props;
+
+  const handlePanelChange = useCallback((panelID: string, isExpanded: boolean) => {
+    setExpanded(isExpanded ? panelID : false);
+  }, []);
 
   const options: MarkdownOptions = {
     overrides: {
@@ -48,8 +53,14 @@ export default function MarkdownLayout(props: Props) {
       InfoGrid: InfoGrid,
       InfoPaper: InfoPaper,
       PanelGrid: PanelGrid,
-      Panel: Panel,
-      MyChip: MyChip,
+      Panel: {
+        component: Panel,
+        props: {
+          expanded: expanded,
+          onChange: handlePanelChange
+        }
+      },
+      MyChip: MyChip
     }
   };
 
@@ -60,6 +71,8 @@ export default function MarkdownLayout(props: Props) {
   );
 }
 
-{/* <ControlledExpansionPanels />
+{
+  /* <ControlledExpansionPanels />
 
- */}
+ */
+}
