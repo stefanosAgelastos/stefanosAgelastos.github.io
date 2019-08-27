@@ -40,7 +40,7 @@ export default function MarkdownLayout(props: Props) {
   const [expanded, setExpanded] = React.useState<string | false>(false);
   const { projectMD } = props;
 
-  const handleChange = useCallback((panelID: string, isExpanded: boolean) => {
+  const handlePanelChange = useCallback((panelID: string, isExpanded: boolean) => {
     setExpanded(isExpanded ? panelID : false);
   }, []);
 
@@ -57,7 +57,7 @@ export default function MarkdownLayout(props: Props) {
         component: Panel,
         props: {
           expanded: expanded,
-          onChange: handleChange
+          onChange: handlePanelChange
         }
       },
       MyChip: MyChip
