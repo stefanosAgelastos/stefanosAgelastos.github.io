@@ -50980,7 +50980,7 @@ function (_React$Component) {
 /*!******************************************!*\
   !*** ./src/MarkdownLayoutComponents.tsx ***!
   \******************************************/
-/*! exports provided: MainGrid, HeaderTitle, TitleAction, InfoGrid, InfoPaper, MyChip, PanelGrid, Panel, ImageCard */
+/*! exports provided: MainGrid, HeaderTitle, TitleAction, InfoGrid, InfoPaper, MyChip, PanelGrid, Panel, ImageCard, HyperLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50994,6 +50994,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PanelGrid", function() { return PanelGrid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Panel", function() { return Panel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageCard", function() { return ImageCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HyperLink", function() { return HyperLink; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -51004,7 +51005,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Done__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Done */ "./node_modules/@material-ui/icons/Done.js");
 /* harmony import */ var _material_ui_icons_Done__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Done__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./theme */ "./src/theme.tsx");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
+/* harmony import */ var _material_ui_core_Link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Link */ "./node_modules/@material-ui/core/esm/Link/index.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 
 
 var _jsxFileName = "/Users/stefanos/Desktop/code/stefanosAgelastos.github.io/src/MarkdownLayoutComponents.tsx";
@@ -51015,8 +51017,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
-var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["makeStyles"])(function (theme) {
-  return Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["createStyles"])({
+
+var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeStyles"])(function (theme) {
+  return Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["createStyles"])({
     titlePaper: {
       padding: theme.spacing(2),
       textAlign: "center",
@@ -51068,12 +51071,12 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["makeStyle
 });
 var MainGrid = function MainGrid(_ref) {
   var children = _ref.children;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     container: true,
     spacing: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, children);
@@ -51084,29 +51087,29 @@ var HeaderTitle = function HeaderTitle(_ref2) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
-    item: true,
-    xs: 12,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 84
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Paper"], {
-    square: true,
-    className: classes.titlePaper,
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
+    item: true,
+    xs: 12,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Paper"], {
+    square: true,
+    className: classes.titlePaper,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Typography"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87
     },
     __self: this
   }, children))));
@@ -51120,7 +51123,7 @@ var TitleAction = function TitleAction(_ref3) {
       href = _ref4.href,
       label = _ref4.label,
       disabled = _ref4.disabled;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Button"], {
     href: href,
     className: classes.actions,
     disabled: disabled,
@@ -51129,14 +51132,14 @@ var TitleAction = function TitleAction(_ref3) {
     color: "default",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 108
     },
     __self: this
   }, label);
 };
 var InfoGrid = function InfoGrid(_ref5) {
   var children = _ref5.children;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     item: true,
     xs: 12,
     md: 6,
@@ -51144,7 +51147,7 @@ var InfoGrid = function InfoGrid(_ref5) {
     direction: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: this
   }, children);
@@ -51152,18 +51155,18 @@ var InfoGrid = function InfoGrid(_ref5) {
 var InfoPaper = function InfoPaper(_ref6) {
   var children = _ref6.children;
   var classes = useStyles();
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Paper"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Paper"], {
     square: true,
     className: classes.paper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, children));
@@ -51174,7 +51177,7 @@ var MyChip = function MyChip(_ref7) {
   var classes = useStyles();
   var _ref8 = props,
       label = _ref8.label;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Chip"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Chip"], {
     className: classes.chip,
     label: label,
     icon: __jsx(_material_ui_icons_Done__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -51183,32 +51186,32 @@ var MyChip = function MyChip(_ref7) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 152
       },
       __self: this
     }),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 148
     },
     __self: this
   });
 };
 var PanelGrid = function PanelGrid(_ref9) {
   var children = _ref9.children;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     item: true,
     xs: 12,
     md: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 160
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: this
   }, children));
@@ -51224,7 +51227,7 @@ var Panel = function Panel(_ref10) {
       secondaryHeading = _ref11.secondaryHeading,
       expanded = _ref11.expanded,
       _onChange = _ref11.onChange;
-  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["ExpansionPanel"], {
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanel"], {
     expanded: expanded === id,
     square: true,
     onChange: function onChange(_e, isExpanded) {
@@ -51233,14 +51236,14 @@ var Panel = function Panel(_ref10) {
     className: classes.panelRoot,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 179
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["ExpansionPanelSummary"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanelSummary"], {
     expandIcon: __jsx(_material_ui_icons_ExpandMore__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 186
       },
       __self: this
     }),
@@ -51248,34 +51251,34 @@ var Panel = function Panel(_ref10) {
     id: id,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Typography"], {
     className: classes.heading,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 189
-    },
-    __self: this
-  }, heading), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
-    className: classes.secondaryHeading,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 190
     },
     __self: this
-  }, secondaryHeading)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["ExpansionPanelDetails"], {
+  }, heading), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Typography"], {
+    className: classes.secondaryHeading,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 191
+    },
+    __self: this
+  }, secondaryHeading)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["ExpansionPanelDetails"], {
     className: classes.panelDetails,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 195
     },
     __self: this
-  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Typography"], {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Typography"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 196
     },
     __self: this
   }, children)));
@@ -51292,7 +51295,21 @@ var ImageCard = function ImageCard(_ref12) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 205
+    },
+    __self: this
+  }));
+};
+var HyperLink = function HyperLink(_ref13) {
+  var props = Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _ref13);
+
+  return __jsx(_material_ui_core_Link__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    color: "inherit",
+    underline: "always"
+  }, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 217
     },
     __self: this
   }));
@@ -51353,6 +51370,7 @@ function MarkdownLayout(props) {
   }, []);
   var options = {
     overrides: {
+      a: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_3__["HyperLink"],
       img: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_3__["ImageCard"],
       MainGrid: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_3__["MainGrid"],
       HeaderTitle: _MarkdownLayoutComponents__WEBPACK_IMPORTED_MODULE_3__["HeaderTitle"],
@@ -51374,7 +51392,7 @@ function MarkdownLayout(props) {
     className: classes.root,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: this
   }, __jsx(markdown_to_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -51382,7 +51400,7 @@ function MarkdownLayout(props) {
     children: projectMD,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }));
@@ -51784,7 +51802,7 @@ module.exports = JSON.parse("[{\"_imageUrl\":\"https://images.unsplash.com/photo
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects%2F%5Bpid%5D&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Fprojects%2F%5Bpid%5D.tsx ***!
   \******************************************************************************************************************************************************************************************/
@@ -51807,5 +51825,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[pid].js.map
