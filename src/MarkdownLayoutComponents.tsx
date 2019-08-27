@@ -3,6 +3,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import CardMedia from "@material-ui/core/CardMedia";
 import DoneIcon from "@material-ui/icons/Done";
 import { Pantone } from './theme';
+import Link from '@material-ui/core/Link';
 import {
   Chip,
   makeStyles,
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     images: {
       marginTop: theme.spacing(2)
-    }
+    },
   })
 );
 
@@ -206,6 +207,16 @@ export const ImageCard: React.FunctionComponent<{}> = ({ ...props }) => {
       classes={{
         root: classes.images
       }}
+      {...props}
+    />
+  );
+};
+
+export const HyperLink: React.FunctionComponent<{}> = ({ ...props }) => {
+  return (
+    <Link
+    color="inherit"
+    underline="always"
       {...props}
     />
   );

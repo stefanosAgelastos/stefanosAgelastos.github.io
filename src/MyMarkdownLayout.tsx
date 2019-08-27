@@ -9,7 +9,8 @@ import {
   Panel,
   HeaderTitle,
   ImageCard,
-  TitleAction
+  TitleAction,
+  HyperLink
 } from "./MarkdownLayoutComponents";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
 
@@ -46,6 +47,7 @@ export default function MarkdownLayout(props: Props) {
 
   const options: MarkdownOptions = {
     overrides: {
+      a: HyperLink,
       img: ImageCard,
       MainGrid: MainGrid,
       HeaderTitle: HeaderTitle,
