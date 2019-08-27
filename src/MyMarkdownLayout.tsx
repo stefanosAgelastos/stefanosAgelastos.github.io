@@ -37,7 +37,12 @@ type Props = {
 
 export default function MarkdownLayout(props: Props) {
   const classes = useStyles(props);
+  const [expanded, setExpanded] = React.useState<string | false>(false);
   const { projectMD } = props;
+
+  const handleChange = (panelID: string) => (_event: React.ChangeEvent<{}>, isExpanded: boolean) => {
+    setExpanded(isExpanded ? panelID : false);
+  };
 
   const options: MarkdownOptions = {
     overrides: {
@@ -47,7 +52,12 @@ export default function MarkdownLayout(props: Props) {
       TitleAction: TitleAction,
       InfoGrid: InfoGrid,
       InfoPaper: InfoPaper,
-      PanelGrid: PanelGrid,
+      PanelGrid: {
+        component: PanelGrid, props: {
+          expanded: expanded,
+          handleSelect: handleChange
+        }
+      },
       Panel: Panel,
       MyChip: MyChip,
     }
