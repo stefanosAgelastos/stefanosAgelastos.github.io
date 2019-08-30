@@ -57,6 +57,8 @@ export default function SimpleSnackbar() {
             <br />
             At the moment, I have only the following projects updated:
             <br />
+            <a href="/projects/next-js-homepage"> My portfolio webpage project </a>
+            <br />
             <a href="/projects/ar-tour-guide"> AR Prototype System </a>
            { "  & " }
             <a href="/projects/chat-webapp-node-js">Make your own chat room</a>

@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 0,
       bottom: 0,
       background: theme.palette.common.black,
-      opacity: 0.5,
+      opacity: 0.2,
       transition: theme.transitions.create("opacity"),
       [theme.breakpoints.down("sm")]: {
         opacity: 0.05

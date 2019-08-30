@@ -40,7 +40,7 @@ const IndexPage: NextPage = () => {
           color="secondary"
           gutterBottom
         >
-          Hello. I&apos;m Stefanos and this is my developer portfolio.
+          Hello. I&apos;m Stefanos and this is my developer portfolio!
         </Typography>
         <Typography
           className={classes.titleText}
