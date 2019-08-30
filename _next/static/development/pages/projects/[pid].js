@@ -50943,7 +50943,7 @@ function (_React$Component) {
                 imageUrl = Object(_util_projectData__WEBPACK_IMPORTED_MODULE_8__["getProjectImageUrl"])(query.pid);
                 snack = true;
 
-                if (query.pid == "ar-tour-guide" || query.pid == "chat-webapp-node-js") {
+                if (query.pid == "ar-tour-guide" || query.pid == "chat-webapp-node-js" || query.pid == "next-js-homepage") {
                   snack = false;
                 }
 
@@ -51529,29 +51529,42 @@ function SimpleSnackbar() {
       },
       __self: this
     }), __jsx("a", {
-      href: "/projects/ar-tour-guide",
+      href: "/projects/next-js-homepage",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 60
+      },
+      __self: this
+    }, " My portfolio webpage project "), __jsx("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }), __jsx("a", {
+      href: "/projects/ar-tour-guide",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
       },
       __self: this
     }, " AR Prototype System "), "  & ", __jsx("a", {
       href: "/projects/chat-webapp-node-js",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 64
       },
       __self: this
     }, "Make your own chat room"), __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 65
       },
       __self: this
     }), "There you can find more content.", __jsx("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 67
       },
       __self: this
     }), "Have a look!")),
@@ -51562,7 +51575,7 @@ function SimpleSnackbar() {
       onClick: handleClose,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 73
       },
       __self: this
     }, "I understand")],
@@ -51802,7 +51815,7 @@ module.exports = JSON.parse("[{\"_imageUrl\":\"https://images.unsplash.com/photo
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!******************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects%2F%5Bpid%5D&absolutePagePath=%2FUsers%2Fstefanos%2FDesktop%2Fcode%2FstefanosAgelastos.github.io%2Fpages%2Fprojects%2F%5Bpid%5D.tsx ***!
   \******************************************************************************************************************************************************************************************/
@@ -51825,5 +51838,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[pid].js.map
