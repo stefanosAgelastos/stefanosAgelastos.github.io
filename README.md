@@ -2,7 +2,7 @@
 
 <HeaderTitle>
   
-# My Portfolio Website <br/> w/ Next.js & TypeScript
+# My Portfolio Website <br/> with Next.js & TypeScript
 <TitleAction href="https://github.com/stefanosAgelastos/stefanosAgelastos.github.io" label="Go to github repo" />
   
 <TitleAction href="https://www.stefworks.ml" disabled label="This is the demo" />
@@ -13,10 +13,10 @@
 <InfoPaper>
 
 ## About the project
-This project is about my personal portfolio at www.stefworks.ml. The webpage is statically exported and hosted for free on Github pages.
-Behind the scenes, for each of my projects the site is fetching the README.md markdown content from github. The markdown is sprinkled with a little bit of HTML and renders a user friendlier layout, using custom themed Material UI components.
+This project is about my personal portfolio at www.stefworks.ml. The webpage is statically hosted for free on Github pages.
+Behind the scenes, for each of my projects the site is fetching the README.md from github. The markdown content is sprinkled with a little bit of HTML and renders a user friendlier layout, using custom themed Material UI components.
 
-The site doesnt run on a server. On the contrary it takes advantage of fast static hosting, and seamless page to page navigation because of Next.js & React.
+The site doesnt run on a server. On the contrary it takes advantage of static exporting and seamless page to page navigation provided by Next.js & React.
 
 </InfoPaper>
 
@@ -77,6 +77,7 @@ Regarding the UI component library, I chose Material UI because, well it's based
 
 ## How to use
 
+**Note : npm6** is required to install dependencies properly.
 Download or clone the repo
 
 ```sh
@@ -97,11 +98,11 @@ npm run dev
 
 ## Getting Started
 
-These instructions here should be explaining which parts of the code you should change in display to host your own projects in development and production. WILL UPDATE SOON.
+These instructions here should be explaining which parts of the code you should change in order to host your own projects in development and production. ALso instructions on how to easily customise the theme. WILL UPDATE SOON.
 
-### Prerequisites
 
-**Note : npm6** is required to install dependencies properly.
+</Panel>
+<Panel id="6" heading="For Devs" secondaryHeading="Ok, now what?" >
 
 ## Available Commands
 
@@ -119,6 +120,7 @@ These instructions here should be explaining which parts of the code you should 
 
 7. `npm run fast` - runs `build & export & publish` in a sequence for fast deployment to github pages
 
+## Happy Coding!
 </Panel>
 
 </PanelGrid>
