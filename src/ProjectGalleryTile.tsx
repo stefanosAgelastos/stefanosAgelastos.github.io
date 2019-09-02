@@ -18,6 +18,29 @@ const useStyles = makeStyles((theme: Theme) =>
         width: "100% !important",
         height: 400,
         zIndex: 1,
+        "& $tileMarked": {
+          opacity: 0
+        },
+        "& $tileBackdrop": {
+          opacity: 0.05
+        },
+        "& $tileTitle": {
+          border: "4px solid currentColor"
+        },
+        "& $tileSubtitle": {
+          visibility: "visible"
+        }
+      },
+      [theme.breakpoints.down("md")]: {
+        "& $tileButton": {
+          padding: theme.spacing(1)
+        },
+        "& $tileSubtitle": {
+          padding: theme.spacing(1),
+        },
+        "& $tileTitle": {
+          padding: theme.spacing(1),
+        },
       },
       [theme.breakpoints.up("sm")]: {
         "&:hover": {
@@ -35,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
         "&:hover $tileSubtitle": {
           visibility: "visible"
         }
-      },
+      }
     },
     tileSrc: {
       position: "absolute",
@@ -54,10 +77,7 @@ const useStyles = makeStyles((theme: Theme) =>
       bottom: 0,
       background: theme.palette.common.black,
       opacity: 0.2,
-      transition: theme.transitions.create("opacity"),
-      [theme.breakpoints.down("sm")]: {
-        opacity: 0.05
-      },
+      transition: theme.transitions.create("opacity")
     },
     tileButton: {
       position: "absolute",
@@ -70,27 +90,16 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: "flex-start",
       justifyContent: "center",
       padding: theme.spacing(2),
-      [theme.breakpoints.down("md")]: {
-        padding: theme.spacing(1)
-      },
       color: theme.palette.common.white
     },
     tileTitle: {
       position: "relative",
       whiteSpace: "pre-wrap", // for displaying \n and tabs in html
-      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
-      [theme.breakpoints.down("sm")]: {
-        padding: theme.spacing(1),
-        border: "4px solid currentColor"
-      },
+      padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`
     },
     tileSubtitle: {
       padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
       visibility: "hidden",
-      [theme.breakpoints.down("md")]: {
-        padding: theme.spacing(1),
-        visibility: "visible"
-      },
       width: "85%"
     },
     tileMarked: {
@@ -100,10 +109,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: "absolute",
       bottom: -2,
       left: "10",
-      transition: theme.transitions.create("opacity"),
-      [theme.breakpoints.down("sm")]: {
-        opacity: 0
-      },
+      transition: theme.transitions.create("opacity")
     }
   })
 );
@@ -128,8 +134,6 @@ export default function ProjectGalleryTile(props: Props) {
             className={classes.tileSrc}
             style={{
               backgroundColor: tile.imageUrl
-              /*               backgroundImage: `url(${tile.imageUrl})`
-               */
             }}
           />
           <div className={classes.tileBackdrop} />
