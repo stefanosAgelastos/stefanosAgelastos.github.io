@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(0),
       borderRadius: 0,
       height: "40vh",
+      width: (props: Props) => props.tile.width,
       [theme.breakpoints.down("sm")]: {
         scrollSnapAlign: "start",
         width: "100% !important",
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
           opacity: 0
         },
         "& $tileBackdrop": {
-          opacity: 0.05
+          /* opacity: 0.05 */
         },
         "& $tileTitle": {
           border: "4px solid currentColor"
@@ -36,18 +37,18 @@ const useStyles = makeStyles((theme: Theme) =>
           padding: theme.spacing(1)
         },
         "& $tileSubtitle": {
-          padding: theme.spacing(1),
+          padding: theme.spacing(1)
         },
         "& $tileTitle": {
-          padding: theme.spacing(1),
-        },
+          padding: theme.spacing(1)
+        }
       },
       [theme.breakpoints.up("sm")]: {
         "&:hover": {
           zIndex: 1
         },
         "&:hover $tileBackdrop": {
-          opacity: 0.05
+          animationPlayState: "paused"
         },
         "&:hover $tileMarked": {
           opacity: 0
@@ -60,12 +61,30 @@ const useStyles = makeStyles((theme: Theme) =>
         }
       }
     },
+    "@keyframes backdropOpacity": {
+      "0%": {
+        opacity: 0.2
+      },
+      /*       "45%": {
+        opacity: 0.1
+      }, */
+      "50%": {
+        opacity: 0
+      },
+      /*       "55%": {
+        opacity: 0.1
+      }, */
+      "100%": {
+        opacity: 0.2
+      }
+    },
     tileSrc: {
       position: "absolute",
       left: 0,
       right: 0,
       top: 0,
       bottom: 0,
+      backgroundColor: (props: Props) => props.tile.imageUrl,
       backgroundSize: "cover",
       backgroundPosition: "center 40%"
     },
@@ -77,6 +96,9 @@ const useStyles = makeStyles((theme: Theme) =>
       bottom: 0,
       background: theme.palette.common.black,
       opacity: 0.2,
+      animationName: "$backdropOpacity",
+      animationDuration: props => props.tile.animationFrequency,
+      animationIterationCount: "infinite",
       transition: theme.transitions.create("opacity")
     },
     tileButton: {
@@ -119,23 +141,13 @@ type Props = {
 };
 
 export default function ProjectGalleryTile(props: Props) {
-  const classes = useStyles();
+  const classes = useStyles(props);
   const { tile } = props;
   return (
     <React.Fragment>
       <Link href="/projects/[pid]" as={`/projects/${tile.slug}`} passHref>
-        <ButtonBase
-          className={classes.tileWrapper}
-          style={{
-            width: tile.width
-          }}
-        >
-          <div
-            className={classes.tileSrc}
-            style={{
-              backgroundColor: tile.imageUrl
-            }}
-          />
+        <ButtonBase className={classes.tileWrapper}>
+          <div className={classes.tileSrc} />
           <div className={classes.tileBackdrop} />
           <div className={classes.tileButton}>
             <GalleryTypography

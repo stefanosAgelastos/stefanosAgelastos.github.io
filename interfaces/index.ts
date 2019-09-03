@@ -10,6 +10,7 @@ export type Project = {
     subtitle: string,
     slug: string,
     markdownUrlPath: string,
+    animationFrequency: string,
     width: string | number | undefined
 }
   
