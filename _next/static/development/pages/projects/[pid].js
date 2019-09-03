@@ -51024,12 +51024,12 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeStyle
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].VibrantYellow
+      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].LimpetShell
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].LimpetShell,
+      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].SeaPink,
       color: theme.palette.text.secondary,
       fontSize: theme.typography.pxToRem(17)
     },
@@ -51040,14 +51040,14 @@ var useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeStyle
       margin: theme.spacing(1),
       backgroundColor: theme.palette.text.secondary,
       fontWeight: "bold",
-      color: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].LimpetShell
+      color: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].SeaPink
     },
     chipIcon: {
-      color: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].LimpetShell
+      color: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].SeaPink
     },
     panelRoot: {
       width: "100%",
-      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].SeaPink
+      backgroundColor: _theme__WEBPACK_IMPORTED_MODULE_6__["Pantone"].VibrantYellow
     },
     panelDetails: {
       backgroundColor: theme.palette.background["default"],
