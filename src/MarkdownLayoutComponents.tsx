@@ -24,12 +24,12 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor: Pantone.VibrantYellow
+      backgroundColor: Pantone.LimpetShell
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: "center",
-      backgroundColor: Pantone.LimpetShell,
+      backgroundColor: Pantone.SeaPink,
       color: theme.palette.text.secondary,
       fontSize: theme.typography.pxToRem(17)
     },
@@ -40,14 +40,14 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(1),
       backgroundColor: theme.palette.text.secondary,
       fontWeight: "bold",
-      color: Pantone.LimpetShell,
+      color: Pantone.SeaPink,
     },
     chipIcon: {
-      color: Pantone.LimpetShell
+      color: Pantone.SeaPink
     },
     panelRoot: {
       width: "100%",
-      backgroundColor: Pantone.SeaPink,
+      backgroundColor: Pantone.VibrantYellow,
     },
     panelDetails: {
       backgroundColor: theme.palette.background.default,
