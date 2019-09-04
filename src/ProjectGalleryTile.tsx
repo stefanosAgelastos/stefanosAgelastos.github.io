@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
           /* opacity: 0.05 */
         },
         "& $tileTitle": {
-          border: "4px solid currentColor"
+          border: "4px solid currentColor" /* MAYBE OUTLINE */
         },
         "& $tileSubtitle": {
           visibility: "visible"
@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme: Theme) =>
           zIndex: 1
         },
         "&:hover $tileBackdrop": {
-          animationPlayState: "paused"
+          animationPlayState: "paused",
+          animationIterationCount: 0
         },
         "&:hover $tileMarked": {
           opacity: 0
@@ -63,20 +64,28 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     "@keyframes backdropOpacity": {
       "0%": {
-        opacity: 0.2
-      },
-      /*       "45%": {
         opacity: 0.1
-      }, */
+      },
       "50%": {
-        opacity: 0
-      },
-      /*       "55%": {
-        opacity: 0.1
-      }, */
-      "100%": {
         opacity: 0.2
+      },
+      "100%": {
+        opacity: 0.1
       }
+    },
+    tileBackdrop: {
+      position: "absolute",
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      background: theme.palette.common.black,
+      opacity: 0,
+      animationName: "$backdropOpacity",
+/*       animationDelay: "3s",
+ */      animationDuration: props => props.tile.animationFrequency,
+      animationIterationCount: "infinite",
+      transition: theme.transitions.create("opacity")
     },
     tileSrc: {
       position: "absolute",
@@ -87,19 +96,6 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: (props: Props) => props.tile.imageUrl,
       backgroundSize: "cover",
       backgroundPosition: "center 40%"
-    },
-    tileBackdrop: {
-      position: "absolute",
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0,
-      background: theme.palette.common.black,
-      opacity: 0.2,
-      animationName: "$backdropOpacity",
-      animationDuration: props => props.tile.animationFrequency,
-      animationIterationCount: "infinite",
-      transition: theme.transitions.create("opacity")
     },
     tileButton: {
       position: "absolute",
