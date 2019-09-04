@@ -22507,6 +22507,8 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       },
       "& $tileTitle": {
         border: "4px solid currentColor"
+        /* MAYBE OUTLINE */
+
       },
       "& $tileSubtitle": {
         visibility: "visible"
@@ -22526,7 +22528,8 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
         zIndex: 1
       },
       "&:hover $tileBackdrop": {
-        animationPlayState: "paused"
+        animationPlayState: "paused",
+        animationIterationCount: 0
       },
       "&:hover $tileMarked": {
         opacity: 0
@@ -22540,22 +22543,32 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
     }), _tileWrapper),
     "@keyframes backdropOpacity": {
       "0%": {
-        opacity: 0.2
-      },
-
-      /*       "45%": {
         opacity: 0.1
-      }, */
+      },
       "50%": {
-        opacity: 0
-      },
-
-      /*       "55%": {
-        opacity: 0.1
-      }, */
-      "100%": {
         opacity: 0.2
+      },
+      "100%": {
+        opacity: 0.1
       }
+    },
+    tileBackdrop: {
+      position: "absolute",
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      background: theme.palette.common.black,
+      opacity: 0,
+      animationName: "$backdropOpacity",
+
+      /*       animationDelay: "3s",
+       */
+      animationDuration: function animationDuration(props) {
+        return props.tile.animationFrequency;
+      },
+      animationIterationCount: "infinite",
+      transition: theme.transitions.create("opacity")
     },
     tileSrc: {
       position: "absolute",
@@ -22568,21 +22581,6 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
       },
       backgroundSize: "cover",
       backgroundPosition: "center 40%"
-    },
-    tileBackdrop: {
-      position: "absolute",
-      left: 0,
-      right: 0,
-      top: 0,
-      bottom: 0,
-      background: theme.palette.common.black,
-      opacity: 0.2,
-      animationName: "$backdropOpacity",
-      animationDuration: function animationDuration(props) {
-        return props.tile.animationFrequency;
-      },
-      animationIterationCount: "infinite",
-      transition: theme.transitions.create("opacity")
     },
     tileButton: {
       position: "absolute",
@@ -22625,7 +22623,7 @@ function ProjectGalleryTile(props) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 143
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -22634,35 +22632,35 @@ function ProjectGalleryTile(props) {
     passHref: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 144
     },
     __self: this
   }, __jsx(_material_ui_core_ButtonBase__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: classes.tileWrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 145
     },
     __self: this
   }, __jsx("div", {
     className: classes.tileSrc,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 146
     },
     __self: this
   }), __jsx("div", {
     className: classes.tileBackdrop,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 147
     },
     __self: this
   }), __jsx("div", {
     className: classes.tileButton,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 148
     },
     __self: this
   }, __jsx(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -22673,14 +22671,14 @@ function ProjectGalleryTile(props) {
     className: classes.tileTitle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 149
     },
     __self: this
   }, tile.title, __jsx("div", {
     className: classes.tileMarked,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 157
     },
     __self: this
   })), __jsx(_MyGalleryTypography__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -22690,7 +22688,7 @@ function ProjectGalleryTile(props) {
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 159
     },
     __self: this
   }, tile.subtitle)))));
@@ -22825,7 +22823,7 @@ function getProjectImageUrl(slug) {
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"_TITLE_ADVICE\":\"SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR\",\"_SUBTITLE_ADVICE\":\"SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE\",\"_imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#009499\",\"title\":\"Augmenting a sought-after guided tour\",\"subtitle\":\"Read about my team work as an intern for KøbenhavnerTure\",\"slug\":\"ar-tour-guide\",\"markdownUrlPath\":\"/mern-admin-app-for-android-AR-app/master\",\"animationFrequency\":\"3s\",\"width\":\"60%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#195190\",\"title\":\"Make your own chat room\",\"subtitle\":\"Read about this personal fullstack project\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"animationFrequency\":\"4s\",\"width\":\"40%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#81894E\",\"title\":\"Making a nice homepage\",\"subtitle\":\"Read about my website stefworks.ml and what's the tech under the hood\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"animationFrequency\":\"2.5s\",\"width\":\"70%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#009499\",\"title\":\"Tailoring a \\nnavigation menu\",\"subtitle\":\"Have a look at a custom navbar I coded from scratch\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"animationFrequency\":\"5s\",\"width\":\"30%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#195190\",\"title\":\"Angular 5 Client App\",\"_subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"subtitle\":\"Read about this personal frontend project, includes JWT authentication\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"animationFrequency\":\"4.5s\",\"width\":\"65%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#FF6F61\",\"_title\":\"Spring Boot Rest\",\"title\":\"Spring Boot Rest\",\"_subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"subtitle\":\"Read about this personal backend project\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"animationFrequency\":\"3.5s\",\"width\":\"35%\"}]");
+module.exports = JSON.parse("[{\"_TITLE_ADVICE\":\"SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR\",\"_SUBTITLE_ADVICE\":\"SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE\",\"_imageUrl\":\"https://images.unsplash.com/photo-1478416272538-5f7e51dc5400?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#009499\",\"title\":\"Augmenting a sought-after guided tour\",\"subtitle\":\"Read about my team work as an intern for KøbenhavnerTure\",\"slug\":\"ar-tour-guide\",\"markdownUrlPath\":\"/mern-admin-app-for-android-AR-app/master\",\"animationFrequency\":\"3s\",\"width\":\"60%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1550151103-0135d8e13537?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#195190\",\"title\":\"Make your own chat room\",\"subtitle\":\"Read about this personal fullstack project\",\"slug\":\"chat-webapp-node-js\",\"markdownUrlPath\":\"/chatNodejs/master\",\"animationFrequency\":\"4s\",\"width\":\"40%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1565277562170-6628d4c5a69e?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#81894E\",\"title\":\"Making a nice homepage\",\"subtitle\":\"Read about my website stefworks.ml and what's the tech under the hood\",\"slug\":\"next-js-homepage\",\"markdownUrlPath\":\"/stefanosAgelastos.github.io/local-development\",\"animationFrequency\":\"2.5s\",\"width\":\"70%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#009499\",\"title\":\"Tailoring a \\nnavigation menu\",\"subtitle\":\"Have a look at a custom navbar I coded from scratch\",\"slug\":\"static-homepage-p5-js\",\"markdownUrlPath\":\"/static-homepage-p5-js/master\",\"animationFrequency\":\"5s\",\"width\":\"30%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1563874093519-ca5eda5cd776?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#195190\",\"title\":\"Angular 5 Client App\",\"_subtitle\":\"This Angular5 app was the first webapp I developed. I got fascinated with JWT authentication and SPA architecture.\",\"subtitle\":\"Read about this personal frontend project with JWT authentication\",\"slug\":\"angular-crud\",\"markdownUrlPath\":\"/cvEditorFront/master\",\"animationFrequency\":\"4.5s\",\"width\":\"65%\"},{\"_imageUrl\":\"https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?auto=format&fit=crop&w=500&q=80\",\"imageUrl\":\"#FF6F61\",\"_title\":\"Spring Boot Rest\",\"title\":\"Spring Boot Rest\",\"_subtitle\":\"Java taught me strict types are fun. This is my Spring Boot Rest API to support the Angular5 front.\",\"subtitle\":\"Read about this personal backend Rest API\",\"slug\":\"spring-api-java\",\"markdownUrlPath\":\"/personalRest/master\",\"animationFrequency\":\"3.5s\",\"width\":\"35%\"}]");
 
 /***/ }),
 
