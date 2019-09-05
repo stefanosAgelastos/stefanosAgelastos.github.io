@@ -22546,7 +22546,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["ma
         opacity: 0.1
       },
       "50%": {
-        opacity: 0.2
+        opacity: 0.3
       },
       "100%": {
         opacity: 0.1
