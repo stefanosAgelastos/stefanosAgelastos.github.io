@@ -70,7 +70,7 @@
   },
   {
     "imageUrl": "#FF6F61",
-    "title": "Serving REST resources from the Cloud",
+    "title": "Serving from the Cloud",
     "subtitle": "This Java Spring Boot 2.0 school project got me an excellent grade, read more!",
     "slug": "spring-api-java",
     "markdownUrlPath": "/personalRest/master",
