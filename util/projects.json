@@ -1,29 +1,27 @@
 [
   {
-    "_TITLE_ADVICE": "SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR",
-    "_SUBTITLE_ADVICE": "SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE",
+    "ADVICE": {
+      "_TITLE_ADVICE": "SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR",
+      "_SUBTITLE_ADVICE": "SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE"
+    },
     "imageUrl": "#81894E",
     "title": "Setting up a secure server with sessions",
     "subtitle": "Read about this back end Node.js project",
     "slug": "auth-session-node",
-    "markdownUrlPath": "/localSessionAuthwithJest/c59840c36ba413110ac42ea00ad8da474c4d9bf3/server",
+    "markdownUrlPath": "/localSessionAuthwithJest/master/server",
     "animationFrequency": "2.5s",
     "width": "55%"
   },
   {
-    "_TITLE_ADVICE": "SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR",
-    "_SUBTITLE_ADVICE": "SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE",
     "imageUrl": "#FF6F61",
     "title": "Sign up and sign in using cookies",
     "subtitle": "Check out this front end React project",
     "slug": "auth-session-react",
-    "markdownUrlPath": "/localSessionAuthwithJest/c59840c36ba413110ac42ea00ad8da474c4d9bf3/client",
+    "markdownUrlPath": "/localSessionAuthwithJest/master/client",
     "animationFrequency": "3.5s",
     "width": "45%"
   },
   {
-    "_TITLE_ADVICE": "SIMPLE, ATTRACTIVE AND TARGETED TO BOTH DEVS AND HR",
-    "_SUBTITLE_ADVICE": "SHORT, INSTRUCT TO A SPECIFIC ACTION AND FEATURE",
     "imageUrl": "#009499",
     "title": "Augmenting a sought-after guided tour",
     "subtitle": "Read about my team work as an intern for KøbenhavnerTure",
@@ -56,7 +54,7 @@
     "subtitle": "Have a look at a custom navbar I coded from scratch",
     "slug": "static-homepage-p5-js",
     "markdownUrlPath": "/static-homepage-p5-js/master",
-    "animationFrequency":"5s",
+    "animationFrequency": "5s",
     "width": "30%"
   },
   {
@@ -65,7 +63,7 @@
     "subtitle": "I used Angular 5, JWT tokens and the Java Rest API from the next project. This school project gave an excellent grade!",
     "slug": "angular-crud",
     "markdownUrlPath": "/cvEditorFront/master",
-    "animationFrequency":"4.5s",
+    "animationFrequency": "4.5s",
     "width": "65%"
   },
   {
@@ -74,7 +72,7 @@
     "subtitle": "This Java Spring Boot 2.0 school project got me an excellent grade, read more!",
     "slug": "spring-api-java",
     "markdownUrlPath": "/personalRest/master",
-    "animationFrequency":"3.5s",
+    "animationFrequency": "3.5s",
     "width": "35%"
   }
 ]
