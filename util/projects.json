@@ -60,7 +60,7 @@
   {
     "imageUrl": "#195190",
     "title": "Developing my first Single Page Application",
-    "subtitle": "Angular 5 and JWT tokens supported by a Java Rest API. This school project gave an excellent grade, read more!",
+    "subtitle": "Angular 5 and JWT tokens supported by a Java Rest API. This school project got an excellent grade, read more!",
     "slug": "angular-crud",
     "markdownUrlPath": "/cvEditorFront/master",
     "animationFrequency": "4.5s",
