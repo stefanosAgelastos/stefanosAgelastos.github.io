@@ -215,6 +215,7 @@ export const ImageCard: React.FunctionComponent<{}> = ({ ...props }) => {
 export const HyperLink: React.FunctionComponent<{}> = ({ ...props }) => {
   return (
     <Link
+    target="_blank"
     color="inherit"
     underline="always"
       {...props}
